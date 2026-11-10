@@ -1,0 +1,19 @@
+{
+  "notebook_syntax": true,
+  "epoch_seeded_augmentation_and_ranges": true,
+  "rgb_jpeg_reference": true,
+  "deformable_initialization_and_offset_gradients": true,
+  "linear_attention_matches_explicit_attention": true,
+  "verification_ties_bruteforce_2000_cases": true,
+  "metric_identity_reference": true,
+  "single_face_overfit": {
+    "steps": 200,
+    "bicubic_l1": 0.054018277674913406,
+    "model_l1": 0.03200491517782211,
+    "bicubic_psnr": 24.178878784179688,
+    "model_psnr": 26.751937866210938,
+    "seconds": 15.70663579995744
+  },
+  "interrupted_resume_equals_uninterrupted": true,
+  "incompatible_checkpoint_rejected": true
+}

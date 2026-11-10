@@ -1,0 +1,23 @@
+{
+  "mode": "balanced",
+  "weights": {
+    "pixel": 1.0,
+    "identity": 0.05,
+    "perceptual": 0.05,
+    "edge": 0.2
+  },
+  "epochs": 5,
+  "batch": 64,
+  "subbatch": 8,
+  "learning_rate": 4e-05,
+  "train_images": 4096,
+  "validation_images": 128,
+  "base_checkpoint_sha256": "f2b3fa876841c63fae3cebaf938d036459b9510dc6750fa8efc49761d7003c0b",
+  "model_source_sha256": "ecdea0ed3e94089b2258a18b631928acd8841b7d052a3d72f438824e0a97d125",
+  "runner_sha256": "ca127aa10fb7c582a1ec893bc4c74cfdda7092fd61a743406e3c7cee24900373",
+  "train_ids_sha256": "7d40b29586b294e04806fb5d5c2414485fdc2864b46908146e657fb43d84d5db",
+  "validation_ids_sha256": "6094e58bc35ca002ce51d4c69552d9aeb6cfba90a6707b1df207a7e54169186b",
+  "selection_score": "Prefer checkpoints passing all declared promotion checks; then maximize mobileface_cos - 0.04*vgg_l1 - 0.2*edge_l1. Keep PSNR >= old-1.5 dB and SSIM >= old-0.05.",
+  "independent_evaluator": "MobileFaceNet (not included in training loss)",
+  "test_images_used_for_selection": 0
+}

@@ -1,0 +1,12 @@
+{
+  "dataset": "nuwandaa/ffhq128",
+  "url": "https://huggingface.co/datasets/nuwandaa/ffhq128/resolve/main/thumbnails128x128.zip",
+  "images": 70000,
+  "shape": [
+    70000,
+    128,
+    128,
+    3
+  ],
+  "ordering": "sorted archive image paths"
+}

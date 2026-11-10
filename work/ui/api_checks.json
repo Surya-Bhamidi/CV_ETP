@@ -1,0 +1,20 @@
+{
+  "real_checkpoint_ready": true,
+  "epoch": 30,
+  "test_samples": 12,
+  "sample_reconstruction": true,
+  "uploaded_pair_matches_sample": true,
+  "simulation": true,
+  "unpaired_metrics_hidden": true,
+  "invalid_input_rejected": true,
+  "sample_metrics": {
+    "sr": {
+      "psnr": 26.195642471313477,
+      "ssim": 0.767955787599299
+    },
+    "bicubic": {
+      "psnr": 25.062349319458008,
+      "ssim": 0.6973622718693011
+    }
+  }
+}

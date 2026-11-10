@@ -1,0 +1,23 @@
+{
+  "mode": "detail",
+  "weights": {
+    "pixel": 1.0,
+    "identity": 0.025,
+    "perceptual": 0.02,
+    "edge": 0.1
+  },
+  "epochs": 3,
+  "batch": 64,
+  "subbatch": 8,
+  "learning_rate": 4e-05,
+  "train_images": 2048,
+  "validation_images": 128,
+  "base_checkpoint_sha256": "f2b3fa876841c63fae3cebaf938d036459b9510dc6750fa8efc49761d7003c0b",
+  "model_source_sha256": "ecdea0ed3e94089b2258a18b631928acd8841b7d052a3d72f438824e0a97d125",
+  "runner_sha256": "40ab8f3cbb6a1fd5c669cb79b3e833bf13e4187223a417390332ff7ee53c27d1",
+  "train_ids_sha256": "715db2a33ac82ffa2b80d2ef8fb4c513984bd6500dee0b5a5b7ea7d10a4aa3f4",
+  "validation_ids_sha256": "6094e58bc35ca002ce51d4c69552d9aeb6cfba90a6707b1df207a7e54169186b",
+  "selection_score": "mobileface_cos - 0.04*vgg_l1 - 0.2*edge_l1; PSNR >= old-1.5 dB and SSIM >= old-0.05",
+  "independent_evaluator": "MobileFaceNet (not included in training loss)",
+  "test_images_used_for_selection": 0
+}

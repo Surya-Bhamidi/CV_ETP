@@ -1,0 +1,8 @@
+{
+  "strength_endpoints_and_real_pixel_blend": true,
+  "same_input_and_reference_for_all_models": true,
+  "clean_reference_never_changes_restoration": true,
+  "invalid_strength_and_non_square_crop_rejected": true,
+  "browser_model_provenance_strength_and_switching": true,
+  "restoration_mobile_no_overflow_or_javascript_errors": true
+}

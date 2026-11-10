@@ -1,0 +1,394 @@
+RUN START UTC 2026-11-10T10:31:44.168324+00:00
+{
+  "protocol": "rgb_jpeg_seeded_v2",
+  "pilot": false,
+  "config": {
+    "work_dir": "C:\\Users\\bhara\\OneDrive\\Desktop\\CV_ETP\\work\\full",
+    "scale": 4,
+    "hr_size": 112,
+    "n_val": 1000,
+    "n_test": 2000,
+    "feat": 48,
+    "blocks": 6,
+    "keep_ratio": 0.5,
+    "batch": 64,
+    "epochs": 30,
+    "lr": 0.0002,
+    "num_workers": 0,
+    "seed": 42
+  },
+  "device": "cuda",
+  "train_images": 67000,
+  "validation_images": 1000,
+  "test_images": 2000,
+  "notebook_sha256": "ecdea0ed3e94089b2258a18b631928acd8841b7d052a3d72f438824e0a97d125",
+  "execution_changes": [
+    "num_workers=0 for Windows",
+    "FFHQ cache built directly from the same dataset's image archive",
+    "audited RGB JPEG handling, seeded epoch augmentation, atomic validated checkpoints"
+  ],
+  "data_integrity": {
+    "shape": [
+      70000,
+      128,
+      128,
+      3
+    ],
+    "dtype": "uint8",
+    "image_pixels_sha256": "09009824c7596d2c88605a8447792b04a4a97dbfdb67a890ac246ca61a7b045d",
+    "images_verified_against_zip": 256,
+    "duplicate_groups": [],
+    "cross_split_duplicate_groups": [],
+    "split_counts": {
+      "train": 67000,
+      "validation": 1000,
+      "test": 2000
+    },
+    "seconds": 8.127289700089023
+  }
+}
+RESULTS {"bicubic": {"PSNR_Y": 24.601633071899414, "SSIM_Y": 0.6641252040098691, "params": 0}}
+  training batch 90/1046
+  training batch 211/1046
+  training batch 330/1046
+  training batch 441/1046
+  training batch 552/1046
+  training batch 671/1046
+  training batch 790/1046
+  training batch 907/1046
+  training batch 1024/1046
+[ours_ssc_attn] epoch 1/30 | L1 0.0540 | val PSNR-Y 24.99 dB | 239s
+RUN START UTC 2026-11-10T10:36:14.911011+00:00
+{
+  "protocol": "rgb_jpeg_seeded_v2",
+  "pilot": false,
+  "config": {
+    "work_dir": "C:\\Users\\bhara\\OneDrive\\Desktop\\CV_ETP\\work\\full",
+    "scale": 4,
+    "hr_size": 112,
+    "n_val": 1000,
+    "n_test": 2000,
+    "feat": 48,
+    "blocks": 6,
+    "keep_ratio": 0.5,
+    "batch": 64,
+    "epochs": 30,
+    "lr": 0.0002,
+    "num_workers": 0,
+    "seed": 42
+  },
+  "device": "cuda",
+  "train_images": 67000,
+  "validation_images": 1000,
+  "test_images": 2000,
+  "notebook_sha256": "ecdea0ed3e94089b2258a18b631928acd8841b7d052a3d72f438824e0a97d125",
+  "execution_changes": [
+    "num_workers=0 for Windows",
+    "FFHQ cache built directly from the same dataset's image archive",
+    "audited RGB JPEG handling, seeded epoch augmentation, atomic validated checkpoints"
+  ],
+  "data_integrity": {
+    "shape": [
+      70000,
+      128,
+      128,
+      3
+    ],
+    "dtype": "uint8",
+    "image_pixels_sha256": "09009824c7596d2c88605a8447792b04a4a97dbfdb67a890ac246ca61a7b045d",
+    "images_verified_against_zip": 256,
+    "duplicate_groups": [],
+    "cross_split_duplicate_groups": [],
+    "split_counts": {
+      "train": 67000,
+      "validation": 1000,
+      "test": 2000
+    },
+    "seconds": 8.127289700089023
+  }
+}
+RESULTS {"bicubic": {"PSNR_Y": 24.601633071899414, "SSIM_Y": 0.6641252040098691, "params": 0}}
+[ours_ssc_attn] resumed from epoch 1
+  training batch 129/1046
+  training batch 309/1046
+  training batch 489/1046
+  training batch 668/1046
+  training batch 845/1046
+  training batch 1021/1046
+[ours_ssc_attn] epoch 2/30 | L1 0.0505 | val PSNR-Y 25.12 dB | 161s
+  training batch 177/1046
+  training batch 348/1046
+  training batch 523/1046
+  training batch 671/1046
+  training batch 846/1046
+  training batch 1021/1046
+[ours_ssc_attn] epoch 3/30 | L1 0.0494 | val PSNR-Y 25.20 dB | 155s
+  training batch 175/1046
+  training batch 348/1046
+  training batch 521/1046
+  training batch 695/1046
+  training batch 870/1046
+  training batch 1044/1046
+[ours_ssc_attn] epoch 4/30 | L1 0.0486 | val PSNR-Y 25.26 dB | 152s
+  training batch 171/1046
+  training batch 340/1046
+  training batch 513/1046
+  training batch 685/1046
+  training batch 860/1046
+  training batch 1035/1046
+[ours_ssc_attn] epoch 5/30 | L1 0.0481 | val PSNR-Y 25.29 dB | 153s
+  training batch 173/1046
+  training batch 344/1046
+  training batch 514/1046
+  training batch 684/1046
+  training batch 855/1046
+  training batch 1028/1046
+[ours_ssc_attn] epoch 6/30 | L1 0.0478 | val PSNR-Y 25.33 dB | 154s
+  training batch 173/1046
+  training batch 345/1046
+  training batch 517/1046
+  training batch 687/1046
+  training batch 861/1046
+  training batch 1034/1046
+[ours_ssc_attn] epoch 7/30 | L1 0.0475 | val PSNR-Y 25.36 dB | 153s
+  training batch 175/1046
+  training batch 350/1046
+  training batch 525/1046
+  training batch 700/1046
+  training batch 872/1046
+  training batch 1044/1046
+[ours_ssc_attn] epoch 8/30 | L1 0.0472 | val PSNR-Y 25.38 dB | 151s
+  training batch 173/1046
+  training batch 347/1046
+  training batch 521/1046
+  training batch 694/1046
+  training batch 868/1046
+  training batch 1040/1046
+[ours_ssc_attn] epoch 9/30 | L1 0.0470 | val PSNR-Y 25.41 dB | 152s
+  training batch 172/1046
+  training batch 346/1046
+  training batch 520/1046
+  training batch 694/1046
+  training batch 868/1046
+  training batch 1041/1046
+[ours_ssc_attn] epoch 10/30 | L1 0.0469 | val PSNR-Y 25.44 dB | 152s
+  training batch 171/1046
+  training batch 344/1046
+  training batch 519/1046
+  training batch 694/1046
+  training batch 869/1046
+  training batch 1044/1046
+[ours_ssc_attn] epoch 11/30 | L1 0.0467 | val PSNR-Y 25.44 dB | 152s
+  training batch 174/1046
+  training batch 347/1046
+  training batch 522/1046
+  training batch 696/1046
+  training batch 870/1046
+  training batch 1044/1046
+[ours_ssc_attn] epoch 12/30 | L1 0.0466 | val PSNR-Y 25.46 dB | 152s
+  training batch 175/1046
+  training batch 346/1046
+  training batch 519/1046
+  training batch 692/1046
+  training batch 866/1046
+  training batch 1040/1046
+[ours_ssc_attn] epoch 13/30 | L1 0.0465 | val PSNR-Y 25.48 dB | 152s
+  training batch 173/1046
+  training batch 345/1046
+  training batch 516/1046
+  training batch 691/1046
+  training batch 864/1046
+  training batch 1037/1046
+[ours_ssc_attn] epoch 14/30 | L1 0.0464 | val PSNR-Y 25.50 dB | 153s
+  training batch 174/1046
+  training batch 348/1046
+  training batch 520/1046
+  training batch 692/1046
+  training batch 859/1046
+  training batch 1032/1046
+[ours_ssc_attn] epoch 15/30 | L1 0.0463 | val PSNR-Y 25.50 dB | 153s
+  training batch 173/1046
+  training batch 344/1046
+  training batch 513/1046
+  training batch 683/1046
+  training batch 854/1046
+  training batch 1027/1046
+[ours_ssc_attn] epoch 16/30 | L1 0.0462 | val PSNR-Y 25.52 dB | 154s
+  training batch 174/1046
+  training batch 348/1046
+  training batch 519/1046
+  training batch 690/1046
+  training batch 862/1046
+  training batch 1035/1046
+[ours_ssc_attn] epoch 17/30 | L1 0.0461 | val PSNR-Y 25.52 dB | 153s
+  training batch 175/1046
+  training batch 353/1046
+  training batch 534/1046
+  training batch 718/1046
+  training batch 904/1046
+[ours_ssc_attn] epoch 18/30 | L1 0.0460 | val PSNR-Y 25.53 dB | 145s
+  training batch 184/1046
+  training batch 369/1046
+  training batch 554/1046
+  training batch 739/1046
+  training batch 925/1046
+[ours_ssc_attn] epoch 19/30 | L1 0.0460 | val PSNR-Y 25.53 dB | 143s
+  training batch 185/1046
+  training batch 370/1046
+  training batch 554/1046
+  training batch 739/1046
+  training batch 921/1046
+[ours_ssc_attn] epoch 20/30 | L1 0.0459 | val PSNR-Y 25.54 dB | 143s
+  training batch 186/1046
+  training batch 371/1046
+  training batch 557/1046
+  training batch 742/1046
+  training batch 927/1046
+[ours_ssc_attn] epoch 21/30 | L1 0.0459 | val PSNR-Y 25.54 dB | 142s
+  training batch 186/1046
+  training batch 370/1046
+  training batch 554/1046
+  training batch 738/1046
+  training batch 923/1046
+[ours_ssc_attn] epoch 22/30 | L1 0.0458 | val PSNR-Y 25.55 dB | 143s
+  training batch 186/1046
+  training batch 370/1046
+  training batch 554/1046
+  training batch 739/1046
+  training batch 924/1046
+[ours_ssc_attn] epoch 23/30 | L1 0.0458 | val PSNR-Y 25.56 dB | 143s
+  training batch 185/1046
+  training batch 370/1046
+  training batch 556/1046
+  training batch 741/1046
+  training batch 926/1046
+[ours_ssc_attn] epoch 24/30 | L1 0.0458 | val PSNR-Y 25.56 dB | 142s
+  training batch 185/1046
+  training batch 370/1046
+  training batch 556/1046
+  training batch 741/1046
+  training batch 926/1046
+[ours_ssc_attn] epoch 25/30 | L1 0.0457 | val PSNR-Y 25.56 dB | 142s
+  training batch 186/1046
+  training batch 372/1046
+  training batch 556/1046
+  training batch 742/1046
+  training batch 924/1046
+[ours_ssc_attn] epoch 26/30 | L1 0.0457 | val PSNR-Y 25.56 dB | 143s
+  training batch 180/1046
+  training batch 361/1046
+  training batch 542/1046
+  training batch 723/1046
+  training batch 905/1046
+[ours_ssc_attn] epoch 27/30 | L1 0.0457 | val PSNR-Y 25.56 dB | 146s
+  training batch 181/1046
+  training batch 363/1046
+  training batch 544/1046
+  training batch 725/1046
+  training batch 906/1046
+[ours_ssc_attn] epoch 28/30 | L1 0.0457 | val PSNR-Y 25.57 dB | 146s
+  training batch 179/1046
+  training batch 359/1046
+  training batch 539/1046
+  training batch 718/1046
+  training batch 904/1046
+[ours_ssc_attn] epoch 29/30 | L1 0.0457 | val PSNR-Y 25.57 dB | 145s
+  training batch 186/1046
+  training batch 371/1046
+  training batch 556/1046
+  training batch 741/1046
+  training batch 927/1046
+[ours_ssc_attn] epoch 30/30 | L1 0.0457 | val PSNR-Y 25.57 dB | 142s
+RESULTS {"bicubic": {"PSNR_Y": 24.601633071899414, "SSIM_Y": 0.6641252040098691, "params": 0}, "ours_ssc_attn": {"PSNR_Y": 25.6828556060791, "SSIM_Y": 0.7344879295747169, "params": 479109, "best_validation_psnr_y": 25.566509246826172, "epochs_completed": 30, "training_and_evaluation_seconds_this_invocation": 4323.039683499839}}
+  training batch 442/1046
+  training batch 881/1046
+[baseline_conv] epoch 1/30 | L1 0.0552 | val PSNR-Y 24.78 dB | 60s
+  training batch 435/1046
+  training batch 875/1046
+[baseline_conv] epoch 2/30 | L1 0.0515 | val PSNR-Y 25.04 dB | 60s
+  training batch 440/1046
+  training batch 881/1046
+[baseline_conv] epoch 3/30 | L1 0.0502 | val PSNR-Y 25.10 dB | 60s
+  training batch 441/1046
+  training batch 882/1046
+[baseline_conv] epoch 4/30 | L1 0.0495 | val PSNR-Y 25.16 dB | 60s
+  training batch 442/1046
+  training batch 884/1046
+[baseline_conv] epoch 5/30 | L1 0.0490 | val PSNR-Y 25.21 dB | 60s
+  training batch 440/1046
+  training batch 879/1046
+[baseline_conv] epoch 6/30 | L1 0.0486 | val PSNR-Y 25.24 dB | 60s
+  training batch 441/1046
+  training batch 881/1046
+[baseline_conv] epoch 7/30 | L1 0.0483 | val PSNR-Y 25.27 dB | 60s
+  training batch 440/1046
+  training batch 881/1046
+[baseline_conv] epoch 8/30 | L1 0.0481 | val PSNR-Y 25.30 dB | 60s
+  training batch 442/1046
+  training batch 883/1046
+[baseline_conv] epoch 9/30 | L1 0.0479 | val PSNR-Y 25.33 dB | 60s
+  training batch 440/1046
+  training batch 880/1046
+[baseline_conv] epoch 10/30 | L1 0.0477 | val PSNR-Y 25.35 dB | 60s
+  training batch 442/1046
+  training batch 883/1046
+[baseline_conv] epoch 11/30 | L1 0.0475 | val PSNR-Y 25.35 dB | 60s
+  training batch 441/1046
+  training batch 881/1046
+[baseline_conv] epoch 12/30 | L1 0.0474 | val PSNR-Y 25.37 dB | 60s
+  training batch 441/1046
+  training batch 883/1046
+[baseline_conv] epoch 13/30 | L1 0.0473 | val PSNR-Y 25.38 dB | 60s
+  training batch 440/1046
+  training batch 882/1046
+[baseline_conv] epoch 14/30 | L1 0.0472 | val PSNR-Y 25.40 dB | 60s
+  training batch 441/1046
+  training batch 881/1046
+[baseline_conv] epoch 15/30 | L1 0.0471 | val PSNR-Y 25.41 dB | 60s
+  training batch 440/1046
+  training batch 881/1046
+[baseline_conv] epoch 16/30 | L1 0.0471 | val PSNR-Y 25.42 dB | 60s
+  training batch 440/1046
+  training batch 881/1046
+[baseline_conv] epoch 17/30 | L1 0.0470 | val PSNR-Y 25.42 dB | 60s
+  training batch 434/1046
+  training batch 868/1046
+[baseline_conv] epoch 18/30 | L1 0.0469 | val PSNR-Y 25.43 dB | 61s
+  training batch 434/1046
+  training batch 868/1046
+[baseline_conv] epoch 19/30 | L1 0.0469 | val PSNR-Y 25.43 dB | 61s
+  training batch 432/1046
+  training batch 864/1046
+[baseline_conv] epoch 20/30 | L1 0.0468 | val PSNR-Y 25.44 dB | 61s
+  training batch 436/1046
+  training batch 868/1046
+[baseline_conv] epoch 21/30 | L1 0.0468 | val PSNR-Y 25.44 dB | 61s
+  training batch 435/1046
+  training batch 868/1046
+[baseline_conv] epoch 22/30 | L1 0.0468 | val PSNR-Y 25.45 dB | 61s
+  training batch 435/1046
+  training batch 868/1046
+[baseline_conv] epoch 23/30 | L1 0.0468 | val PSNR-Y 25.45 dB | 61s
+  training batch 435/1046
+  training batch 868/1046
+[baseline_conv] epoch 24/30 | L1 0.0467 | val PSNR-Y 25.45 dB | 61s
+  training batch 433/1046
+  training batch 869/1046
+[baseline_conv] epoch 25/30 | L1 0.0467 | val PSNR-Y 25.45 dB | 61s
+  training batch 440/1046
+  training batch 880/1046
+[baseline_conv] epoch 26/30 | L1 0.0467 | val PSNR-Y 25.46 dB | 60s
+  training batch 440/1046
+  training batch 881/1046
+[baseline_conv] epoch 27/30 | L1 0.0467 | val PSNR-Y 25.46 dB | 60s
+  training batch 440/1046
+  training batch 882/1046
+[baseline_conv] epoch 28/30 | L1 0.0467 | val PSNR-Y 25.46 dB | 60s
+  training batch 440/1046
+  training batch 881/1046
+[baseline_conv] epoch 29/30 | L1 0.0467 | val PSNR-Y 25.46 dB | 60s
+  training batch 440/1046
+  training batch 879/1046
+[baseline_conv] epoch 30/30 | L1 0.0467 | val PSNR-Y 25.46 dB | 60s
+RESULTS {"bicubic": {"PSNR_Y": 24.601633071899414, "SSIM_Y": 0.6641252040098691, "params": 0}, "ours_ssc_attn": {"PSNR_Y": 25.6828556060791, "SSIM_Y": 0.7344879295747169, "params": 479109, "best_validation_psnr_y": 25.566509246826172, "epochs_completed": 30, "training_and_evaluation_seconds_this_invocation": 4323.039683499839}, "baseline_conv": {"PSNR_Y": 25.574419021606445, "SSIM_Y": 0.7276636786801379, "params": 371715, "best_validation_psnr_y": 25.458900451660156, "epochs_completed": 30, "training_and_evaluation_seconds_this_invocation": 1807.6994672000874}}
+COMPLETE C:\Users\bhara\OneDrive\Desktop\CV_ETP\work\full\part1_results.json

@@ -1,0 +1,12 @@
+{
+  "training_complete": true,
+  "epochs": 5,
+  "optimizer_steps": 5230,
+  "training_and_validation_seconds": 1587.045686500147,
+  "all_2000_per_image_metrics_verified": true,
+  "original_results_reproduced": true,
+  "lpips_reduction_percent": 22.132259203634618,
+  "default_model": "detail",
+  "evaluation_completed": true,
+  "note": "PowerShell classified upstream torchvision deprecation warnings as NativeCommandError records; all evaluation outputs, completion prints and 2000-image arrays were verified. No evaluation traceback occurred."
+}

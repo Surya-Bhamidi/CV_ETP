@@ -1,0 +1,10 @@
+# Preserve exact bytes: experiment manifests contain source/checkpoint SHA256s.
+* -text
+*.pt binary
+*.pth binary
+*.onnx binary
+*.npz binary
+*.npy binary
+*.png binary
+*.jpg binary
+*.zip binary

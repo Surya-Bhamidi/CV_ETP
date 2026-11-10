@@ -1,0 +1,18 @@
+# Versions recorded in the working environment. Install a matching CUDA-enabled
+# PyTorch build separately if your platform's default wheels are CPU-only.
+torch==2.14.0
+torchvision==0.29.0
+numpy==2.4.2
+Pillow==12.1.1
+opencv-python-headless==5.0.0.93
+scikit-image==0.26.0
+scikit-learn==1.8.0
+scipy==1.17.1
+matplotlib==3.10.8
+onnx==1.23.2
+onnx2torch==1.5.15
+datasets==5.2.0
+gdown==6.5.1
+tqdm==4.67.3
+-r requirements-ui.txt
+-r requirements-quality.txt

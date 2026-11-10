@@ -1,0 +1,40 @@
+{
+  "mode": "balanced",
+  "best_validation": {
+    "psnr_y": 25.706119135022163,
+    "ssim_y": 0.7226950972544254,
+    "pixel_l1": 0.045352890781941824,
+    "edge_l1": 0.019362926053872798,
+    "vgg_l1": 0.9686537152156234,
+    "arcface_cos": 0.3699021061474923,
+    "mobileface_cos": 0.3976978841237724
+  },
+  "baseline_validation": {
+    "original_sr": {
+      "psnr_y": 25.862078100442886,
+      "ssim_y": 0.7368819863704485,
+      "pixel_l1": 0.044557954868650995,
+      "edge_l1": 0.01900205902347807,
+      "vgg_l1": 0.9790169363841414,
+      "arcface_cos": 0.30432882488821633,
+      "mobileface_cos": 0.3728708315757103
+    },
+    "bicubic": {
+      "psnr_y": 24.78071704506874,
+      "ssim_y": 0.665415679546291,
+      "pixel_l1": 0.054865442813024856,
+      "edge_l1": 0.021989992390444968,
+      "vgg_l1": 1.141701021231711,
+      "arcface_cos": 0.3635141409467906,
+      "mobileface_cos": 0.33097431604983285
+    }
+  },
+  "promotion_checks": {
+    "pixel_quality_guard": true,
+    "independent_feature_similarity_improves": true,
+    "perceptual_error_improves": false,
+    "edge_error_not_materially_worse": true
+  },
+  "passes_validation": false,
+  "checkpoint": "C:\\Users\\bhara\\OneDrive\\Desktop\\CV_ETP\\work\\refinement\\trial_balanced\\best.pt"
+}

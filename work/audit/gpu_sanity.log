@@ -1,0 +1,4 @@
+RUN START UTC 2026-11-10T10:30:36.641092+00:00
+sanity OK | output (2, 3, 112, 112) | params 479,109
+baseline_conv {"parameters": 371715, "batch": 64, "training_step_seconds": 0.054274766628320016, "finite_gradients": true}
+ours_ssc_attn {"parameters": 479109, "batch": 64, "training_step_seconds": 0.12786829999337593, "finite_gradients": true}

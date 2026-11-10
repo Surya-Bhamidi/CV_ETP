@@ -1,0 +1,23 @@
+{
+  "bicubic": {
+    "PSNR_Y": 24.601633071899414,
+    "SSIM_Y": 0.6641252040098691,
+    "params": 0
+  },
+  "ours_ssc_attn": {
+    "PSNR_Y": 25.6828556060791,
+    "SSIM_Y": 0.7344879295747169,
+    "params": 479109,
+    "best_validation_psnr_y": 25.566509246826172,
+    "epochs_completed": 30,
+    "training_and_evaluation_seconds_this_invocation": 4323.039683499839
+  },
+  "baseline_conv": {
+    "PSNR_Y": 25.574419021606445,
+    "SSIM_Y": 0.7276636786801379,
+    "params": 371715,
+    "best_validation_psnr_y": 25.458900451660156,
+    "epochs_completed": 30,
+    "training_and_evaluation_seconds_this_invocation": 1807.6994672000874
+  }
+}

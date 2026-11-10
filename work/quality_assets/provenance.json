@@ -1,0 +1,6 @@
+{
+  "url": "https://download.pytorch.org/models/squeezenet1_1-b8a52dc0.pth",
+  "sha256": "b8a52dc049b60e4b6ab68ad0df457362afab8b6304b2febdc1650a5dab4d7e7b",
+  "metric": "Official LPIPS 0.1.4, SqueezeNet v0.1 calibrated weights packaged with lpips.",
+  "role": "Evaluation only, never used in training or checkpoint selection."
+}

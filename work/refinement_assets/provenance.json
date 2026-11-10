@@ -1,0 +1,12 @@
+{
+  "vgg16": {
+    "url": "https://download.pytorch.org/models/vgg16-397923af.pth",
+    "sha256": "397923af8e79cdbb6a7127f12361acd7a2f83e06b05044ddf496e83de57a5bf0"
+  },
+  "mobilefacenet": {
+    "url": "https://github.com/deepinsight/insightface/releases/download/model-zoo/buffalo_sc.zip",
+    "archive_sha256": "57d31b56b6ffa911c8a73cfc1707c73cab76efe7f13b675a05223bf42de47c72",
+    "onnx_sha256": "9cc6e4a75f0e2bf0b1aed94578f144d15175f357bdc05e815e5c4a02b319eb4f"
+  },
+  "purpose": "VGG and ResNet50 ArcFace guide training; MobileFaceNet is used only for validation and evaluation."
+}

@@ -1,0 +1,19 @@
+{
+  "checkpoint": "work/visual_sr/full_reconstruction/best.pt",
+  "checkpoint_sha256": "d320936014d5ed01b7dc9950e06fd4d9a451eb558dd14358db5067a99bf5c7a6",
+  "passes_reconstruction_checks": true,
+  "checks": {
+    "full_training_completed": true,
+    "validation_reconstruction_guards": true,
+    "test_psnr_within_0_20_db": true,
+    "test_ssim_within_0_003": true,
+    "test_independent_lpips_improves": true
+  },
+  "finetune_epochs": 5,
+  "epochs_run": 5,
+  "mode": "perceptual",
+  "default_model": "detail",
+  "description": "Reconstruction-first fine-tuning; no recognition loss. Original remains available.",
+  "scope": "Synthetic FFHQ reconstruction only; no CCTV identity improvement is claimed.",
+  "default_promotion_reason": "All reconstruction checks, manual comparison review and browser/API checks passed. Original remains selectable; external models never default."
+}

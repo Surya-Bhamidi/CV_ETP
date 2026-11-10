@@ -1,0 +1,14 @@
+{
+  "ours_ssc_attn": {
+    "epochs": 30,
+    "updates": 31380,
+    "history_entries": 30,
+    "last_five_validation_delta_db": 0.0055065155029296875
+  },
+  "baseline_conv": {
+    "epochs": 30,
+    "updates": 31380,
+    "history_entries": 30,
+    "last_five_validation_delta_db": 0.00368499755859375
+  }
+}

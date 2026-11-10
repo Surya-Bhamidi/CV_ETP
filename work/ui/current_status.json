@@ -1,0 +1,55 @@
+{
+  "checked_at_utc": "2026-11-10T18:37:56.648375+00:00",
+  "status": {
+    "app_id": "cv-etp-compare-v1",
+    "state": "ready",
+    "error": null,
+    "hardware": "NVIDIA GeForce RTX 4060 Laptop GPU",
+    "scale": 4,
+    "epochs": 30,
+    "samples_available": true,
+    "models": [
+      {
+        "id": "standard",
+        "label": "Pixel model (original)",
+        "epochs": 30,
+        "description": "30 epochs \u00b7 pixel L1 reconstruction",
+        "finetune_epochs": 0,
+        "kind": "custom",
+        "parameters": 479109
+      },
+      {
+        "id": "detail",
+        "label": "Reconstruction refinement (ours)",
+        "epochs": 35,
+        "finetune_epochs": 5,
+        "kind": "custom",
+        "parameters": 479109,
+        "description": "30 base + 5 fine-tune epochs \u00b7 structure and perceptual reconstruction",
+        "reconstruction_validated": true,
+        "warning": "Fine-tuned for reconstruction on synthetic FFHQ pairs. Compare with Original to inspect remaining missing or changed facial details."
+      },
+      {
+        "id": "restoration",
+        "label": "GFPGAN 1.4 (pretrained)",
+        "epochs": null,
+        "finetune_epochs": 0,
+        "kind": "external_pretrained",
+        "parameters": 86444252,
+        "description": "External pretrained restoration \u00b7 aligned face crops \u00b7 adjustable strength",
+        "warning": "Pretrained generative restoration can change facial features. These are estimated details, not verified recovery. This is GFPGAN, separate from our trained SR model. FFHQ pretraining overlap is not excluded."
+      }
+    ],
+    "default_model": "detail"
+  },
+  "checks": {
+    "gpu_ready": true,
+    "validated_custom_refinement_is_default": true,
+    "ui_checkpoint_matches_evaluated_checkpoint": true,
+    "same_input_and_clean_reference": true,
+    "previous_sr_matches_original": true,
+    "new_output_is_distinct": true,
+    "custom_inference_does_not_require_clean_reference": true,
+    "retired_models_not_exposed": true
+  }
+}

@@ -1,0 +1,1 @@
+Top to bottom: nearest enlarged LR; bicubic; baseline_conv; ours_ssc_attn; clean HR.

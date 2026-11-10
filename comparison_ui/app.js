@@ -1,0 +1,252 @@
+'use strict';
+const $ = id => document.getElementById(id);
+const state = {ready:false,busy:false,result:null,source:'samples',layout:'slider',compare:'input',split:50,zoom:1,panX:0,panY:0,upload:null,reference:null,sample:null,model:'standard',models:[],lastRequest:null,strength:.75};
+const icon = (id) => `<svg aria-hidden="true"><use href="#${id}"/></svg>`;
+const sizeText = size => `${size[0]} × ${size[1]}`;
+const wait = ms => new Promise(resolve => setTimeout(resolve, ms));
+
+async function api(path, options={}) {
+  const response = await fetch(path, options);
+  let body;
+  try { body = await response.json(); } catch { throw new Error('The local server returned an unexpected response.'); }
+  if (!response.ok) throw new Error(typeof body.detail === 'string' ? body.detail : 'This image could not be processed.');
+  return body;
+}
+function showError(message) { $('error-message').textContent=message; $('error-message').hidden=false; }
+function clearError() { $('error-message').hidden=true; $('error-message').textContent=''; }
+function updateButtons() {
+  $('reconstruct').disabled=!state.ready||state.busy||!state.upload;
+  document.querySelectorAll('.sample-button').forEach(button=>button.disabled=state.busy);
+  $('input-mode').disabled=state.busy;
+  $('drop-zone').disabled=state.busy;
+  $('model-choice').disabled=state.busy||!state.ready;
+  $('restoration-strength').disabled=state.busy||!state.ready;
+}
+function setBusy(busy, label='Reconstructing your image…') {
+  state.busy=busy;
+  $('loading-overlay').hidden=!busy;
+  $('loading-label').textContent=label;
+  $('loading-hint').textContent=state.ready?'Running your fully trained model locally.':'The comparison will appear here.';
+  $('reconstruct').querySelector('span').textContent=busy?'Reconstructing…':'Reconstruct image';
+  updateButtons();
+}
+function setSource(source) {
+  state.source=source;
+  for (const name of ['samples','upload']) {
+    const active=source===name;
+    $(`${name}-tab`).classList.toggle('active',active);
+    $(`${name}-tab`).setAttribute('aria-selected',String(active));
+    $(`${name}-panel`).hidden=!active;
+  }
+  clearError();
+}
+function setSplit(value) {
+  state.split=Math.min(100,Math.max(0,Number(value)));
+  $('before-layer').style.clipPath=`inset(0 ${100-state.split}% 0 0)`;
+  $('compare-divider').style.left=`${state.split}%`;
+  $('split-range').value=state.split;
+  $('split-range').setAttribute('aria-valuetext',`${Math.round(state.split)} percent comparison image, ${Math.round(100-state.split)} percent reconstructed image`);
+}
+function updateTransform() {
+  $('image-stage').style.setProperty('--image-transform',`translate(${state.panX}px,${state.panY}px) scale(${state.zoom})`);
+  $('image-stage').classList.toggle('zoomed',state.zoom>1);
+  $('zoom-level').textContent=state.zoom===1?'Fit':`${Math.round(state.zoom*100)}%`;
+  $('zoom-out').disabled=state.zoom<=1;
+  $('zoom-in').disabled=state.zoom>=4;
+  $('drag-hint').textContent=state.zoom>1?'Drag the image to pan':'Drag the divider to compare';
+}
+function resetView() { state.zoom=1; state.panX=0; state.panY=0; updateTransform(); }
+function zoomBy(delta) { state.zoom=Math.min(4,Math.max(1,state.zoom+delta)); if(state.zoom===1) {state.panX=0;state.panY=0;} updateTransform(); }
+function renderComparison() {
+  if (!state.result) return;
+  const result=state.result;
+  if (state.compare==='reference'&&!result.reference) state.compare='input';
+  if (state.compare==='previous'&&!result.previous) state.compare='input';
+  const labels={input:'LOW-RES INPUT',bicubic:'BICUBIC ×4',reference:'CLEAN ORIGINAL',previous:'ORIGINAL CUSTOM SR'};
+  const image=state.compare==='reference'?result.reference:result[state.compare];
+  $('before-image').src=image;
+  $('side-before-image').src=image;
+  for(const name of ['before-image','side-before-image']) {
+    $(name).classList.toggle('pixelated',state.compare==='input');
+    $(name).alt=labels[state.compare];
+  }
+  $('before-tag').textContent=labels[state.compare];
+  $('side-before-tag').textContent=labels[state.compare];
+  $('slider-view').hidden=state.layout!=='slider';
+  $('side-view').hidden=state.layout!=='side';
+  document.querySelectorAll('[data-compare]').forEach(button=>{
+    const active=button.dataset.compare===state.compare;
+    button.classList.toggle('active',active);button.setAttribute('aria-pressed',String(active));
+  });
+  document.querySelectorAll('[data-layout]').forEach(button=>{
+    const active=button.dataset.layout===state.layout;
+    button.classList.toggle('active',active);button.setAttribute('aria-pressed',String(active));
+  });
+  if(state.compare==='reference') $('result-note').textContent=`Clean reference view: the model received the ${sizeText(result.input_size)} low-res input, not this original image. ${result.note||''}`;
+  else $('result-note').textContent=result.note||(result.reference?'Switch to Original to inspect how closely the reconstruction matches the clean face.':'This upload has no clean reference. Compare visually, or add a matching original to measure PSNR and SSIM.');
+  setSplit(state.split);
+}
+function metric(name, number, unit, difference, digits) {
+  $(name+'-value').replaceChildren(document.createTextNode(number.toFixed(digits)));
+  if(unit) {const small=document.createElement('small');small.textContent=` ${unit}`;$(name+'-value').append(small);}
+  const caption=$(name+'-caption');
+  caption.classList.remove('positive','negative');
+  caption.classList.add(difference>=0?'positive':'negative');
+  caption.textContent=`${difference>=0?'+':''}${difference.toFixed(digits)}${unit?' '+unit:''} vs bicubic`;
+}
+function showResult(result) {
+  state.result=result;
+  $('empty-state').hidden=true;
+  $('after-image').src=result.sr;
+  $('side-after-image').src=result.sr;
+  $('input-resolution').innerHTML=`${sizeText(result.input_size)}<small> px</small>`;
+  $('output-resolution').innerHTML=`${sizeText(result.output_size)}<small> px</small>`;
+  $('original-option').disabled=!result.reference;
+  $('original-option').title=result.reference?'Compare against the clean original':'A clean original is needed';
+  $('previous-option').disabled=!result.previous;
+  if(result.model_info) {
+    $('model-description').textContent=result.model_info.description;
+    const external=result.model_info.kind==='external_pretrained';
+    $('epoch-count').textContent=external?'externally pretrained':result.model_info.finetune_epochs?`30 + ${result.model_info.finetune_epochs} epochs`:`${result.model_info.epochs} epochs`;
+    $('selected-model-label').textContent=external?(result.model_id==='codeformer'?'CodeFormer pretrained model':'GFPGAN pretrained model'):'Your trained SR model';
+    const warning=result.model_info.warning||(result.model_info.experimental?'Experimental refinement: image structure and CCTV checks regressed.':'');
+    $('model-warning').textContent=warning;
+    $('model-warning').hidden=!warning;
+    $('restoration-controls').hidden=!external;
+    $('after-tag-text').textContent=external?'RESTORATION ×4':'SR ×4';
+    $('side-after-tag-text').textContent=external?'RESTORATION ×4':'SR ×4';
+    $('after-image').alt=`Reconstructed image from ${result.model_info.label}`;
+  }
+  if(result.metrics) {
+    metric('psnr',result.metrics.sr.psnr,'dB',result.metrics.sr.psnr-result.metrics.bicubic.psnr,2);
+    metric('ssim',result.metrics.sr.ssim,'',result.metrics.sr.ssim-result.metrics.bicubic.ssim,4);
+  } else {
+    $('psnr-value').innerHTML='—<small> dB</small>';$('ssim-value').textContent='—';
+    for(const name of ['psnr','ssim']) {$(name+'-caption').textContent='A clean original is needed';$(name+'-caption').classList.remove('positive','negative');}
+  }
+  $('result-name').textContent=result.name;
+  $('runtime-label').textContent=`${result.processing_ms<1000?Math.round(result.processing_ms)+' ms':(result.processing_ms/1000).toFixed(2)+' s'} inference · processed locally`;
+  $('result-note').textContent=result.note||(result.reference?'Switch to Original to inspect how closely the reconstruction matches the clean face.':'This upload has no clean reference. Compare visually, or add a matching original to measure PSNR and SSIM.');
+  $('download').href=result.sr;
+  $('download').download=result.filename;
+  $('download').classList.remove('disabled');
+  $('download').setAttribute('aria-disabled','false');
+  resetView();setSplit(50);renderComparison();
+}
+async function reconstruct(payload, name) {
+  if(state.busy||!state.ready) return;
+  clearError();setBusy(true,`Reconstructing ${name||'your image'}…`);
+  try {
+    const result=await api('/api/compare',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({...payload,model:state.model,strength:state.strength})});
+    state.lastRequest={...payload};
+    showResult(result);
+  } catch(error) {
+    showError(error.message);
+    if(state.result?.model_id){state.model=state.result.model_id;$('model-choice').value=state.model;}
+    if(state.result?.strength!=null){state.strength=state.result.strength;$('restoration-strength').value=state.strength;$('strength-value').textContent=`${Math.round(state.strength*100)}%`;}
+  }
+  finally {setBusy(false);}
+}
+async function chooseSample(sample) {
+  if(state.busy) return;
+  state.sample=sample.id;
+  document.querySelectorAll('.sample-button').forEach(button=>{
+    const selected=Number(button.dataset.id)===sample.id;
+    button.classList.toggle('selected',selected);button.setAttribute('aria-pressed',String(selected));
+  });
+  $('selected-name').textContent=sample.name;
+  $('selected-detail').textContent=`${sizeText(sample.input_size)} input → 112 × 112 output`;
+  await reconstruct({sample_id:sample.id},sample.name.toLowerCase());
+}
+function readFile(file) {
+  return new Promise((resolve,reject)=>{
+    if(!['image/png','image/jpeg','image/webp'].includes(file.type)) {reject(new Error('Choose a PNG, JPEG, or WebP image.'));return;}
+    if(file.size>8*1024*1024) {reject(new Error('Choose an image smaller than 8 MB.'));return;}
+    const reader=new FileReader();reader.onload=()=>resolve(reader.result);reader.onerror=()=>reject(new Error('This image could not be opened.'));reader.readAsDataURL(file);
+  });
+}
+async function uploadFile(file, reference=false) {
+  if(!file||state.busy)return;
+  clearError();
+  try {
+    const url=await readFile(file);
+    if(reference) {state.reference={url,name:file.name};$('reference-name').textContent=file.name;$('reference-selection').hidden=false;return;}
+    const dimensions=await new Promise((resolve,reject)=>{const img=new Image();img.onload=()=>resolve([img.naturalWidth,img.naturalHeight]);img.onerror=()=>reject(new Error('This image could not be opened.'));img.src=url;});
+    state.upload={url,name:file.name};$('uploaded-thumb').src=url;$('upload-name').textContent=file.name;$('upload-dimensions').textContent=sizeText(dimensions)+' px';$('upload-preview').hidden=false;updateButtons();
+  } catch(error) {showError(error.message);}
+}
+function updateMode() {
+  const simulate=$('input-mode').value==='simulate';
+  $('reference-controls').hidden=simulate;
+  $('mode-help').textContent=simulate?'Creates a 112 × 112 center-fitted original and a degraded 28 × 28 input. Choose a cropped face.':'Use a cropped face. Large inputs are fitted within 256 px before processing.';
+}
+
+$('samples-tab').addEventListener('click',()=>setSource('samples'));
+$('upload-tab').addEventListener('click',()=>setSource('upload'));
+$('drop-zone').addEventListener('click',()=>$('image-file').click());
+$('image-file').addEventListener('change',event=>uploadFile(event.target.files[0]));
+$('reference-file').addEventListener('change',event=>uploadFile(event.target.files[0],true));
+$('add-reference').addEventListener('click',()=>$('reference-file').click());
+$('remove-reference').addEventListener('click',()=>{state.reference=null;$('reference-file').value='';$('reference-selection').hidden=true;});
+$('remove-upload').addEventListener('click',()=>{state.upload=null;$('image-file').value='';$('upload-preview').hidden=true;updateButtons();});
+$('input-mode').addEventListener('change',updateMode);
+$('model-choice').addEventListener('change',async event=>{state.model=event.target.value;if(state.lastRequest)await reconstruct(state.lastRequest,'the selected image');});
+$('restoration-strength').addEventListener('input',event=>{$('strength-value').textContent=`${Math.round(Number(event.target.value)*100)}%`;});
+$('restoration-strength').addEventListener('change',async event=>{state.strength=Number(event.target.value);if(['restoration','codeformer'].includes(state.model)&&state.lastRequest)await reconstruct(state.lastRequest,'the selected image');});
+for(const eventName of ['dragenter','dragover'])$('drop-zone').addEventListener(eventName,event=>{event.preventDefault();$('drop-zone').classList.add('drag-over');});
+for(const eventName of ['dragleave','drop'])$('drop-zone').addEventListener(eventName,event=>{event.preventDefault();$('drop-zone').classList.remove('drag-over');});
+$('drop-zone').addEventListener('drop',event=>uploadFile(event.dataTransfer.files[0]));
+$('reconstruct').addEventListener('click',()=>{if(state.upload)reconstruct({image:state.upload.url,name:state.upload.name,mode:$('input-mode').value,reference:state.reference?.url||null},'your image');});
+document.querySelectorAll('[data-layout]').forEach(button=>button.addEventListener('click',()=>{state.layout=button.dataset.layout;resetView();renderComparison();}));
+document.querySelectorAll('[data-compare]').forEach(button=>button.addEventListener('click',()=>{state.compare=button.dataset.compare;renderComparison();}));
+$('split-range').addEventListener('input',event=>setSplit(event.target.value));
+$('zoom-in').addEventListener('click',()=>zoomBy(.5));
+$('zoom-out').addEventListener('click',()=>zoomBy(-.5));
+$('reset-view').addEventListener('click',resetView);
+$('fullscreen').addEventListener('click',async()=>{try{if(document.fullscreenElement)await document.exitFullscreen();else await $('viewer-card').requestFullscreen();}catch{showError('Full-screen mode is not available in this browser.');}});
+let dragging=null;
+$('divider-handle').addEventListener('pointerdown',event=>{if(!state.result)return;event.preventDefault();event.stopPropagation();dragging={type:'split'};$('divider-handle').setPointerCapture(event.pointerId);});
+$('image-stage').addEventListener('pointerdown',event=>{if(state.busy||!state.result||state.zoom<=1||event.target.closest('#divider-handle'))return;event.preventDefault();dragging={type:'pan',x:event.clientX,y:event.clientY,px:state.panX,py:state.panY};$('image-stage').setPointerCapture(event.pointerId);$('image-stage').classList.add('panning');});
+window.addEventListener('pointermove',event=>{
+  if(!dragging)return;
+  if(dragging.type==='split'){const box=$('image-stage').getBoundingClientRect();setSplit(100*(event.clientX-box.left)/box.width);}
+  else {const bounds=$('image-stage').getBoundingClientRect();const limitX=bounds.width*(state.zoom-1)/2;const limitY=bounds.height*(state.zoom-1)/2;state.panX=Math.max(-limitX,Math.min(limitX,dragging.px+event.clientX-dragging.x));state.panY=Math.max(-limitY,Math.min(limitY,dragging.py+event.clientY-dragging.y));updateTransform();}
+});
+function stopDrag(){dragging=null;$('image-stage').classList.remove('panning');}
+window.addEventListener('pointerup',stopDrag);window.addEventListener('pointercancel',stopDrag);
+document.addEventListener('keydown',event=>{if(event.key==='Escape')resetView();});
+
+async function start() {
+  $('model-status').classList.add('loading');
+  for(let attempt=0;attempt<180;attempt++) {
+    try {
+      const status=await api('/api/status');
+      if(status.state==='error') {showError(status.error);$('status-text').textContent='Model unavailable';$('model-status').className='model-status error';$('loading-overlay').hidden=true;return;}
+      if(status.state==='ready') {
+        state.ready=true;$('status-text').textContent=status.hardware==='CPU'?'Model ready · CPU':'Model ready · GPU';$('model-status').classList.remove('loading');$('epoch-count').textContent=status.epochs;
+        state.models=status.models?.length?status.models:[{id:'standard',label:'Pixel model (original)',description:'30 epochs · pixel L1 reconstruction'}];
+        const query=new URLSearchParams(location.search);
+        const strength=Number(query.get('strength')??.75);
+        if(Number.isFinite(strength)&&strength>=0&&strength<=1)state.strength=strength;
+        $('restoration-strength').value=state.strength;
+        $('strength-value').textContent=`${Math.round(state.strength*100)}%`;
+        if(['input','bicubic','reference','previous'].includes(query.get('compare'))) state.compare=query.get('compare');
+        const requested=query.get('model')||status.default_model||'standard';
+        state.model=state.models.some(model=>model.id===requested)?requested:'standard';
+        $('model-choice').replaceChildren(...state.models.map(model=>{const option=document.createElement('option');option.value=model.id;option.textContent=model.label;return option;}));
+        $('model-choice').value=state.model;
+        $('model-description').textContent=state.models.find(model=>model.id===state.model)?.description||'';
+        $('loading-overlay').hidden=true;updateButtons();
+        if(status.samples_available) {
+          const response=await api('/api/samples');$('sample-grid').replaceChildren();$('sample-count').textContent=`${response.samples.length} examples`;
+          for(const sample of response.samples) {const button=document.createElement('button');button.className='sample-button';button.dataset.id=sample.id;button.setAttribute('aria-label',`Reconstruct ${sample.name}`);button.setAttribute('aria-pressed','false');const img=document.createElement('img');img.src=sample.thumbnail;img.alt=sample.name;button.append(img);button.addEventListener('click',()=>chooseSample(sample));$('sample-grid').append(button);}
+          if(response.samples.length){const index=Number(query.get('sample')||0);await chooseSample(response.samples.find(sample=>sample.id===index)||response.samples[0]);}
+        } else {$('sample-grid').replaceChildren();$('sample-count').textContent='Not available';$('sample-description').hidden=true;setSource('upload');}
+        return;
+      }
+    } catch(error) {if(attempt===179){showError('The local server could not be reached. Restart the comparison app.');$('loading-overlay').hidden=true;return;}}
+    await wait(1000);
+  }
+  showError('The model is taking longer than expected to load. Check the server log and refresh.');$('loading-overlay').hidden=true;
+}
+updateTransform();start();

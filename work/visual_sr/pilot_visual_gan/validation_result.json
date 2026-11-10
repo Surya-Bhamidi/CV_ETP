@@ -1,0 +1,21 @@
+{
+  "mode": "visual_gan",
+  "baseline": {
+    "psnr_y": 25.701281934976578,
+    "ssim_y": 0.7327950586080108,
+    "pixel_l1": 0.045336118804698344,
+    "vgg_l1": 0.9870771272107959,
+    "laplacian_l1": 0.023967717977939174
+  },
+  "best_validation": {
+    "psnr_y": 25.642308838665485,
+    "ssim_y": 0.7326177021916953,
+    "pixel_l1": 0.0457233929191716,
+    "vgg_l1": 0.9547983114607632,
+    "laplacian_l1": 0.0243236695532687
+  },
+  "best_epoch": 2,
+  "passes_reconstruction_guards": true,
+  "trained_epochs": 2,
+  "checkpoint": "C:\\Users\\bhara\\OneDrive\\Desktop\\CV_ETP\\work\\visual_sr\\pilot_visual_gan\\best.pt"
+}

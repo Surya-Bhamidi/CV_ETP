@@ -1,0 +1,21 @@
+{
+  "mode": "perceptual",
+  "baseline": {
+    "psnr_y": 25.566521312713622,
+    "ssim_y": 0.7317709785993353,
+    "pixel_l1": 0.04601009494066238,
+    "vgg_l1": 0.9946393499970436,
+    "laplacian_l1": 0.024260472012683748
+  },
+  "best_validation": {
+    "psnr_y": 25.507776918411256,
+    "ssim_y": 0.7319066831901219,
+    "pixel_l1": 0.0464287103060633,
+    "vgg_l1": 0.9474958893656731,
+    "laplacian_l1": 0.024642979548312724
+  },
+  "best_epoch": 5,
+  "passes_reconstruction_guards": true,
+  "trained_epochs": 5,
+  "checkpoint": "C:\\Users\\bhara\\OneDrive\\Desktop\\CV_ETP\\work\\visual_sr\\full_reconstruction\\best.pt"
+}

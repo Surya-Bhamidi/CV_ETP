@@ -1,0 +1,26 @@
+{
+  "commit": "b33cc7d639d6545bfcccc7e0bc6ae51f24e79c2b",
+  "files": {
+    "codeformer_arch.py": {
+      "url": "https://raw.githubusercontent.com/sczhou/CodeFormer/b33cc7d639d6545bfcccc7e0bc6ae51f24e79c2b/basicsr/archs/codeformer_arch.py",
+      "sha256": "dfccf9e9e6cd58b933301350e956418d1ffb15bb601ef5ce16d6dda3f01d020a",
+      "bytes": 11117
+    },
+    "vqgan_arch.py": {
+      "url": "https://raw.githubusercontent.com/sczhou/CodeFormer/b33cc7d639d6545bfcccc7e0bc6ae51f24e79c2b/basicsr/archs/vqgan_arch.py",
+      "sha256": "5ef00125ce448e34c9c02655bdebff5dca51589597c7c43a0b4bf2326d32e8cb",
+      "bytes": 15428
+    },
+    "LICENSE": {
+      "url": "https://raw.githubusercontent.com/sczhou/CodeFormer/b33cc7d639d6545bfcccc7e0bc6ae51f24e79c2b/LICENSE",
+      "sha256": "cfd654022bdc44fdd809670d50239bcb1ebf2f4a661dca7e328f93c269538246",
+      "bytes": 1717
+    },
+    "codeformer.pth": {
+      "url": "https://github.com/sczhou/CodeFormer/releases/download/v0.1.0/codeformer.pth",
+      "sha256": "1009e537e0c2a07d4cabce6355f53cb66767cd4b4297ec7a4a64ca4b8a5684b7",
+      "bytes": 376637898
+    }
+  },
+  "role": "External pretrained research baseline; not trained as part of this project."
+}

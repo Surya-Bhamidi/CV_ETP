@@ -1,0 +1,19 @@
+{
+  "shape": [
+    70000,
+    128,
+    128,
+    3
+  ],
+  "dtype": "uint8",
+  "image_pixels_sha256": "09009824c7596d2c88605a8447792b04a4a97dbfdb67a890ac246ca61a7b045d",
+  "images_verified_against_zip": 256,
+  "duplicate_groups": [],
+  "cross_split_duplicate_groups": [],
+  "split_counts": {
+    "train": 67000,
+    "validation": 1000,
+    "test": 2000
+  },
+  "seconds": 8.127289700089023
+}

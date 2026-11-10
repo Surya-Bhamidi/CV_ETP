@@ -1,0 +1,20 @@
+{
+  "device": "cuda",
+  "torch": "2.14.0+cu130",
+  "torchvision": "0.29.0+cu130",
+  "models": {
+    "baseline_conv": {
+      "parameters": 371715,
+      "batch": 64,
+      "training_step_seconds": 0.054274766628320016,
+      "finite_gradients": true
+    },
+    "ours_ssc_attn": {
+      "parameters": 479109,
+      "batch": 64,
+      "training_step_seconds": 0.12786829999337593,
+      "finite_gradients": true
+    }
+  },
+  "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU"
+}

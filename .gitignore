@@ -1,0 +1,41 @@
+# Local Python/editor state and credentials
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.pytest_cache/
+.publish-preview-*/
+.env
+.env.*
+!.env.example
+.aws/
+.codex/
+.agents/
+*.pem
+*.key
+*.pfx
+.DS_Store
+Thumbs.db
+
+# Downloaded datasets and generated recognition embedding caches
+work/data/*
+!work/data/source.json
+work/recognition/
+work/**/emb/
+
+# Re-downloadable third-party model binaries (keep provenance and licenses)
+work/*_assets/*.pth
+work/*_assets/*.pt
+work/*_assets/*.onnx
+work/*_assets/*.zip
+
+# Incomplete downloads and live UI process state
+*.part
+*.tmp
+*.pid
+work/ui/*.log
+work/ui/uploaded_*.png
+work/ui/downloaded_sr.png
+
+# Project-trained checkpoints, reports, plots and experiment records are included.

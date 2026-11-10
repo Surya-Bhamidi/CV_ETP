@@ -1,0 +1,5 @@
+{
+  "enabled": false,
+  "reason": "Validation comparison showed visible ghosting/double edges and poorer structure than GFPGAN. Fidelity 0/0.5/1 and landmark alignment were tried. Keep this research baseline archived; do not present it as a project improvement.",
+  "evidence": ["fidelity_comparison.png", "fidelity_metrics.json", "../alignment_assets/trial.json"]
+}

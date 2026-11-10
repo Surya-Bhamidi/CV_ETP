@@ -1,0 +1,5 @@
+{
+  "prefetched_order_and_pixels_equal_synchronous_loader": true,
+  "samples": 128,
+  "batches": 8
+}

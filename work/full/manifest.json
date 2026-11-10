@@ -1,0 +1,48 @@
+{
+  "protocol": "rgb_jpeg_seeded_v2",
+  "pilot": false,
+  "config": {
+    "work_dir": "C:\\Users\\bhara\\OneDrive\\Desktop\\CV_ETP\\work\\full",
+    "scale": 4,
+    "hr_size": 112,
+    "n_val": 1000,
+    "n_test": 2000,
+    "feat": 48,
+    "blocks": 6,
+    "keep_ratio": 0.5,
+    "batch": 64,
+    "epochs": 30,
+    "lr": 0.0002,
+    "num_workers": 0,
+    "seed": 42
+  },
+  "device": "cuda",
+  "train_images": 67000,
+  "validation_images": 1000,
+  "test_images": 2000,
+  "notebook_sha256": "ecdea0ed3e94089b2258a18b631928acd8841b7d052a3d72f438824e0a97d125",
+  "execution_changes": [
+    "num_workers=0 for Windows",
+    "FFHQ cache built directly from the same dataset's image archive",
+    "audited RGB JPEG handling, seeded epoch augmentation, atomic validated checkpoints"
+  ],
+  "data_integrity": {
+    "shape": [
+      70000,
+      128,
+      128,
+      3
+    ],
+    "dtype": "uint8",
+    "image_pixels_sha256": "09009824c7596d2c88605a8447792b04a4a97dbfdb67a890ac246ca61a7b045d",
+    "images_verified_against_zip": 256,
+    "duplicate_groups": [],
+    "cross_split_duplicate_groups": [],
+    "split_counts": {
+      "train": 67000,
+      "validation": 1000,
+      "test": 2000
+    },
+    "seconds": 8.127289700089023
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "torch": "2.14.0+cu130",
+  "torchvision": "0.29.0+cu130",
+  "opencv-python-headless": "5.0.0.93",
+  "numpy": "2.4.2",
+  "pillow": "12.1.1",
+  "datasets": "5.2.0",
+  "scikit-image": "0.26.0",
+  "scikit-learn": "1.8.0",
+  "scipy": "1.17.1",
+  "gdown": "6.5.1",
+  "onnx": "1.23.2",
+  "onnx2torch": "1.5.15"
+}

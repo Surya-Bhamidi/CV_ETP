@@ -1,0 +1,1 @@
+Archived earlier refinement. The recognizer-guided candidate regressed in reconstruction and is retired from active UI options. Its weights/results are preserved for reproducibility. Current completed work, model defaults and verified metrics are described in work/visual_sr/CURRENT_WORK.md and work/visual_sr/full_reconstruction/quality_report.md.
