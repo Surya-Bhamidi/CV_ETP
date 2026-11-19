@@ -1,0 +1,83 @@
+{
+  "scope": "Fixed model/native calibration, paired anchor-ID resampling only; does not fully account for shared negative IDs, calibration fitting, training seeds, repeated test use or upstream overlap.",
+  "seed": 42,
+  "resamples": 2000,
+  "results": {
+    "main": {
+      "single": {
+        "v4_supported_accuracy_interval_percent": [
+          69.78283916712257,
+          71.52725449934572
+        ],
+        "bicubic_change_interval_pp": [
+          2.594688588256831,
+          4.191453789581618
+        ],
+        "camera_v3_change_interval_pp": [
+          2.933174067830084,
+          4.571515818695206
+        ],
+        "app_default_change_interval_pp": [
+          3.76321149399978,
+          5.459056929968204
+        ]
+      },
+      "mirror": {
+        "v4_supported_accuracy_interval_percent": [
+          69.59758208910574,
+          71.32982864763066
+        ],
+        "bicubic_change_interval_pp": [
+          -0.5962409771283822,
+          0.6686194410967798
+        ],
+        "camera_v3_change_interval_pp": [
+          0.4548782255023956,
+          1.2164238574941504
+        ],
+        "app_default_change_interval_pp": [
+          1.4506600054046628,
+          2.971270174507584
+        ]
+      }
+    },
+    "additional": {
+      "single": {
+        "v4_supported_accuracy_interval_percent": [
+          61.26928008733607,
+          64.91431046455767
+        ],
+        "bicubic_change_interval_pp": [
+          0.8790793170520855,
+          3.649430582547253
+        ],
+        "camera_v3_change_interval_pp": [
+          1.8770344568159973,
+          4.588230892890735
+        ],
+        "app_default_change_interval_pp": [
+          2.0250521886485853,
+          5.355576049387833
+        ]
+      },
+      "mirror": {
+        "v4_supported_accuracy_interval_percent": [
+          60.1761864711778,
+          63.804987714990084
+        ],
+        "bicubic_change_interval_pp": [
+          -3.6079452114238957,
+          -1.0581947516846728
+        ],
+        "camera_v3_change_interval_pp": [
+          -0.02979793691037974,
+          1.3944466657437602
+        ],
+        "app_default_change_interval_pp": [
+          -0.2653253493936907,
+          2.8481461286804786
+        ]
+      }
+    }
+  }
+}

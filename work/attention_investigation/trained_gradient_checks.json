@@ -1,0 +1,42 @@
+{
+  "trained_checkpoint_gradients": [
+    {
+      "block": 1,
+      "score_gradient_l1": 8.230023116340135e-06,
+      "offset_gradient_l1": 1.654847264289856,
+      "all_attention_gradients_finite": true
+    },
+    {
+      "block": 2,
+      "score_gradient_l1": 0.007288772401807364,
+      "offset_gradient_l1": 1.6573262214660645,
+      "all_attention_gradients_finite": true
+    },
+    {
+      "block": 3,
+      "score_gradient_l1": 0.01026954667759128,
+      "offset_gradient_l1": 1.293591022491455,
+      "all_attention_gradients_finite": true
+    },
+    {
+      "block": 4,
+      "score_gradient_l1": 9.403295200272055e-07,
+      "offset_gradient_l1": 1.3489460945129395,
+      "all_attention_gradients_finite": true
+    },
+    {
+      "block": 5,
+      "score_gradient_l1": 0.009735455445479602,
+      "offset_gradient_l1": 1.6985673904418945,
+      "all_attention_gradients_finite": true
+    },
+    {
+      "block": 6,
+      "score_gradient_l1": 0.00010379075530408954,
+      "offset_gradient_l1": 1.6405975818634033,
+      "all_attention_gradients_finite": true
+    }
+  ],
+  "rectangular_two_and_eight_pass_inverse_transforms": true,
+  "no_optimizer_step_performed": true
+}

@@ -20,7 +20,7 @@ def main():
         browser = p.chromium.launch(channel="msedge", headless=True, args=["--disable-gpu"])
         page = browser.new_page(viewport={"width": 1440, "height": 1000}, device_scale_factor=1)
         page.on("pageerror", lambda error: errors.append(str(error)))
-        page.goto(URL, wait_until="networkidle")
+        page.goto(URL + '/?split=test&focus=all', wait_until="networkidle")
         page.wait_for_function("document.querySelector('#download').getAttribute('aria-disabled') === 'false'", timeout=120000)
         expect(page.locator(".sample-button")).to_have_count(12)
         expect(page.locator("#input-resolution")).to_contain_text("28")
@@ -108,7 +108,7 @@ def main():
         page.screenshot(path=str(ARTIFACTS / "desktop.png"), full_page=True)
         mobile = browser.new_page(viewport={"width": 390, "height": 844}, is_mobile=True, has_touch=True)
         mobile.on("pageerror", lambda error: errors.append(str(error)))
-        mobile.goto(URL, wait_until="networkidle")
+        mobile.goto(URL + '/?split=test&focus=all', wait_until="networkidle")
         mobile.wait_for_function("document.querySelector('#download').getAttribute('aria-disabled') === 'false'", timeout=120000)
         assert mobile.evaluate("document.documentElement.scrollWidth <= window.innerWidth"), "Mobile horizontal overflow"
         mobile.locator("[data-layout='side']").click()

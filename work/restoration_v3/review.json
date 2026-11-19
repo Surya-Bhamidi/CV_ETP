@@ -1,0 +1,13 @@
+{
+  "available_for_comparison": true,
+  "checkpoint": "work/restoration_v3/final.pt",
+  "checkpoint_sha256": "1cc9cc06944d97cc86c58a0eadfc45cc981d54b13002ec2878062bcc8082f658",
+  "checks": {
+    "validation_selected_new_epoch": true,
+    "direct_leakage_audit_passed": true
+  },
+  "experimental": true,
+  "release_selected_using_test": false,
+  "default_model_unchanged": true,
+  "warning": "Validation-selected observation-consistent restoration. No clean HR QMUL targets; generated facial detail is not verified identity recovery. Test results are reported separately and do not select this option."
+}

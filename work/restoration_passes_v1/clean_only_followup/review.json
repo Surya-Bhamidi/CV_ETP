@@ -1,0 +1,12 @@
+{
+  "available_as_clean_only_experiment": true,
+  "validation_selected": true,
+  "test_used_to_select_method": false,
+  "checkpoint_sha256": "2fd49ea0226e05c7f9fcc1263fde429995c0a15b4be00fba52d045b25284fe11",
+  "inference_source_sha256": "a2b39c1b32e3be0b9869860dda09d6d52276c88d12b221150b3d727919792c12",
+  "method": "backprojection3",
+  "allowed_profile": "clean28",
+  "native_camera_allowed": false,
+  "default_ui_stays_single": true,
+  "warning": "Experimental consistency correction for known clean bicubic inputs only. Not repeated neural SR, not an identity-recovery percentage."
+}

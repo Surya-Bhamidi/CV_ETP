@@ -1,0 +1,235 @@
+{
+  "protocol": {
+    "source_sha256": "7814ccc990dae58889a63dee773f590d18214cc7cbf8998827bfff714ed04e59",
+    "checkpoints": {
+      "app_default": "d320936014d5ed01b7dc9950e06fd4d9a451eb558dd14358db5067a99bf5c7a6",
+      "camera_v3": "1cc9cc06944d97cc86c58a0eadfc45cc981d54b13002ec2878062bcc8082f658",
+      "identity_v4": "2fd49ea0226e05c7f9fcc1263fde429995c0a15b4be00fba52d045b25284fe11"
+    },
+    "pipeline": "Native crop -> app min8/max256 handling -> x4 SR or bicubic -> round to8-bit RGB -> bicubic antialias resize112 -> same frozen MobileFace single/mirrored features.",
+    "unsupported": "Reject min side<8, or resizing max256 makes min side<8, exactly as app. Retain every pair; report coverage and count abstentions as unsuccessful in all-pair success.",
+    "calibration": "Original512 native crops from256 held-out official-training identities, original balanced512 pairs. Fit using supported calibration pairs only; report count. No test threshold fitting.",
+    "batching": "Exact native shapes grouped for throughput; no padding/resizing to a batch shape. Recognition112 normalization only after exported SR.",
+    "scope": "Recorded still-crop replay; not live camera/video or full-frame detector/tracker. Repeatedly evaluated cohorts; unknown upstream/FFHQ person overlap remains."
+  },
+  "calibration_sha256": "f18ceed98816b47c9062d8137c7dcce56737a5305688a03503a822be0937ffbc",
+  "input_coverage": {
+    "validation": {
+      "images": 512,
+      "supported_images": 509,
+      "unsupported_images": 3
+    },
+    "main": {
+      "images": 9913,
+      "supported_images": 9872,
+      "unsupported_images": 41
+    },
+    "additional": {
+      "images": 1423,
+      "supported_images": 1377,
+      "unsupported_images": 46
+    }
+  },
+  "recognition": {
+    "bicubic": {
+      "main": {
+        "single": {
+          "supported_pair_accuracy": 0.6726032588101554,
+          "all_pair_success_with_abstentions_counted_unsuccessful": 0.6672932330827067,
+          "supported_pair_auc": 0.7734148799550566,
+          "threshold_from_native_training_validation": 0.14795026183128357,
+          "pairs": 10640,
+          "supported_pairs": 10556,
+          "unsupported_pairs": 84,
+          "coverage": 0.9921052631578947,
+          "correct_pairs": 7100
+        },
+        "mirror": {
+          "supported_pair_accuracy": 0.7043387646835922,
+          "all_pair_success_with_abstentions_counted_unsuccessful": 0.6987781954887218,
+          "supported_pair_auc": 0.7757375227835458,
+          "threshold_from_native_training_validation": 0.21833109855651855,
+          "pairs": 10640,
+          "supported_pairs": 10556,
+          "unsupported_pairs": 84,
+          "coverage": 0.9921052631578947,
+          "correct_pairs": 7435
+        }
+      },
+      "additional": {
+        "single": {
+          "supported_pair_accuracy": 0.6092879256965944,
+          "all_pair_success_with_abstentions_counted_unsuccessful": 0.5761124121779859,
+          "supported_pair_auc": 0.7023343685300206,
+          "threshold_from_native_training_validation": 0.14795026183128357,
+          "pairs": 3416,
+          "supported_pairs": 3230,
+          "unsupported_pairs": 186,
+          "coverage": 0.9455503512880562,
+          "correct_pairs": 1968
+        },
+        "mirror": {
+          "supported_pair_accuracy": 0.6436532507739938,
+          "all_pair_success_with_abstentions_counted_unsuccessful": 0.6086065573770492,
+          "supported_pair_auc": 0.701988727858293,
+          "threshold_from_native_training_validation": 0.21833109855651855,
+          "pairs": 3416,
+          "supported_pairs": 3230,
+          "unsupported_pairs": 186,
+          "coverage": 0.9455503512880562,
+          "correct_pairs": 2079
+        }
+      }
+    },
+    "app_default": {
+      "main": {
+        "single": {
+          "supported_pair_accuracy": 0.6606669192876089,
+          "all_pair_success_with_abstentions_counted_unsuccessful": 0.6554511278195488,
+          "supported_pair_auc": 0.7447130417458276,
+          "threshold_from_native_training_validation": 0.21429408341646194,
+          "pairs": 10640,
+          "supported_pairs": 10556,
+          "unsupported_pairs": 84,
+          "coverage": 0.9921052631578947,
+          "correct_pairs": 6974
+        },
+        "mirror": {
+          "supported_pair_accuracy": 0.6824554755589238,
+          "all_pair_success_with_abstentions_counted_unsuccessful": 0.6770676691729324,
+          "supported_pair_auc": 0.7471746428895144,
+          "threshold_from_native_training_validation": 0.2742929607629776,
+          "pairs": 10640,
+          "supported_pairs": 10556,
+          "unsupported_pairs": 84,
+          "coverage": 0.9921052631578947,
+          "correct_pairs": 7204
+        }
+      },
+      "additional": {
+        "single": {
+          "supported_pair_accuracy": 0.5944272445820433,
+          "all_pair_success_with_abstentions_counted_unsuccessful": 0.5620608899297423,
+          "supported_pair_auc": 0.6649087493290391,
+          "threshold_from_native_training_validation": 0.21429408341646194,
+          "pairs": 3416,
+          "supported_pairs": 3230,
+          "unsupported_pairs": 186,
+          "coverage": 0.9455503512880562,
+          "correct_pairs": 1920
+        },
+        "mirror": {
+          "supported_pair_accuracy": 0.6068111455108359,
+          "all_pair_success_with_abstentions_counted_unsuccessful": 0.5737704918032787,
+          "supported_pair_auc": 0.6670404876926616,
+          "threshold_from_native_training_validation": 0.2742929607629776,
+          "pairs": 3416,
+          "supported_pairs": 3230,
+          "unsupported_pairs": 186,
+          "coverage": 0.9455503512880562,
+          "correct_pairs": 1960
+        }
+      }
+    },
+    "camera_v3": {
+      "main": {
+        "single": {
+          "supported_pair_accuracy": 0.6690034103827207,
+          "all_pair_success_with_abstentions_counted_unsuccessful": 0.6637218045112782,
+          "supported_pair_auc": 0.7750599618950526,
+          "threshold_from_native_training_validation": 0.13739711046218872,
+          "pairs": 10640,
+          "supported_pairs": 10556,
+          "unsupported_pairs": 84,
+          "coverage": 0.9921052631578947,
+          "correct_pairs": 7062
+        },
+        "mirror": {
+          "supported_pair_accuracy": 0.6963812050018947,
+          "all_pair_success_with_abstentions_counted_unsuccessful": 0.6908834586466165,
+          "supported_pair_auc": 0.7774881426844513,
+          "threshold_from_native_training_validation": 0.17877963185310364,
+          "pairs": 10640,
+          "supported_pairs": 10556,
+          "unsupported_pairs": 84,
+          "coverage": 0.9921052631578947,
+          "correct_pairs": 7351
+        }
+      },
+      "additional": {
+        "single": {
+          "supported_pair_accuracy": 0.5993808049535604,
+          "all_pair_success_with_abstentions_counted_unsuccessful": 0.5667447306791569,
+          "supported_pair_auc": 0.6915259565984204,
+          "threshold_from_native_training_validation": 0.13739711046218872,
+          "pairs": 3416,
+          "supported_pairs": 3230,
+          "unsupported_pairs": 186,
+          "coverage": 0.9455503512880562,
+          "correct_pairs": 1936
+        },
+        "mirror": {
+          "supported_pair_accuracy": 0.6136222910216719,
+          "all_pair_success_with_abstentions_counted_unsuccessful": 0.5802107728337237,
+          "supported_pair_auc": 0.6940046775554021,
+          "threshold_from_native_training_validation": 0.17877963185310364,
+          "pairs": 3416,
+          "supported_pairs": 3230,
+          "unsupported_pairs": 186,
+          "coverage": 0.9455503512880562,
+          "correct_pairs": 1982
+        }
+      }
+    },
+    "identity_v4": {
+      "main": {
+        "single": {
+          "supported_pair_accuracy": 0.7067070860174308,
+          "all_pair_success_with_abstentions_counted_unsuccessful": 0.7011278195488722,
+          "supported_pair_auc": 0.7783804948617551,
+          "threshold_from_native_training_validation": 0.20349861681461334,
+          "pairs": 10640,
+          "supported_pairs": 10556,
+          "unsupported_pairs": 84,
+          "coverage": 0.9921052631578947,
+          "correct_pairs": 7460
+        },
+        "mirror": {
+          "supported_pair_accuracy": 0.7047176960970064,
+          "all_pair_success_with_abstentions_counted_unsuccessful": 0.6991541353383459,
+          "supported_pair_auc": 0.7806663250443556,
+          "threshold_from_native_training_validation": 0.19077621400356293,
+          "pairs": 10640,
+          "supported_pairs": 10556,
+          "unsupported_pairs": 84,
+          "coverage": 0.9921052631578947,
+          "correct_pairs": 7439
+        }
+      },
+      "additional": {
+        "single": {
+          "supported_pair_accuracy": 0.631578947368421,
+          "all_pair_success_with_abstentions_counted_unsuccessful": 0.5971896955503513,
+          "supported_pair_auc": 0.6961460010735374,
+          "threshold_from_native_training_validation": 0.20349861681461334,
+          "pairs": 3416,
+          "supported_pairs": 3230,
+          "unsupported_pairs": 186,
+          "coverage": 0.9455503512880562,
+          "correct_pairs": 2040
+        },
+        "mirror": {
+          "supported_pair_accuracy": 0.6204334365325077,
+          "all_pair_success_with_abstentions_counted_unsuccessful": 0.5866510538641686,
+          "supported_pair_auc": 0.6984119316003374,
+          "threshold_from_native_training_validation": 0.19077621400356293,
+          "pairs": 3416,
+          "supported_pairs": 3230,
+          "unsupported_pairs": 186,
+          "coverage": 0.9455503512880562,
+          "correct_pairs": 2004
+        }
+      }
+    }
+  }
+}

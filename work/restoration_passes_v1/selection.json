@@ -1,0 +1,9 @@
+{
+  "selected": "single",
+  "eligible": [],
+  "selected_before_test": true,
+  "checkpoint_sha256": "2fd49ea0226e05c7f9fcc1263fde429995c0a15b4be00fba52d045b25284fe11",
+  "validation_evaluation_sha256": "69242f58e0bf1c2f3e6482d727a1b4202d2670bf34a46c0b39760c60d47d3e23",
+  "test_may_change_selection": false,
+  "default_ui_remains_single": true
+}

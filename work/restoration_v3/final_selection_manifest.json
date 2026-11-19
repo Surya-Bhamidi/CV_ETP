@@ -1,0 +1,54 @@
+{
+  "source_sha256": "68a372ef75af68e46184ee5312448d768d2595b19f22f97561b8abe8f00fa889",
+  "coefficients_if_no_epoch_passed": [
+    0.5,
+    0.75
+  ],
+  "base_checkpoint_sha256": "0f837d57d280606e8cccb12345d908d7b7fde0bc4a8d05930f7413cd1774bc89",
+  "texture_checkpoint_sha256": "ddd555928278be6f8576d95ae5a342df666b87f354043e243fa691168c4c0193",
+  "selection": "Identical validation limits and score as training. No test data. Parameter interpolation only if no full epoch passed.",
+  "evaluated": [
+    {
+      "coefficient": 0.5,
+      "validation": {
+        "ffhq": {
+          "standard28": {
+            "psnr_y": 25.655490323901176,
+            "ssim_y": 0.7337941002075888,
+            "lpips": 0.2121539189829491
+          },
+          "clean28": {
+            "psnr_y": 28.319647446274757,
+            "ssim_y": 0.8508211052133117,
+            "lpips": 0.12690651605953462
+          }
+        },
+        "domain_validation_arcface_auc": 0.750762939453125,
+        "domain_validation_pairs": 512
+      },
+      "eligible": true,
+      "score": 0.01613529793394264
+    },
+    {
+      "coefficient": 0.75,
+      "validation": {
+        "ffhq": {
+          "standard28": {
+            "psnr_y": 25.613060295581818,
+            "ssim_y": 0.7336662814083573,
+            "lpips": 0.20443656749557704
+          },
+          "clean28": {
+            "psnr_y": 28.270895302295685,
+            "ssim_y": 0.8508220774179813,
+            "lpips": 0.12035607401048765
+          }
+        },
+        "domain_validation_arcface_auc": 0.7510833740234375,
+        "domain_validation_pairs": 512
+      },
+      "eligible": true,
+      "score": 0.023910063842777163
+    }
+  ]
+}

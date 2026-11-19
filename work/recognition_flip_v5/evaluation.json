@@ -1,0 +1,65 @@
+{
+  "protocol": {
+    "source_sha256": "d51f630484a138a09d76d7d252348402515ef63475e9a2cde83b1a064e4c1f4e",
+    "checkpoint_sha256": "2fd49ea0226e05c7f9fcc1263fde429995c0a15b4be00fba52d045b25284fe11",
+    "v4_selection_sha256": "3b456651443b0c06a04bd44a4761d8b2ee4038e433001158c8b23655b523798e",
+    "method": "Same v4 SR pixels; normalize(sum of original and horizontally mirrored recognition features), per recognizer. Fixed equal negative-validation-standardized ArcFace/MobileFace score fusion.",
+    "calibration": "Unchanged original512 crops/256 held-out official-training IDs;256 positive256 negative pairs. No expanded calibration and no test-label threshold search.",
+    "reason": "Fixed additional inference attempt after v4 primary fusion69.91%. Historical repeated-test research bias remains.",
+    "image_output_changed": false,
+    "recognizer_compute_passes": 2,
+    "recognizers_in_fusion": 2,
+    "sr_inference_passes": 1,
+    "test_used_to_choose_threshold_or_weights": false
+  },
+  "calibration_sha256": "8075c09ab49b4302d40dec48aacb6b8e90cbf62e208887aef1e3d0e8dec19e6a",
+  "recognition": {
+    "prior_9913_images": {
+      "arcface": {
+        "accuracy": 0.6777255639097745,
+        "auc": 0.7571800624682006,
+        "threshold_from_training_validation": 0.275638610124588,
+        "correct_pairs": 7211,
+        "pairs": 10640
+      },
+      "mobileface": {
+        "accuracy": 0.700281954887218,
+        "auc": 0.7731776457120244,
+        "threshold_from_training_validation": 0.1980598419904709,
+        "correct_pairs": 7451,
+        "pairs": 10640
+      },
+      "fusion": {
+        "accuracy": 0.6882518796992482,
+        "auc": 0.7775949742777997,
+        "threshold_from_training_validation": 0.10637687519192696,
+        "correct_pairs": 7323,
+        "pairs": 10640
+      }
+    },
+    "additional_identity_disjoint": {
+      "arcface": {
+        "accuracy": 0.6188524590163934,
+        "auc": 0.6689236901425445,
+        "threshold_from_training_validation": 0.275638610124588,
+        "correct_pairs": 2114,
+        "pairs": 3416
+      },
+      "mobileface": {
+        "accuracy": 0.6244145199063232,
+        "auc": 0.692663571072073,
+        "threshold_from_training_validation": 0.1980598419904709,
+        "correct_pairs": 2133,
+        "pairs": 3416
+      },
+      "fusion": {
+        "accuracy": 0.6033372365339579,
+        "auc": 0.6904513955541906,
+        "threshold_from_training_validation": 0.10637687519192696,
+        "correct_pairs": 2061,
+        "pairs": 3416
+      }
+    }
+  },
+  "v4_original_evaluation_sha256": "944ebd2a9165c7046e1b6f2a3a97d39dc1dcab0739c79670f743e15cc02a645a"
+}

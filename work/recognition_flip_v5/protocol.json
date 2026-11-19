@@ -1,0 +1,13 @@
+{
+  "source_sha256": "d51f630484a138a09d76d7d252348402515ef63475e9a2cde83b1a064e4c1f4e",
+  "checkpoint_sha256": "2fd49ea0226e05c7f9fcc1263fde429995c0a15b4be00fba52d045b25284fe11",
+  "v4_selection_sha256": "3b456651443b0c06a04bd44a4761d8b2ee4038e433001158c8b23655b523798e",
+  "method": "Same v4 SR pixels; normalize(sum of original and horizontally mirrored recognition features), per recognizer. Fixed equal negative-validation-standardized ArcFace/MobileFace score fusion.",
+  "calibration": "Unchanged original512 crops/256 held-out official-training IDs;256 positive256 negative pairs. No expanded calibration and no test-label threshold search.",
+  "reason": "Fixed additional inference attempt after v4 primary fusion69.91%. Historical repeated-test research bias remains.",
+  "image_output_changed": false,
+  "recognizer_compute_passes": 2,
+  "recognizers_in_fusion": 2,
+  "sr_inference_passes": 1,
+  "test_used_to_choose_threshold_or_weights": false
+}

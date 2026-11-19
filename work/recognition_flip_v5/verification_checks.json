@@ -1,0 +1,13 @@
+{
+  "raw_pair_scores_accuracy_auc_reproduced": true,
+  "validation_only_thresholds_reproduced": true,
+  "fixed_fusion_reproduced": true,
+  "sr_pixels_unchanged": true,
+  "point_estimates_above70": {
+    "arcface": false,
+    "mobileface": true,
+    "fusion": false
+  },
+  "portable_figures_checked_and_pdf_exported": true,
+  "report_source_sha256": "226ccf227e3a042fc0104bc00fa27b312e571d02549177a9139ba2db2c9660ae"
+}

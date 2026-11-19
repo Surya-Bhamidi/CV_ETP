@@ -1,0 +1,146 @@
+{
+  "checks": {
+    "factorized_attention_matches_explicit_normalized_kernel_attention": true,
+    "training_outputs_and_all_parameter_gradients_preserved": true,
+    "gathered_eval_matches_dense_for_12_shape_budget_cases": true,
+    "both_policies_keep_exact_key_budget_including_odd_shapes": true,
+    "max_float64_gather_error": 2.220446049250313e-16,
+    "ssc_is_deformable_conv_with_learnable_offsets": true,
+    "whole_trained_network_gather_max_error": 0.00019824504852294922,
+    "whole_trained_network_png_max_difference_levels": 1.0
+  },
+  "checkpoint": "work/identity_investigation/mixed_quality_v1/best.pt",
+  "checkpoint_sha256": "4bd8a58d28406d0a4593a9d28bfc4cb361815f4ab1de286c0adca30c3929e4d1",
+  "parameters": 479109,
+  "fp32_weight_bytes": 1916436,
+  "blocks": 6,
+  "channels": 48,
+  "attention_parameters": 60054,
+  "ssc_parameters": 171468,
+  "query_positions_at_28": 784,
+  "key_positions_at_28": 392,
+  "attention_math": "Normalized ELU+1 kernel attention; no softmax NxN matrix. O(N*C*C) contractions at fixed C.",
+  "sparsity": "Content-adaptive positions, fixed 50% count. Original implementation masks dense tensors; it does not gather or skip keys.",
+  "sampling": "9 learned deformable offsets per position, tanh bounded +/-2 around the 3x3 grid, within 7x7 support; not correlation-selected ASC-SRN.",
+  "exact_paper_reproduction_established": false,
+  "hardware": "NVIDIA GeForce RTX 4060 Laptop GPU",
+  "latency": {
+    "28": {
+      "original_model": {
+        "median_ms": 8.493099827319384,
+        "p90_ms": 9.610260277986526,
+        "repeats": 40
+      },
+      "gather_model": {
+        "median_ms": 9.132149862125516,
+        "p90_ms": 9.606720134615898,
+        "repeats": 40
+      },
+      "original_attention": {
+        "median_ms": 0.6913498509675264,
+        "p90_ms": 0.7691399194300176,
+        "repeats": 40
+      },
+      "gather_attention": {
+        "median_ms": 0.7518499623984098,
+        "p90_ms": 0.826910138130188,
+        "repeats": 40
+      }
+    },
+    "56": {
+      "original_model": {
+        "median_ms": 9.420650312677026,
+        "p90_ms": 9.8353601526469,
+        "repeats": 40
+      },
+      "gather_model": {
+        "median_ms": 9.530549868941307,
+        "p90_ms": 10.213859984651208,
+        "repeats": 40
+      },
+      "original_attention": {
+        "median_ms": 0.7680498529225588,
+        "p90_ms": 0.9541501756757498,
+        "repeats": 40
+      },
+      "gather_attention": {
+        "median_ms": 0.7840499747544527,
+        "p90_ms": 0.9731398429721594,
+        "repeats": 40
+      }
+    },
+    "112": {
+      "original_model": {
+        "median_ms": 13.065600069239736,
+        "p90_ms": 13.957029953598976,
+        "repeats": 40
+      },
+      "gather_model": {
+        "median_ms": 12.409350136294961,
+        "p90_ms": 13.851389894261956,
+        "repeats": 40
+      },
+      "original_attention": {
+        "median_ms": 0.7874998264014721,
+        "p90_ms": 0.851359823718667,
+        "repeats": 40
+      },
+      "gather_attention": {
+        "median_ms": 0.8336000610142946,
+        "p90_ms": 0.9731197264045477,
+        "repeats": 40
+      }
+    }
+  },
+  "trained_key_masks": [
+    {
+      "kept_per_image": [
+        392.0,
+        392.0
+      ],
+      "mask_disagreement_two_faces": 0.4515306055545807,
+      "scorer_score_std": 0.00010531080624787137
+    },
+    {
+      "kept_per_image": [
+        392.0,
+        392.0
+      ],
+      "mask_disagreement_two_faces": 0.48469385504722595,
+      "scorer_score_std": 0.1417892724275589
+    },
+    {
+      "kept_per_image": [
+        392.0,
+        392.0
+      ],
+      "mask_disagreement_two_faces": 0.48469385504722595,
+      "scorer_score_std": 0.15504708886146545
+    },
+    {
+      "kept_per_image": [
+        392.0,
+        392.0
+      ],
+      "mask_disagreement_two_faces": 0.37755101919174194,
+      "scorer_score_std": 1.5061174053698778e-05
+    },
+    {
+      "kept_per_image": [
+        392.0,
+        392.0
+      ],
+      "mask_disagreement_two_faces": 0.5025510191917419,
+      "scorer_score_std": 0.29601672291755676
+    },
+    {
+      "kept_per_image": [
+        392.0,
+        392.0
+      ],
+      "mask_disagreement_two_faces": 0.5153061151504517,
+      "scorer_score_std": 0.03833159804344177
+    }
+  ],
+  "gather_equivalence_scope": "Float64 module equivalence; FP32 complete-network agreement within one 8-bit level on these two validation inputs, not bitwise equality."
+}

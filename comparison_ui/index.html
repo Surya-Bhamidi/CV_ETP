@@ -1,91 +1,561 @@
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#101612">
-  <meta name="description" content="Compare low-resolution faces with reconstructions from your trained super-resolution model.">
-  <title>RE:FACE — Reconstruction lab</title>
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23d5ef98'/%3E%3Cpath d='M18 25v-7h7m14 0h7v7M18 39v7h7m14 0h7v-7M25 32h14' fill='none' stroke='%23101612' stroke-width='4'/%3E%3C/svg%3E">
-  <link rel="stylesheet" href="/assets/styles.css">
-  <script src="/assets/app.js" defer></script>
-</head>
-<body>
-<svg class="icon-definitions" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><defs>
-  <symbol id="i-frame" viewBox="0 0 24 24"><path d="M4 8V4h4m8 0h4v4M4 16v4h4m8 0h4v-4M8 12h8"/></symbol>
-  <symbol id="i-upload" viewBox="0 0 24 24"><path d="M12 16V4m-4 4 4-4 4 4M4 16v4h16v-4"/></symbol>
-  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M4 12h16m-6-6 6 6-6 6"/></symbol>
-  <symbol id="i-download" viewBox="0 0 24 24"><path d="M12 3v12m-4-4 4 4 4-4M4 17v4h16v-4"/></symbol>
-  <symbol id="i-columns" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M12 5v14"/></symbol>
-  <symbol id="i-slider" viewBox="0 0 24 24"><path d="M12 3v18M8 8l-4 4 4 4m8-8 4 4-4 4"/></symbol>
-  <symbol id="i-expand" viewBox="0 0 24 24"><path d="M8 3H3v5m13-5h5v5M3 16v5h5m13-5v5h-5"/></symbol>
-  <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
-  <symbol id="i-minus" viewBox="0 0 24 24"><path d="M5 12h14"/></symbol>
-  <symbol id="i-refresh" viewBox="0 0 24 24"><path d="M20 7v5h-5M4 17v-5h5M6 7a7 7 0 0 1 12-1l2 3M4 15l2 3a7 7 0 0 0 12-1"/></symbol>
-  <symbol id="i-spark" viewBox="0 0 24 24"><path d="m12 3 2.5 6.5L21 12l-6.5 2.5L12 21l-2.5-6.5L3 12l6.5-2.5L12 3Z"/></symbol>
-  <symbol id="i-image" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="m3 16 5-5 5 5 3-3 5 5"/><circle cx="15.5" cy="8.5" r="1.5"/></symbol>
-  <symbol id="i-close" viewBox="0 0 24 24"><path d="m6 6 12 12M6 18 18 6"/></symbol>
-  <symbol id="i-shield" viewBox="0 0 24 24"><path d="m12 3 8 3v6c0 5-8 9-8 9s-8-4-8-9V6l8-3Z"/><path d="m8 12 3 3 5-6"/></symbol>
-</defs></svg>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#101612" />
+    <meta
+      name="description"
+      content="Compare low-resolution faces with reconstructions from your trained super-resolution model."
+    />
+    <title>RE:FACE — Reconstruction lab</title>
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23d5ef98'/%3E%3Cpath d='M18 25v-7h7m14 0h7v7M18 39v7h7m14 0h7v-7M25 32h14' fill='none' stroke='%23101612' stroke-width='4'/%3E%3C/svg%3E"
+    />
+    <link rel="stylesheet" href="/assets/styles.css" />
+    <script src="/assets/app.js" defer></script>
+  </head>
+  <body>
+    <svg
+      class="icon-definitions"
+      xmlns="http://www.w3.org/2000/svg"
+      aria-hidden="true"
+    >
+      <defs>
+        <symbol id="i-frame" viewBox="0 0 24 24">
+          <path d="M4 8V4h4m8 0h4v4M4 16v4h4m8 0h4v-4M8 12h8" />
+        </symbol>
+        <symbol id="i-upload" viewBox="0 0 24 24">
+          <path d="M12 16V4m-4 4 4-4 4 4M4 16v4h16v-4" />
+        </symbol>
+        <symbol id="i-arrow" viewBox="0 0 24 24">
+          <path d="M4 12h16m-6-6 6 6-6 6" />
+        </symbol>
+        <symbol id="i-download" viewBox="0 0 24 24">
+          <path d="M12 3v12m-4-4 4 4 4-4M4 17v4h16v-4" />
+        </symbol>
+        <symbol id="i-columns" viewBox="0 0 24 24">
+          <rect x="3" y="5" width="18" height="14" rx="2" />
+          <path d="M12 5v14" />
+        </symbol>
+        <symbol id="i-slider" viewBox="0 0 24 24">
+          <path d="M12 3v18M8 8l-4 4 4 4m8-8 4 4-4 4" />
+        </symbol>
+        <symbol id="i-expand" viewBox="0 0 24 24">
+          <path d="M8 3H3v5m13-5h5v5M3 16v5h5m13-5v5h-5" />
+        </symbol>
+        <symbol id="i-plus" viewBox="0 0 24 24">
+          <path d="M12 5v14M5 12h14" />
+        </symbol>
+        <symbol id="i-minus" viewBox="0 0 24 24"><path d="M5 12h14" /></symbol>
+        <symbol id="i-refresh" viewBox="0 0 24 24">
+          <path
+            d="M20 7v5h-5M4 17v-5h5M6 7a7 7 0 0 1 12-1l2 3M4 15l2 3a7 7 0 0 0 12-1"
+          />
+        </symbol>
+        <symbol id="i-spark" viewBox="0 0 24 24">
+          <path
+            d="m12 3 2.5 6.5L21 12l-6.5 2.5L12 21l-2.5-6.5L3 12l6.5-2.5L12 3Z"
+          />
+        </symbol>
+        <symbol id="i-image" viewBox="0 0 24 24">
+          <rect x="3" y="3" width="18" height="18" rx="3" />
+          <path d="m3 16 5-5 5 5 3-3 5 5" />
+          <circle cx="15.5" cy="8.5" r="1.5" />
+        </symbol>
+        <symbol id="i-close" viewBox="0 0 24 24">
+          <path d="m6 6 12 12M6 18 18 6" />
+        </symbol>
+        <symbol id="i-shield" viewBox="0 0 24 24">
+          <path d="m12 3 8 3v6c0 5-8 9-8 9s-8-4-8-9V6l8-3Z" />
+          <path d="m8 12 3 3 5-6" />
+        </symbol>
+      </defs>
+    </svg>
 
-<header class="app-header">
-  <a class="brand" href="/" aria-label="RE:FACE reconstruction lab"><span class="brand-mark"><svg><use href="#i-frame"/></svg></span><span>RE<span class="brand-colon">:</span>FACE</span></a>
-  <span class="header-divider"></span><span class="header-subtitle">Reconstruction lab</span>
-  <div class="header-right"><span class="local-label">LOCAL WORKSPACE</span><span class="model-status" id="model-status"><span class="status-dot"></span><span id="status-text">Loading model</span></span></div>
-</header>
-
-<div class="workspace">
-  <aside class="sidebar">
-    <div class="sidebar-title"><span class="eyebrow">01 / SOURCE</span><h2>Start with a face.</h2><p>Pick a test example or bring your own.</p></div>
-    <div class="source-tabs" role="tablist" aria-label="Image source">
-      <button id="samples-tab" class="source-tab active" role="tab" aria-selected="true" aria-controls="samples-panel">Test examples</button>
-      <button id="upload-tab" class="source-tab" role="tab" aria-selected="false" aria-controls="upload-panel">Your image</button>
-    </div>
-    <section id="samples-panel" role="tabpanel" aria-labelledby="samples-tab">
-      <div class="section-label"><span>PAIRED TEST FACES</span><span id="sample-count">12 examples</span></div>
-      <div id="sample-grid" class="sample-grid" aria-label="Choose a held-out test face"><div class="sample-skeleton"></div><div class="sample-skeleton"></div><div class="sample-skeleton"></div><div class="sample-skeleton"></div><div class="sample-skeleton"></div><div class="sample-skeleton"></div></div>
-      <p class="source-help">FFHQ images held out from our custom SR training, with clean originals for comparison.</p>
-      <div class="sample-description" id="sample-description"><span class="selection-marker"></span><div><strong id="selected-name">Choose an example</strong><span id="selected-detail">28 × 28 input → 112 × 112 output</span></div></div>
-    </section>
-    <section id="upload-panel" role="tabpanel" aria-labelledby="upload-tab" hidden>
-      <input type="file" id="image-file" accept="image/png,image/jpeg,image/webp" hidden>
-      <button class="drop-zone" id="drop-zone"><span class="upload-icon"><svg><use href="#i-upload"/></svg></span><strong>Drop your image here</strong><span>or <em>browse files</em></span><small>PNG, JPG, WebP · up to 8 MB</small></button>
-      <div class="upload-preview" id="upload-preview" hidden><img id="uploaded-thumb" alt="Selected upload"><div><strong id="upload-name"></strong><span id="upload-dimensions"></span></div><button id="remove-upload" class="icon-button" aria-label="Remove uploaded image"><svg><use href="#i-close"/></svg></button></div>
-      <label class="field-label" for="input-mode">Input mode</label>
-      <select id="input-mode"><option value="native">Reconstruct this image ×4</option><option value="simulate">Simulate CCTV from a clear photo</option></select>
-      <p class="source-help" id="mode-help">Use a cropped face. Large inputs are fitted within 256 px before processing.</p>
-      <div id="reference-controls"><input type="file" id="reference-file" accept="image/png,image/jpeg,image/webp" hidden><button id="add-reference" class="text-button">+ Add a clean original <span>(optional)</span></button><div id="reference-selection" class="reference-selection" hidden><span id="reference-name"></span><button id="remove-reference" class="icon-button" aria-label="Remove clean original"><svg><use href="#i-close"/></svg></button></div></div>
-      <button id="reconstruct" class="primary-button" disabled><svg><use href="#i-spark"/></svg><span>Reconstruct image</span><svg class="button-arrow"><use href="#i-arrow"/></svg></button>
-    </section>
-    <div class="sidebar-bottom"><div class="model-info"><span class="small-model-icon"><svg><use href="#i-spark"/></svg></span><div><strong id="selected-model-label">Your trained SR model</strong><span>×4 reconstruction · <span id="epoch-count">30 epochs</span></span></div></div><div class="privacy-note"><svg><use href="#i-shield"/></svg><span>Images are processed on your computer.</span></div></div>
-  </aside>
-
-  <main class="main-panel">
-    <div class="main-heading"><div><span class="eyebrow">02 / COMPARE</span><h1>A closer look.</h1><p>Explore the difference between input and reconstruction.</p></div><a id="download" class="download-button disabled" aria-disabled="true"><svg><use href="#i-download"/></svg><span>Download result</span></a></div>
-    <div id="error-message" class="error-message" role="alert" hidden></div>
-    <div class="model-choice-bar"><div><label for="model-choice">RECONSTRUCTION MODEL</label><select id="model-choice" aria-label="Reconstruction model"><option value="standard">Pixel model (original)</option></select></div><p id="model-description">30 epochs · pixel L1 reconstruction</p></div>
-    <div id="model-warning" class="model-warning" role="status" hidden>Experimental result: feature fidelity and LFW results improved, but the independent CCTV check regressed. Compare with Original and Previous SR; this is not a validated CCTV upgrade.</div>
-    <div id="restoration-controls" class="restoration-controls" hidden><div><label for="restoration-strength">Restoration strength</label><output id="strength-value" for="restoration-strength">75%</output></div><input id="restoration-strength" type="range" min="0" max="1" step="0.05" value="0.75" aria-label="Restoration strength"><p>0% keeps the original custom SR result. 100% uses the pretrained restoration. Compare with Original to check changed features.</p></div>
-    <section class="viewer-card" id="viewer-card" aria-label="Image comparison">
-      <div class="viewer-toolbar"><div class="view-tabs" role="group" aria-label="Comparison layout"><button class="view-tab active" data-layout="slider" aria-pressed="true"><svg><use href="#i-slider"/></svg><span>Slider</span></button><button class="view-tab" data-layout="side" aria-pressed="false"><svg><use href="#i-columns"/></svg><span>Side by side</span></button></div><div class="zoom-controls"><button id="zoom-out" class="icon-button" aria-label="Zoom out"><svg><use href="#i-minus"/></svg></button><span id="zoom-level">100%</span><button id="zoom-in" class="icon-button" aria-label="Zoom in"><svg><use href="#i-plus"/></svg></button><button id="reset-view" class="icon-button reset-button" aria-label="Reset zoom and position"><svg><use href="#i-refresh"/></svg></button><span class="toolbar-divider"></span><button id="fullscreen" class="icon-button" aria-label="Toggle full screen"><svg><use href="#i-expand"/></svg></button></div></div>
-      <div class="image-stage" id="image-stage">
-        <div class="empty-state" id="empty-state"><span class="empty-frame"><svg><use href="#i-frame"/></svg></span><h3>Your comparison lives here.</h3><p>Choose a face to see the reconstruction.</p></div>
-        <div class="slider-view" id="slider-view" hidden>
-          <div class="image-layer after-layer"><img id="after-image" alt="Super-resolved result from your trained model" draggable="false"></div>
-          <div class="image-layer before-layer" id="before-layer"><img id="before-image" class="pixelated" alt="Low-resolution input" draggable="false"></div>
-          <span class="image-tag before-tag" id="before-tag">LOW-RES INPUT</span><span class="image-tag after-tag"><span class="tag-dot"></span><span id="after-tag-text">SR ×4</span></span>
-          <div class="compare-divider" id="compare-divider"><button id="divider-handle" aria-label="Drag to compare before and after"><svg><use href="#i-slider"/></svg></button></div>
-        </div>
-        <div class="side-view" id="side-view" hidden><div class="side-cell"><span class="image-tag" id="side-before-tag">LOW-RES INPUT</span><img id="side-before-image" class="pixelated" alt="Comparison input" draggable="false"></div><div class="side-cell"><span class="image-tag"><span class="tag-dot"></span><span id="side-after-tag-text">SR ×4</span></span><img id="side-after-image" alt="Super-resolved image" draggable="false"></div></div>
-        <div class="loading-overlay" id="loading-overlay"><span class="loading-spinner"></span><strong id="loading-label">Loading your trained model…</strong><span id="loading-hint">The comparison will appear here.</span></div>
+    <header class="app-header">
+      <a class="brand" href="/" aria-label="RE:FACE reconstruction lab"
+        ><span class="brand-mark"
+          ><svg><use href="#i-frame" /></svg></span
+        ><span>RE<span class="brand-colon">:</span>FACE</span></a
+      >
+      <span class="header-divider"></span
+      ><span class="header-subtitle">Reconstruction lab</span>
+      <div class="header-right">
+        <span class="local-label">LOCAL WORKSPACE</span
+        ><span class="model-status" id="model-status"
+          ><span class="status-dot"></span
+          ><span id="status-text">Loading model</span></span
+        >
       </div>
-      <div class="viewer-bottom"><div class="compare-options" role="group" aria-label="Compare reconstruction with"><span>Compare with</span><button data-compare="input" class="compare-option active" aria-pressed="true">Input</button><button data-compare="bicubic" class="compare-option" aria-pressed="false">Bicubic</button><button data-compare="reference" class="compare-option" id="original-option" aria-pressed="false" disabled title="A clean original is needed">Original</button><button data-compare="previous" class="compare-option" id="previous-option" aria-pressed="false" disabled title="Compare with the original custom SR model on identical input pixels">Previous SR</button></div><span class="drag-hint" id="drag-hint">Drag the divider to compare</span></div>
-      <label class="accessible-slider" for="split-range">Before / after position<input id="split-range" type="range" min="0" max="100" value="50" aria-label="Before and after divider position"></label>
-    </section>
-    <section class="metrics-row" aria-label="Image details and reconstruction quality"><article class="metric-card"><span class="metric-label">INPUT RESOLUTION</span><div class="metric-value" id="input-resolution">—<small> px</small></div><span class="metric-caption">Before reconstruction</span></article><article class="metric-card"><span class="metric-label">OUTPUT RESOLUTION <span class="tiny-badge">×4</span></span><div class="metric-value" id="output-resolution">—<small> px</small></div><span class="metric-caption">Reconstructed image</span></article><article class="metric-card"><span class="metric-label">PSNR <span class="metric-info" title="Luminance PSNR against the clean original, excluding a 4-pixel border. Higher is closer.">i</span></span><div class="metric-value" id="psnr-value">—<small> dB</small></div><span class="metric-caption" id="psnr-caption">A clean original is needed</span></article><article class="metric-card"><span class="metric-label">SSIM <span class="metric-info" title="Structural similarity against the clean original, excluding a 4-pixel border. Higher is closer.">i</span></span><div class="metric-value" id="ssim-value">—</div><span class="metric-caption" id="ssim-caption">A clean original is needed</span></article></section>
-    <div class="comparison-note"><span class="note-mark">↳</span><p id="result-note">Use Original to inspect how closely the reconstruction matches the clean face.</p></div>
-    <footer class="workspace-footer"><span><span class="footer-dot"></span><span id="result-name">Ready when you are</span></span><span id="runtime-label">Local inference · no uploads to the cloud</span></footer>
-  </main>
-</div>
-</body>
+    </header>
+
+    <div class="workspace">
+      <aside class="sidebar">
+        <div class="sidebar-title">
+          <span class="eyebrow">01 / SOURCE</span>
+          <h2>Start with a face.</h2>
+          <p>Pick a test example or bring your own.</p>
+        </div>
+        <div class="source-tabs" role="tablist" aria-label="Image source">
+          <button
+            id="samples-tab"
+            class="source-tab active"
+            role="tab"
+            aria-selected="true"
+            aria-controls="samples-panel"
+          >
+            Dataset examples
+          </button>
+          <button
+            id="upload-tab"
+            class="source-tab"
+            role="tab"
+            aria-selected="false"
+            aria-controls="upload-panel"
+          >
+            Your image
+          </button>
+        </div>
+        <div id="quality-controls">
+          <label class="field-label" for="quality-profile"
+            >Input quality for paired experiments</label
+          ><select id="quality-profile">
+            <option value="standard28">Benchmark: blur + noise + JPEG</option>
+            <option value="mild28">Mild degradation</option>
+            <option value="clean28">Downsampling only</option>
+          </select>
+          <p class="source-help">
+            Changing this setting changes the experiment input. It does not
+            recover missing information from an existing image.
+          </p>
+        </div>
+        <section
+          id="samples-panel"
+          role="tabpanel"
+          aria-labelledby="samples-tab"
+        >
+          <label class="field-label" for="sample-split">Dataset split</label
+          ><select id="sample-split">
+            <option value="test">FFHQ test (held out from our training)</option>
+            <option value="validation">
+              FFHQ validation (model selection)
+            </option>
+            <option value="qmul">QMUL real camera crops (no HR target)</option>
+          </select>
+          <button id="validation-cases" class="text-button">
+            Selected validation case studies
+          </button>
+          <div class="section-label">
+            <span id="gallery-label">SELECTED VALIDATION CASE STUDIES</span
+            ><span id="sample-count">Loading examples</span>
+          </div>
+          <div
+            id="sample-grid"
+            class="sample-grid"
+            aria-label="Choose a dataset face"
+          >
+            <div class="sample-skeleton"></div>
+            <div class="sample-skeleton"></div>
+            <div class="sample-skeleton"></div>
+            <div class="sample-skeleton"></div>
+            <div class="sample-skeleton"></div>
+            <div class="sample-skeleton"></div>
+          </div>
+          <p class="source-help" id="gallery-help">
+            Default demo: selected validation strengths and counterexamples.
+            Choose FFHQ test above to view the fixed test gallery.
+          </p>
+          <div class="sample-description" id="sample-description">
+            <span class="selection-marker"></span>
+            <div>
+              <strong id="selected-name">Choose an example</strong
+              ><span id="selected-detail"
+                >28 × 28 input → 112 × 112 output</span
+              >
+            </div>
+          </div>
+        </section>
+        <section
+          id="upload-panel"
+          role="tabpanel"
+          aria-labelledby="upload-tab"
+          hidden
+        >
+          <input
+            type="file"
+            id="image-file"
+            accept="image/png,image/jpeg,image/webp"
+            hidden
+          />
+          <button class="drop-zone" id="drop-zone">
+            <span class="upload-icon"
+              ><svg><use href="#i-upload" /></svg></span
+            ><strong>Drop your image here</strong
+            ><span>or <em>browse files</em></span
+            ><small>PNG, JPG, WebP · up to 8 MB</small>
+          </button>
+          <div class="upload-preview" id="upload-preview" hidden>
+            <img id="uploaded-thumb" alt="Selected upload" />
+            <div>
+              <strong id="upload-name"></strong
+              ><span id="upload-dimensions"></span>
+            </div>
+            <button
+              id="remove-upload"
+              class="icon-button"
+              aria-label="Remove uploaded image"
+            >
+              <svg><use href="#i-close" /></svg>
+            </button>
+          </div>
+          <label class="field-label" for="input-mode">Input mode</label>
+          <select id="input-mode">
+            <option value="native">Reconstruct this image ×4</option>
+            <option value="simulate">Simulate CCTV from a clear photo</option>
+          </select>
+          <p class="source-help" id="mode-help">
+            Use a cropped face. Large inputs are fitted within 256 px before
+            processing.
+          </p>
+          <div id="reference-controls">
+            <input
+              type="file"
+              id="reference-file"
+              accept="image/png,image/jpeg,image/webp"
+              hidden
+            /><button id="add-reference" class="text-button">
+              + Add a clean original <span>(optional)</span>
+            </button>
+            <div id="reference-selection" class="reference-selection" hidden>
+              <span id="reference-name"></span
+              ><button
+                id="remove-reference"
+                class="icon-button"
+                aria-label="Remove clean original"
+              >
+                <svg><use href="#i-close" /></svg>
+              </button>
+            </div>
+          </div>
+          <button id="reconstruct" class="primary-button" disabled>
+            <svg><use href="#i-spark" /></svg><span>Reconstruct image</span
+            ><svg class="button-arrow"><use href="#i-arrow" /></svg>
+          </button>
+        </section>
+        <div class="sidebar-bottom">
+          <div class="model-info">
+            <span class="small-model-icon"
+              ><svg><use href="#i-spark" /></svg
+            ></span>
+            <div>
+              <strong id="selected-model-label">Your trained SR model</strong
+              ><span
+                >×4 reconstruction ·
+                <span id="epoch-count">30 epochs</span></span
+              >
+            </div>
+          </div>
+          <div class="privacy-note">
+            <svg><use href="#i-shield" /></svg
+            ><span>Images are processed on your computer.</span>
+          </div>
+        </div>
+      </aside>
+
+      <main class="main-panel">
+        <div class="main-heading">
+          <div>
+            <span class="eyebrow">02 / COMPARE</span>
+            <h1>A closer look.</h1>
+            <p>Explore the difference between input and reconstruction.</p>
+          </div>
+          <a id="download" class="download-button disabled" aria-disabled="true"
+            ><svg><use href="#i-download" /></svg
+            ><span>Download result</span></a
+          >
+        </div>
+        <div id="error-message" class="error-message" role="alert" hidden></div>
+        <div class="model-choice-bar">
+          <div>
+            <label for="model-choice">RECONSTRUCTION MODEL</label
+            ><select id="model-choice" aria-label="Reconstruction model">
+              <option value="identity_v4">
+                Ours - lightweight SSC + attention (v4)
+              </option>
+            </select>
+          </div>
+          <p id="model-description">
+            Your selected v4 model and two official pretrained baselines.
+          </p>
+        </div>
+        <div class="model-choice-bar">
+          <div>
+            <label for="inference-mode">REFINEMENT</label
+            ><select id="inference-mode">
+              <option value="single">Single pass (default)</option>
+              <option value="clean_consistency">
+                Clean-input consistency (3 corrections)
+              </option>
+            </select>
+          </div>
+          <p id="inference-help">
+            Select downsampling-only input quality to try the clean-input
+            correction. Native camera crops retain single-pass inference.
+          </p>
+        </div>
+        <p class="source-help">
+          <a href="/diagnostics/passes" target="_blank" rel="noopener"
+            >See the measured 1, 2, 3, 5 and 8-pass comparison</a
+          >
+        </p>
+        <p class="source-help">
+          Three models, identical input pixels. Earlier experiments are
+          archived. Pretrained baselines share FFHQ as a training dataset but
+          use different splits and training procedures.
+        </p>
+        <div id="model-warning" class="model-warning" role="status" hidden>
+          Experimental result: feature fidelity and LFW results improved, but
+          the independent CCTV check regressed. Compare with Original and
+          Previous SR; this is not a validated CCTV upgrade.
+        </div>
+        <section
+          class="viewer-card"
+          id="viewer-card"
+          aria-label="Image comparison"
+        >
+          <div class="viewer-toolbar">
+            <div class="view-tabs" role="group" aria-label="Comparison layout">
+              <button
+                class="view-tab active"
+                data-layout="slider"
+                aria-pressed="true"
+              >
+                <svg><use href="#i-slider" /></svg><span>Slider</span></button
+              ><button class="view-tab" data-layout="side" aria-pressed="false">
+                <svg><use href="#i-columns" /></svg><span>Side by side</span>
+              </button>
+            </div>
+            <div class="zoom-controls">
+              <button id="zoom-out" class="icon-button" aria-label="Zoom out">
+                <svg><use href="#i-minus" /></svg></button
+              ><span id="zoom-level">100%</span
+              ><button id="zoom-in" class="icon-button" aria-label="Zoom in">
+                <svg><use href="#i-plus" /></svg></button
+              ><button
+                id="reset-view"
+                class="icon-button reset-button"
+                aria-label="Reset zoom and position"
+              >
+                <svg><use href="#i-refresh" /></svg></button
+              ><span class="toolbar-divider"></span
+              ><button
+                id="fullscreen"
+                class="icon-button"
+                aria-label="Toggle full screen"
+              >
+                <svg><use href="#i-expand" /></svg>
+              </button>
+            </div>
+          </div>
+          <div class="image-stage" id="image-stage">
+            <div class="empty-state" id="empty-state">
+              <span class="empty-frame"
+                ><svg><use href="#i-frame" /></svg
+              ></span>
+              <h3>Your comparison lives here.</h3>
+              <p>Choose a face to see the reconstruction.</p>
+            </div>
+            <div class="slider-view" id="slider-view" hidden>
+              <div class="image-layer after-layer">
+                <img
+                  id="after-image"
+                  alt="Super-resolved result from your trained model"
+                  draggable="false"
+                />
+              </div>
+              <div class="image-layer before-layer" id="before-layer">
+                <img
+                  id="before-image"
+                  class="pixelated"
+                  alt="Low-resolution input"
+                  draggable="false"
+                />
+              </div>
+              <span class="image-tag before-tag" id="before-tag"
+                >LOW-RES INPUT</span
+              ><span class="image-tag after-tag"
+                ><span class="tag-dot"></span
+                ><span id="after-tag-text">SR ×4</span></span
+              >
+              <div class="compare-divider" id="compare-divider">
+                <button
+                  id="divider-handle"
+                  aria-label="Drag to compare before and after"
+                >
+                  <svg><use href="#i-slider" /></svg>
+                </button>
+              </div>
+            </div>
+            <div class="side-view" id="side-view" hidden>
+              <div class="side-cell">
+                <span class="image-tag" id="side-before-tag">LOW-RES INPUT</span
+                ><img
+                  id="side-before-image"
+                  class="pixelated"
+                  alt="Comparison input"
+                  draggable="false"
+                />
+              </div>
+              <div class="side-cell">
+                <span class="image-tag"
+                  ><span class="tag-dot"></span
+                  ><span id="side-after-tag-text">SR ×4</span></span
+                ><img
+                  id="side-after-image"
+                  alt="Super-resolved image"
+                  draggable="false"
+                />
+              </div>
+            </div>
+            <div class="loading-overlay" id="loading-overlay">
+              <span class="loading-spinner"></span
+              ><strong id="loading-label">Loading your trained model…</strong
+              ><span id="loading-hint">The comparison will appear here.</span>
+            </div>
+          </div>
+          <div class="viewer-bottom">
+            <div
+              class="compare-options"
+              role="group"
+              aria-label="Compare reconstruction with"
+            >
+              <span>Compare with</span
+              ><button
+                data-compare="input"
+                class="compare-option active"
+                aria-pressed="true"
+              >
+                Input</button
+              ><button
+                data-compare="bicubic"
+                class="compare-option"
+                aria-pressed="false"
+              >
+                Bicubic</button
+              ><button
+                data-compare="reference"
+                class="compare-option"
+                id="original-option"
+                aria-pressed="false"
+                disabled
+                title="A clean original is needed"
+              >
+                Original</button
+              ><button
+                data-compare="previous"
+                class="compare-option"
+                id="previous-option"
+                aria-pressed="false"
+                disabled
+                title="Compare this baseline with our v4 model on identical input pixels"
+              >
+                Our model
+              </button>
+            </div>
+            <span class="drag-hint" id="drag-hint"
+              >Drag the divider to compare</span
+            >
+          </div>
+          <label class="accessible-slider" for="split-range"
+            >Before / after position<input
+              id="split-range"
+              type="range"
+              min="0"
+              max="100"
+              value="50"
+              aria-label="Before and after divider position"
+          /></label>
+        </section>
+        <section
+          class="metrics-row"
+          aria-label="Image details and reconstruction quality"
+        >
+          <article class="metric-card">
+            <span class="metric-label">INPUT RESOLUTION</span>
+            <div class="metric-value" id="input-resolution">
+              —<small> px</small>
+            </div>
+            <span class="metric-caption">Before reconstruction</span>
+          </article>
+          <article class="metric-card">
+            <span class="metric-label"
+              >OUTPUT RESOLUTION <span class="tiny-badge">×4</span></span
+            >
+            <div class="metric-value" id="output-resolution">
+              —<small> px</small>
+            </div>
+            <span class="metric-caption">Reconstructed image</span>
+          </article>
+          <article class="metric-card">
+            <span class="metric-label"
+              >PSNR
+              <span
+                class="metric-info"
+                title="Luminance PSNR against the clean original, excluding a 4-pixel border. Higher is closer."
+                >i</span
+              ></span
+            >
+            <div class="metric-value" id="psnr-value">—<small> dB</small></div>
+            <span class="metric-caption" id="psnr-caption"
+              >A clean original is needed</span
+            >
+          </article>
+          <article class="metric-card">
+            <span class="metric-label"
+              >SSIM
+              <span
+                class="metric-info"
+                title="Structural similarity against the clean original, excluding a 4-pixel border. Higher is closer."
+                >i</span
+              ></span
+            >
+            <div class="metric-value" id="ssim-value">—</div>
+            <span class="metric-caption" id="ssim-caption"
+              >A clean original is needed</span
+            >
+          </article>
+        </section>
+        <div class="comparison-note">
+          <span class="note-mark">↳</span>
+          <p id="result-note">
+            Use Original to inspect how closely the reconstruction matches the
+            clean face.
+          </p>
+        </div>
+        <p class="source-help" id="input-guidance"></p>
+        <p class="source-help">
+          Higher PSNR/SSIM can still look softer. These scores measure closeness
+          to a clean original, not the percentage of identity recovered. Heavy
+          generative models may look sharper. QMUL has no paired clean original.
+        </p>
+        <p class="source-help">
+          <a href="/diagnostics/visual" target="_blank" rel="noopener"
+            >View selected validation strengths and counterexamples</a
+          >
+          — selected after metric comparison; not training images or an unbiased
+          test gallery.
+        </p>
+        <footer class="workspace-footer">
+          <span
+            ><span class="footer-dot"></span
+            ><span id="result-name">Ready when you are</span></span
+          ><span id="runtime-label"
+            >Local inference · no uploads to the cloud</span
+          >
+        </footer>
+      </main>
+    </div>
+  </body>
 </html>

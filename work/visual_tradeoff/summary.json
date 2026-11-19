@@ -1,0 +1,35 @@
+{
+  "cohort": "128 previously examined FFHQ validation images, standard28",
+  "mean_metrics": {
+    "identity_v4": {
+      "psnr": 25.560803711414337,
+      "ssim": 0.7330526435175995,
+      "lpips_alex": 0.25442428956739604,
+      "mobileface_cosine": 0.36648103647166863
+    },
+    "restoration": {
+      "psnr": 23.649574160575867,
+      "ssim": 0.683900006616261,
+      "lpips_alex": 0.12230403372086585,
+      "mobileface_cosine": 0.3869116482674144
+    },
+    "codeformer": {
+      "psnr": 23.654644340276718,
+      "ssim": 0.6359727711469845,
+      "lpips_alex": 0.15577163139823824,
+      "mobileface_cosine": 0.3572062434977852
+    },
+    "bicubic": {
+      "psnr": 24.78071692585945,
+      "ssim": 0.665415679546291,
+      "lpips_alex": 0.5744682471267879,
+      "mobileface_cosine": 0.33076756179798394
+    }
+  },
+  "ours_better_than_both_baselines_image_counts": {
+    "psnr": 128,
+    "ssim": 125,
+    "lpips_alex": 0,
+    "mobileface_cosine": 41
+  }
+}

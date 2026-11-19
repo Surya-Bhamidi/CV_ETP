@@ -1,0 +1,10 @@
+{
+  "all_native_input_coverage_and_rejections_reproduced": true,
+  "all_original_pairs_retained": true,
+  "all_native_validation_thresholds_reproduced": true,
+  "all_supported_and_all_pair_success_metrics_reproduced": true,
+  "all_supported_pair_auc_reproduced": true,
+  "raw_runtime_spotcheck_statistics_reproduced": true,
+  "uncached_upload_api_pixels_match_offline_inference_within_one_to_two_levels": true,
+  "no_live_video_or_physical_field_trial_claimed": true
+}

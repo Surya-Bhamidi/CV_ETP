@@ -1,5 +1,0 @@
-{
-  "enabled": false,
-  "reason": "The compact pretrained generic SR baseline produced blocking and a large reconstruction regression. Two denoising weights were checked on 256 validation images; reflection padding also failed to improve the small validation trial. Keep archived as an evaluated baseline, not a project improvement.",
-  "evidence": ["validation_metrics.json", "validation_comparison.png", "padding_metrics.json", "padding_comparison.png"]
-}

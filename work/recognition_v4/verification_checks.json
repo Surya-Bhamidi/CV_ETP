@@ -1,0 +1,11 @@
+{
+  "validation_identity_and_pixel_cache_integrity": true,
+  "primary512_calibration_indices_unchanged": true,
+  "all_calibration_thresholds_reproduced_from_validation_scores": true,
+  "all_pair_accuracy_auc_and_fixed_fusion_scores_reproduced": true,
+  "selection_and_release_frozen_before_evaluation": true,
+  "paired_quality_metrics_reproduced": true,
+  "primary_over70_claim_checked": true,
+  "independent_mobileface_excluded_from_training_and_selection": true,
+  "limits": "Historical repeated-test bias and unknown pretraining/FFHQ person overlap remain; fusion is a different recognition pipeline."
+}

@@ -1,0 +1,65 @@
+{
+  "purpose": "Simplified presentation UI requested by the user: one preferred project model and two genuine pretrained comparators.",
+  "default_model": "identity_v4",
+  "models": [
+    {
+      "id": "identity_v4",
+      "label": "Ours - lightweight SSC + attention (v4)",
+      "epochs": 44,
+      "finetune_epochs": 14,
+      "kind": "custom",
+      "parameters": 479109,
+      "checkpoint_sha256": "2fd49ea0226e05c7f9fcc1263fde429995c0a15b4be00fba52d045b25284fe11",
+      "training_domains": [
+        "FFHQ project training split",
+        "Official QMUL training identities"
+      ],
+      "description": "Your selected v4 model: sparse-sampling convolution and adaptive sparse linear attention.",
+      "warning": "Eye and spectacle detail remains imperfect. FFHQ has clean comparison targets; QMUL has no paired clean originals. Recognizer accuracy is not a restoration percentage."
+    },
+    {
+      "id": "restoration",
+      "label": "GFPGAN 1.4 (official pretrained)",
+      "epochs": null,
+      "finetune_epochs": 0,
+      "kind": "external_pretrained",
+      "parameters": 86444252,
+      "checkpoint_sha256": "e2cd4703ab14f4d01fd1383a8a8b266f9a5833dacee8e6a79d3bf21a1b6be5ad",
+      "training_domains": [
+        "FFHQ (official pretraining; different split and procedure)"
+      ],
+      "fidelity": null,
+      "description": "Official pretrained GFPGAN 1.4, full model output without blending.",
+      "warning": "Shared FFHQ dataset, different training splits and budget; external pretraining overlap is not excluded. Both baselines internally resize the same supplied crop to 512 x 512, then return x4 at its original aspect ratio. No detector or extra alignment is applied. Generated details may change identity."
+    },
+    {
+      "id": "codeformer",
+      "label": "CodeFormer (official pretrained, w=0.5)",
+      "epochs": null,
+      "finetune_epochs": 0,
+      "kind": "external_pretrained",
+      "parameters": 94112707,
+      "checkpoint_sha256": "1009e537e0c2a07d4cabce6355f53cb66767cd4b4297ec7a4a64ca4b8a5684b7",
+      "training_domains": [
+        "FFHQ (official pretraining; different split and procedure)"
+      ],
+      "fidelity": 0.5,
+      "description": "Official pretrained CodeFormer, documented cropped-face setting w=0.5, without blending.",
+      "warning": "Shared FFHQ dataset, different training splits and budget; external pretraining overlap is not excluded. Both baselines internally resize the same supplied crop to 512 x 512, then return x4 at its original aspect ratio. No detector or extra alignment is applied. Generated details may change identity."
+    }
+  ],
+  "project_weights_changed": false,
+  "new_training": false,
+  "baselines_unblended": true,
+  "old_codeformer_ui_rejection": "Preserved in work/codeformer_assets/ui_review.json. That earlier image-quality judgment is historical; CodeFormer is now exposed as an explicitly labeled comparator, not an approved project improvement.",
+  "eye_variant": "Remains retired after user visual rejection.",
+  "old_experiments": "Archived in their original directories; not loaded into active UI.",
+  "no_guaranteed_winner": true,
+  "matched_training_claim": false,
+  "default_gallery": {
+    "split": "validation",
+    "profile": "standard28",
+    "focus": "cases"
+  },
+  "gallery_change_reason": "User clarified: change demo images; keep both baselines. Direct launch now uses labeled validation case studies; fixed test gallery remains accessible."
+}

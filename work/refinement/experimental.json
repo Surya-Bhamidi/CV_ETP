@@ -1,8 +1,0 @@
-{
-  "checkpoint": "work/refinement/detail_full/best.pt",
-  "checkpoint_sha256": "4a6a3a56383178476862735dabe831615e139dc224d2ada1bdd33355c8fac61e",
-  "passes_release": false,
-  "available_for_comparison": false,
-  "reason": "Independent QMUL MobileFaceNet AUC regressed; retain original as default.",
-  "retired_reason": "User observed visual regression; PSNR/SSIM, pixel and edge error confirm it. Archived for reproducibility, removed from active UI options."
-}

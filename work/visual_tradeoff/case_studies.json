@@ -1,0 +1,31 @@
+{
+  "split": "validation",
+  "profile": "standard28",
+  "post_hoc_selection": true,
+  "source_evaluation_sha256": "17b502a98dc2aaca46b52312c7b62bf7337ca14aeb21b4967f7374b4e86e0428",
+  "rule": "Two largest v4 cosine advantages over both baselines, followed by two largest v4 LPIPS disadvantages; illustrative selection, not an unbiased evaluation.",
+  "not_training_images": true,
+  "no_model_or_setting_changes": true,
+  "cases": [
+    {
+      "index": 31,
+      "role": "v4 face-feature cosine advantage",
+      "selection_metric": "mobileface_cosine"
+    },
+    {
+      "index": 72,
+      "role": "v4 face-feature cosine advantage",
+      "selection_metric": "mobileface_cosine"
+    },
+    {
+      "index": 42,
+      "role": "heavy-model perceptual advantage",
+      "selection_metric": "lpips_alex"
+    },
+    {
+      "index": 41,
+      "role": "heavy-model perceptual advantage",
+      "selection_metric": "lpips_alex"
+    }
+  ]
+}

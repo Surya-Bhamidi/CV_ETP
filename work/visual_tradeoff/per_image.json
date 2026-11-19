@@ -1,0 +1,3842 @@
+[
+  {
+    "index": 0,
+    "input_png_sha256": "801be794ff1f6326b749c402b6e933d27b7c112bafff9606b32424c4d30d7398",
+    "models": {
+      "identity_v4": {
+        "psnr": 22.809524536132812,
+        "ssim": 0.7289027853146749,
+        "lpips_alex": 0.3215470016002655,
+        "mobileface_cosine": 0.47662192583084106
+      },
+      "restoration": {
+        "psnr": 21.5999698638916,
+        "ssim": 0.6869920039022086,
+        "lpips_alex": 0.21442192792892456,
+        "mobileface_cosine": 0.2897820472717285
+      },
+      "codeformer": {
+        "psnr": 21.51581573486328,
+        "ssim": 0.6963605527341165,
+        "lpips_alex": 0.17293599247932434,
+        "mobileface_cosine": 0.42245662212371826
+      },
+      "bicubic": {
+        "psnr": 22.087570190429688,
+        "ssim": 0.678960549549293,
+        "lpips_alex": 0.5586110353469849,
+        "mobileface_cosine": 0.4417334794998169
+      }
+    }
+  },
+  {
+    "index": 1,
+    "input_png_sha256": "696ae0c05c1146735345cbbd40f7bb010d0ee01969c8fa1c6f81eb0cc6add633",
+    "models": {
+      "identity_v4": {
+        "psnr": 26.513826370239258,
+        "ssim": 0.6714042066622025,
+        "lpips_alex": 0.291970819234848,
+        "mobileface_cosine": 0.32082220911979675
+      },
+      "restoration": {
+        "psnr": 23.989959716796875,
+        "ssim": 0.586902628311739,
+        "lpips_alex": 0.12431192398071289,
+        "mobileface_cosine": 0.44368454813957214
+      },
+      "codeformer": {
+        "psnr": 24.09681510925293,
+        "ssim": 0.558398331717086,
+        "lpips_alex": 0.16320836544036865,
+        "mobileface_cosine": 0.25342145562171936
+      },
+      "bicubic": {
+        "psnr": 25.94984245300293,
+        "ssim": 0.6146894671948537,
+        "lpips_alex": 0.5917715430259705,
+        "mobileface_cosine": 0.2937764823436737
+      }
+    }
+  },
+  {
+    "index": 2,
+    "input_png_sha256": "96ba830b1724002e16fed3fa9f5392b9accaa0ebce359da4279276026e7655a1",
+    "models": {
+      "identity_v4": {
+        "psnr": 23.515987396240234,
+        "ssim": 0.6908301539709323,
+        "lpips_alex": 0.2913316488265991,
+        "mobileface_cosine": 0.49360260367393494
+      },
+      "restoration": {
+        "psnr": 21.60818099975586,
+        "ssim": 0.6630283797186265,
+        "lpips_alex": 0.09935404360294342,
+        "mobileface_cosine": 0.5657252073287964
+      },
+      "codeformer": {
+        "psnr": 21.917644500732422,
+        "ssim": 0.5798346741802929,
+        "lpips_alex": 0.1840088665485382,
+        "mobileface_cosine": 0.5569902062416077
+      },
+      "bicubic": {
+        "psnr": 22.762670516967773,
+        "ssim": 0.6155449895355296,
+        "lpips_alex": 0.6469070315361023,
+        "mobileface_cosine": 0.441096693277359
+      }
+    }
+  },
+  {
+    "index": 3,
+    "input_png_sha256": "8289664131f30c5e70a745bcfcfb8f76893bef5acd86fa0faca3d8f80e943b09",
+    "models": {
+      "identity_v4": {
+        "psnr": 25.685701370239258,
+        "ssim": 0.6513653416778588,
+        "lpips_alex": 0.31540003418922424,
+        "mobileface_cosine": 0.19245903193950653
+      },
+      "restoration": {
+        "psnr": 24.188480377197266,
+        "ssim": 0.6279765998593216,
+        "lpips_alex": 0.1709033101797104,
+        "mobileface_cosine": 0.2325018048286438
+      },
+      "codeformer": {
+        "psnr": 24.36630630493164,
+        "ssim": 0.576134078777987,
+        "lpips_alex": 0.2038222998380661,
+        "mobileface_cosine": 0.24667519330978394
+      },
+      "bicubic": {
+        "psnr": 24.9854679107666,
+        "ssim": 0.5813665768117862,
+        "lpips_alex": 0.628870964050293,
+        "mobileface_cosine": 0.2501048147678375
+      }
+    }
+  },
+  {
+    "index": 4,
+    "input_png_sha256": "f6b21398354af28e998f11e69f62f60dcbf027c552df7913b3c412622dc176b7",
+    "models": {
+      "identity_v4": {
+        "psnr": 26.13999366760254,
+        "ssim": 0.709095033017447,
+        "lpips_alex": 0.25402554869651794,
+        "mobileface_cosine": 0.30515938997268677
+      },
+      "restoration": {
+        "psnr": 24.025653839111328,
+        "ssim": 0.6482060964473971,
+        "lpips_alex": 0.10209889709949493,
+        "mobileface_cosine": 0.4215310513973236
+      },
+      "codeformer": {
+        "psnr": 24.497602462768555,
+        "ssim": 0.5935469059733713,
+        "lpips_alex": 0.15873654186725616,
+        "mobileface_cosine": 0.24588173627853394
+      },
+      "bicubic": {
+        "psnr": 25.652381896972656,
+        "ssim": 0.6472950676694743,
+        "lpips_alex": 0.5749997496604919,
+        "mobileface_cosine": 0.17035138607025146
+      }
+    }
+  },
+  {
+    "index": 5,
+    "input_png_sha256": "274aaf4fe947d7dada0c884ea2bd688f99ebc1896eb804ffa23ef56d2c2415e1",
+    "models": {
+      "identity_v4": {
+        "psnr": 24.804893493652344,
+        "ssim": 0.6993675124378091,
+        "lpips_alex": 0.2875935733318329,
+        "mobileface_cosine": 0.35024693608283997
+      },
+      "restoration": {
+        "psnr": 23.58295249938965,
+        "ssim": 0.6972974562547875,
+        "lpips_alex": 0.11837803572416306,
+        "mobileface_cosine": 0.5175811648368835
+      },
+      "codeformer": {
+        "psnr": 23.092350006103516,
+        "ssim": 0.6475633610898966,
+        "lpips_alex": 0.12052138894796371,
+        "mobileface_cosine": 0.40900906920433044
+      },
+      "bicubic": {
+        "psnr": 24.15496063232422,
+        "ssim": 0.6264893388367103,
+        "lpips_alex": 0.568557620048523,
+        "mobileface_cosine": 0.2580294907093048
+      }
+    }
+  },
+  {
+    "index": 6,
+    "input_png_sha256": "8e286ddc932b4e191a46efd21cf542b824fa789c1679be0b68990be121562f61",
+    "models": {
+      "identity_v4": {
+        "psnr": 24.793216705322266,
+        "ssim": 0.7220597272176108,
+        "lpips_alex": 0.248244509100914,
+        "mobileface_cosine": 0.299326092004776
+      },
+      "restoration": {
+        "psnr": 20.65191650390625,
+        "ssim": 0.5799978384725085,
+        "lpips_alex": 0.15546216070652008,
+        "mobileface_cosine": 0.2564375400543213
+      },
+      "codeformer": {
+        "psnr": 21.995498657226562,
+        "ssim": 0.6051188250600279,
+        "lpips_alex": 0.1661103516817093,
+        "mobileface_cosine": 0.3330373764038086
+      },
+      "bicubic": {
+        "psnr": 24.062253952026367,
+        "ssim": 0.6676174078949263,
+        "lpips_alex": 0.5601545572280884,
+        "mobileface_cosine": 0.34676438570022583
+      }
+    }
+  },
+  {
+    "index": 7,
+    "input_png_sha256": "4db4a347a7028b85ca8640c72fddc9d468f5ed20219986cc66fc24f27278d6fc",
+    "models": {
+      "identity_v4": {
+        "psnr": 31.452529907226562,
+        "ssim": 0.8427500038272757,
+        "lpips_alex": 0.22658732533454895,
+        "mobileface_cosine": 0.4837920665740967
+      },
+      "restoration": {
+        "psnr": 29.616003036499023,
+        "ssim": 0.8134763494888406,
+        "lpips_alex": 0.07156411558389664,
+        "mobileface_cosine": 0.35272443294525146
+      },
+      "codeformer": {
+        "psnr": 29.732942581176758,
+        "ssim": 0.811992726272299,
+        "lpips_alex": 0.08156104385852814,
+        "mobileface_cosine": 0.4140572249889374
+      },
+      "bicubic": {
+        "psnr": 30.07545280456543,
+        "ssim": 0.7863559753786815,
+        "lpips_alex": 0.5113889575004578,
+        "mobileface_cosine": 0.36547380685806274
+      }
+    }
+  },
+  {
+    "index": 8,
+    "input_png_sha256": "5868f95465c8aea301067e85ac9953532416dff051cfc55a62b347b629a1cdf2",
+    "models": {
+      "identity_v4": {
+        "psnr": 25.012876510620117,
+        "ssim": 0.7254974004099176,
+        "lpips_alex": 0.22665417194366455,
+        "mobileface_cosine": 0.46449142694473267
+      },
+      "restoration": {
+        "psnr": 23.45464324951172,
+        "ssim": 0.7107288707880967,
+        "lpips_alex": 0.07990798354148865,
+        "mobileface_cosine": 0.710688591003418
+      },
+      "codeformer": {
+        "psnr": 23.314342498779297,
+        "ssim": 0.6282099123219442,
+        "lpips_alex": 0.11431307345628738,
+        "mobileface_cosine": 0.6054253578186035
+      },
+      "bicubic": {
+        "psnr": 24.561359405517578,
+        "ssim": 0.6796359872710781,
+        "lpips_alex": 0.4493740499019623,
+        "mobileface_cosine": 0.3979252576828003
+      }
+    }
+  },
+  {
+    "index": 9,
+    "input_png_sha256": "fb50e132f294d83264553619466e3c5031743ec58ccf69f5681135741b74a86c",
+    "models": {
+      "identity_v4": {
+        "psnr": 25.648662567138672,
+        "ssim": 0.7367123088321149,
+        "lpips_alex": 0.20945201814174652,
+        "mobileface_cosine": 0.38135775923728943
+      },
+      "restoration": {
+        "psnr": 23.197895050048828,
+        "ssim": 0.6635844434048163,
+        "lpips_alex": 0.09626775234937668,
+        "mobileface_cosine": 0.3341732919216156
+      },
+      "codeformer": {
+        "psnr": 23.47286605834961,
+        "ssim": 0.661839921977936,
+        "lpips_alex": 0.12264809757471085,
+        "mobileface_cosine": 0.26520583033561707
+      },
+      "bicubic": {
+        "psnr": 25.012121200561523,
+        "ssim": 0.6801366373466078,
+        "lpips_alex": 0.535973072052002,
+        "mobileface_cosine": 0.3910309672355652
+      }
+    }
+  },
+  {
+    "index": 10,
+    "input_png_sha256": "a37d8c030d34ab8392cd71a29f84b4a3352629e093ccbc4c0864bf34158be603",
+    "models": {
+      "identity_v4": {
+        "psnr": 26.467666625976562,
+        "ssim": 0.7351325214694953,
+        "lpips_alex": 0.21124041080474854,
+        "mobileface_cosine": 0.33312147855758667
+      },
+      "restoration": {
+        "psnr": 24.662151336669922,
+        "ssim": 0.6718156678790899,
+        "lpips_alex": 0.09602569788694382,
+        "mobileface_cosine": 0.28991541266441345
+      },
+      "codeformer": {
+        "psnr": 24.249345779418945,
+        "ssim": 0.6071266785850838,
+        "lpips_alex": 0.1691729724407196,
+        "mobileface_cosine": 0.11972855776548386
+      },
+      "bicubic": {
+        "psnr": 25.685165405273438,
+        "ssim": 0.6769026538437093,
+        "lpips_alex": 0.6312510967254639,
+        "mobileface_cosine": 0.23382647335529327
+      }
+    }
+  },
+  {
+    "index": 11,
+    "input_png_sha256": "9a037e6b5a9d867983d08df6576bdde22584319ce5bdec60f5b708a9521c7435",
+    "models": {
+      "identity_v4": {
+        "psnr": 26.39892578125,
+        "ssim": 0.799956194446258,
+        "lpips_alex": 0.22969399392604828,
+        "mobileface_cosine": 0.5212485194206238
+      },
+      "restoration": {
+        "psnr": 23.889907836914062,
+        "ssim": 0.7563307089623185,
+        "lpips_alex": 0.11783843487501144,
+        "mobileface_cosine": 0.5106492042541504
+      },
+      "codeformer": {
+        "psnr": 24.5559024810791,
+        "ssim": 0.7345413424470739,
+        "lpips_alex": 0.1385444551706314,
+        "mobileface_cosine": 0.5193715691566467
+      },
+      "bicubic": {
+        "psnr": 25.530323028564453,
+        "ssim": 0.7368642223438598,
+        "lpips_alex": 0.5013773441314697,
+        "mobileface_cosine": 0.5618941783905029
+      }
+    }
+  },
+  {
+    "index": 12,
+    "input_png_sha256": "d6c04dd4e77268e6a1b800c2543c9907b7b47806b8b14c260edca0534d8fc325",
+    "models": {
+      "identity_v4": {
+        "psnr": 25.091259002685547,
+        "ssim": 0.625734538853878,
+        "lpips_alex": 0.32795950770378113,
+        "mobileface_cosine": 0.3404727876186371
+      },
+      "restoration": {
+        "psnr": 22.14749526977539,
+        "ssim": 0.528884766521875,
+        "lpips_alex": 0.1990167498588562,
+        "mobileface_cosine": 0.27708935737609863
+      },
+      "codeformer": {
+        "psnr": 21.992332458496094,
+        "ssim": 0.44645759091098647,
+        "lpips_alex": 0.3683021068572998,
+        "mobileface_cosine": 0.2610667645931244
+      },
+      "bicubic": {
+        "psnr": 24.830415725708008,
+        "ssim": 0.5789119199054971,
+        "lpips_alex": 0.6411105394363403,
+        "mobileface_cosine": 0.2133358120918274
+      }
+    }
+  },
+  {
+    "index": 13,
+    "input_png_sha256": "b2ff0c7c9b034882f67d718559f5ca5be1ec0aac13d2d1cd196133ef95fb7f8b",
+    "models": {
+      "identity_v4": {
+        "psnr": 27.503416061401367,
+        "ssim": 0.8301693457796485,
+        "lpips_alex": 0.12041157484054565,
+        "mobileface_cosine": 0.3527860939502716
+      },
+      "restoration": {
+        "psnr": 25.262977600097656,
+        "ssim": 0.7957413942793601,
+        "lpips_alex": 0.06494402885437012,
+        "mobileface_cosine": 0.382567822933197
+      },
+      "codeformer": {
+        "psnr": 25.74610137939453,
+        "ssim": 0.7844277703435777,
+        "lpips_alex": 0.06905285269021988,
+        "mobileface_cosine": 0.3421652019023895
+      },
+      "bicubic": {
+        "psnr": 25.73721694946289,
+        "ssim": 0.7410884204903481,
+        "lpips_alex": 0.4536932706832886,
+        "mobileface_cosine": 0.4399276375770569
+      }
+    }
+  },
+  {
+    "index": 14,
+    "input_png_sha256": "fe1e1e995013307e1ce5ab2270f6133af2cf0ae1446faad266ae014396c3587f",
+    "models": {
+      "identity_v4": {
+        "psnr": 26.319477081298828,
+        "ssim": 0.7041970922722433,
+        "lpips_alex": 0.28408747911453247,
+        "mobileface_cosine": 0.3801844120025635
+      },
+      "restoration": {
+        "psnr": 23.78670883178711,
+        "ssim": 0.624941626944115,
+        "lpips_alex": 0.09576341509819031,
+        "mobileface_cosine": 0.39655905961990356
+      },
+      "codeformer": {
+        "psnr": 22.932071685791016,
+        "ssim": 0.4994828423862607,
+        "lpips_alex": 0.24975019693374634,
+        "mobileface_cosine": 0.2443259060382843
+      },
+      "bicubic": {
+        "psnr": 25.426130294799805,
+        "ssim": 0.6357848197668071,
+        "lpips_alex": 0.5744680166244507,
+        "mobileface_cosine": 0.3607898950576782
+      }
+    }
+  },
+  {
+    "index": 15,
+    "input_png_sha256": "058cf66a3a23eb691802f99210ab073274d8bf79964967dabbb4f61d60254359",
+    "models": {
+      "identity_v4": {
+        "psnr": 27.071208953857422,
+        "ssim": 0.7863539086576171,
+        "lpips_alex": 0.16537226736545563,
+        "mobileface_cosine": 0.4001646637916565
+      },
+      "restoration": {
+        "psnr": 24.639312744140625,
+        "ssim": 0.7227765008435469,
+        "lpips_alex": 0.10798323899507523,
+        "mobileface_cosine": 0.3346768021583557
+      },
+      "codeformer": {
+        "psnr": 24.28926658630371,
+        "ssim": 0.6631693144806385,
+        "lpips_alex": 0.09942261874675751,
+        "mobileface_cosine": 0.27290958166122437
+      },
+      "bicubic": {
+        "psnr": 25.646324157714844,
+        "ssim": 0.7045275946382231,
+        "lpips_alex": 0.5661784410476685,
+        "mobileface_cosine": 0.3391009569168091
+      }
+    }
+  },
+  {
+    "index": 16,
+    "input_png_sha256": "f97c4515e5eb56ec512a53ed76bc0355898145c679d332aae40cf4f89a1aa5b8",
+    "models": {
+      "identity_v4": {
+        "psnr": 25.90719223022461,
+        "ssim": 0.7227085854657642,
+        "lpips_alex": 0.2805429995059967,
+        "mobileface_cosine": 0.36841249465942383
+      },
+      "restoration": {
+        "psnr": 23.51917266845703,
+        "ssim": 0.6374038746264428,
+        "lpips_alex": 0.11188302934169769,
+        "mobileface_cosine": 0.3649258613586426
+      },
+      "codeformer": {
+        "psnr": 23.32193374633789,
+        "ssim": 0.5925333576047056,
+        "lpips_alex": 0.1600782722234726,
+        "mobileface_cosine": 0.3108626902103424
+      },
+      "bicubic": {
+        "psnr": 24.818706512451172,
+        "ssim": 0.6377153914671931,
+        "lpips_alex": 0.6018886566162109,
+        "mobileface_cosine": 0.3064038157463074
+      }
+    }
+  },
+  {
+    "index": 17,
+    "input_png_sha256": "8864ce1c7d7321c852e403c7fcf806c696412eca006eac23c175f846812c17d9",
+    "models": {
+      "identity_v4": {
+        "psnr": 27.080570220947266,
+        "ssim": 0.7534316725310863,
+        "lpips_alex": 0.19608309864997864,
+        "mobileface_cosine": 0.3151346743106842
+      },
+      "restoration": {
+        "psnr": 25.644102096557617,
+        "ssim": 0.7054034713112044,
+        "lpips_alex": 0.1090230643749237,
+        "mobileface_cosine": 0.31163984537124634
+      },
+      "codeformer": {
+        "psnr": 23.855945587158203,
+        "ssim": 0.5696365772349864,
+        "lpips_alex": 0.23603855073451996,
+        "mobileface_cosine": 0.21676333248615265
+      },
+      "bicubic": {
+        "psnr": 25.694583892822266,
+        "ssim": 0.6504696874937784,
+        "lpips_alex": 0.5809231996536255,
+        "mobileface_cosine": 0.24857215583324432
+      }
+    }
+  },
+  {
+    "index": 18,
+    "input_png_sha256": "470f2c0000106f8d49b210164bdadbd09053e7a9aaf788261f5c50010e36e8fe",
+    "models": {
+      "identity_v4": {
+        "psnr": 26.499013900756836,
+        "ssim": 0.7217238768564163,
+        "lpips_alex": 0.23622430860996246,
+        "mobileface_cosine": 0.4025184214115143
+      },
+      "restoration": {
+        "psnr": 25.050434112548828,
+        "ssim": 0.675253098393518,
+        "lpips_alex": 0.0996202901005745,
+        "mobileface_cosine": 0.451104998588562
+      },
+      "codeformer": {
+        "psnr": 24.5046443939209,
+        "ssim": 0.607126703436421,
+        "lpips_alex": 0.15038013458251953,
+        "mobileface_cosine": 0.17334075272083282
+      },
+      "bicubic": {
+        "psnr": 26.228397369384766,
+        "ssim": 0.6823401299442245,
+        "lpips_alex": 0.5466640591621399,
+        "mobileface_cosine": 0.29848095774650574
+      }
+    }
+  },
+  {
+    "index": 19,
+    "input_png_sha256": "c8ddc0c20554499a3fe0986d9b3bba42a3b4ae2f2db4e4a3774ac010bee010db",
+    "models": {
+      "identity_v4": {
+        "psnr": 25.32560157775879,
+        "ssim": 0.7234170489450334,
+        "lpips_alex": 0.23789575695991516,
+        "mobileface_cosine": 0.3328061103820801
+      },
+      "restoration": {
+        "psnr": 23.79848289489746,
+        "ssim": 0.6779386260760577,
+        "lpips_alex": 0.11175693571567535,
+        "mobileface_cosine": 0.313310831785202
+      },
+      "codeformer": {
+        "psnr": 23.560449600219727,
+        "ssim": 0.6079065290555167,
+        "lpips_alex": 0.20554973185062408,
+        "mobileface_cosine": 0.2514898478984833
+      },
+      "bicubic": {
+        "psnr": 24.47625160217285,
+        "ssim": 0.6417391461657128,
+        "lpips_alex": 0.5991640686988831,
+        "mobileface_cosine": 0.22880931198596954
+      }
+    }
+  },
+  {
+    "index": 20,
+    "input_png_sha256": "cfb3d2d33bd55b712920752f57d88ef9ed12f22e5db9c9b937f518224838c5c5",
+    "models": {
+      "identity_v4": {
+        "psnr": 24.002553939819336,
+        "ssim": 0.645325795450071,
+        "lpips_alex": 0.267572820186615,
+        "mobileface_cosine": 0.43071645498275757
+      },
+      "restoration": {
+        "psnr": 22.60026741027832,
+        "ssim": 0.6127109126376754,
+        "lpips_alex": 0.1437574326992035,
+        "mobileface_cosine": 0.4485422372817993
+      },
+      "codeformer": {
+        "psnr": 21.515836715698242,
+        "ssim": 0.5425310260760053,
+        "lpips_alex": 0.1710185408592224,
+        "mobileface_cosine": 0.39017677307128906
+      },
+      "bicubic": {
+        "psnr": 23.351428985595703,
+        "ssim": 0.5916740331129022,
+        "lpips_alex": 0.651308536529541,
+        "mobileface_cosine": 0.3957310616970062
+      }
+    }
+  },
+  {
+    "index": 21,
+    "input_png_sha256": "5de42825c620a06ed77f9652d392703807df1a52294d24d174ea1e19a64ce49a",
+    "models": {
+      "identity_v4": {
+        "psnr": 23.37751579284668,
+        "ssim": 0.6519545061420028,
+        "lpips_alex": 0.42214399576187134,
+        "mobileface_cosine": 0.25166112184524536
+      },
+      "restoration": {
+        "psnr": 20.441444396972656,
+        "ssim": 0.5762508444290031,
+        "lpips_alex": 0.2969599664211273,
+        "mobileface_cosine": 0.17544996738433838
+      },
+      "codeformer": {
+        "psnr": 21.24433135986328,
+        "ssim": 0.5383770128376688,
+        "lpips_alex": 0.2521389126777649,
+        "mobileface_cosine": 0.2371862679719925
+      },
+      "bicubic": {
+        "psnr": 22.972929000854492,
+        "ssim": 0.6117213946528947,
+        "lpips_alex": 0.7389424443244934,
+        "mobileface_cosine": 0.3595331609249115
+      }
+    }
+  },
+  {
+    "index": 22,
+    "input_png_sha256": "fd6f0f871d7be2d874b23f4625922c02a1657587595ae070ca9bc5ce839e86f5",
+    "models": {
+      "identity_v4": {
+        "psnr": 26.192935943603516,
+        "ssim": 0.6878192098684477,
+        "lpips_alex": 0.27129483222961426,
+        "mobileface_cosine": 0.46372753381729126
+      },
+      "restoration": {
+        "psnr": 23.82809829711914,
+        "ssim": 0.5810071544213186,
+        "lpips_alex": 0.1518741250038147,
+        "mobileface_cosine": 0.3587169945240021
+      },
+      "codeformer": {
+        "psnr": 24.733076095581055,
+        "ssim": 0.5833414009099945,
+        "lpips_alex": 0.22043579816818237,
+        "mobileface_cosine": 0.3111599087715149
+      },
+      "bicubic": {
+        "psnr": 25.918895721435547,
+        "ssim": 0.642533012764526,
+        "lpips_alex": 0.5588525533676147,
+        "mobileface_cosine": 0.26511186361312866
+      }
+    }
+  },
+  {
+    "index": 23,
+    "input_png_sha256": "328ff2a968fb95573a23fab1e4f973427859fc14be535e86fda060c56f46450b",
+    "models": {
+      "identity_v4": {
+        "psnr": 25.529918670654297,
+        "ssim": 0.7436062605703652,
+        "lpips_alex": 0.21678553521633148,
+        "mobileface_cosine": 0.4454713463783264
+      },
+      "restoration": {
+        "psnr": 24.586849212646484,
+        "ssim": 0.716679326587421,
+        "lpips_alex": 0.12166357785463333,
+        "mobileface_cosine": 0.44627803564071655
+      },
+      "codeformer": {
+        "psnr": 24.06654167175293,
+        "ssim": 0.6569338594481151,
+        "lpips_alex": 0.1257818341255188,
+        "mobileface_cosine": 0.4215683937072754
+      },
+      "bicubic": {
+        "psnr": 24.48755645751953,
+        "ssim": 0.6737847672035276,
+        "lpips_alex": 0.5056039690971375,
+        "mobileface_cosine": 0.39114394783973694
+      }
+    }
+  },
+  {
+    "index": 24,
+    "input_png_sha256": "23e41677e55724e075052e7ff7118b7e45910c26b2dc49349bb09f65af264059",
+    "models": {
+      "identity_v4": {
+        "psnr": 24.64734649658203,
+        "ssim": 0.7867555507573271,
+        "lpips_alex": 0.17917193472385406,
+        "mobileface_cosine": 0.3234202265739441
+      },
+      "restoration": {
+        "psnr": 23.011669158935547,
+        "ssim": 0.7457612345711095,
+        "lpips_alex": 0.0909477099776268,
+        "mobileface_cosine": 0.34521105885505676
+      },
+      "codeformer": {
+        "psnr": 22.05175018310547,
+        "ssim": 0.6587387288681411,
+        "lpips_alex": 0.1618293970823288,
+        "mobileface_cosine": 0.27693235874176025
+      },
+      "bicubic": {
+        "psnr": 23.133930206298828,
+        "ssim": 0.6725126899671592,
+        "lpips_alex": 0.567188560962677,
+        "mobileface_cosine": 0.35172146558761597
+      }
+    }
+  },
+  {
+    "index": 25,
+    "input_png_sha256": "9334b96aba00f6dc945824b9572d962c18ea3800f27411e825aefd174acccae1",
+    "models": {
+      "identity_v4": {
+        "psnr": 27.593433380126953,
+        "ssim": 0.7542871177047504,
+        "lpips_alex": 0.2397734522819519,
+        "mobileface_cosine": 0.2582669258117676
+      },
+      "restoration": {
+        "psnr": 26.148908615112305,
+        "ssim": 0.7514236538177693,
+        "lpips_alex": 0.08048795908689499,
+        "mobileface_cosine": 0.7141387462615967
+      },
+      "codeformer": {
+        "psnr": 26.03571319580078,
+        "ssim": 0.714223898997604,
+        "lpips_alex": 0.10694660246372223,
+        "mobileface_cosine": 0.5618202686309814
+      },
+      "bicubic": {
+        "psnr": 27.351879119873047,
+        "ssim": 0.714441053300364,
+        "lpips_alex": 0.6066659092903137,
+        "mobileface_cosine": 0.2802281677722931
+      }
+    }
+  },
+  {
+    "index": 26,
+    "input_png_sha256": "ba13e5abfa7010a27530fe9097dde549e076af83f92962caf57de768cb8c872f",
+    "models": {
+      "identity_v4": {
+        "psnr": 25.579837799072266,
+        "ssim": 0.7617212357915056,
+        "lpips_alex": 0.2691541016101837,
+        "mobileface_cosine": 0.42450183629989624
+      },
+      "restoration": {
+        "psnr": 24.350536346435547,
+        "ssim": 0.7162898778607609,
+        "lpips_alex": 0.08934071660041809,
+        "mobileface_cosine": 0.4354093074798584
+      },
+      "codeformer": {
+        "psnr": 24.223539352416992,
+        "ssim": 0.6762538402484486,
+        "lpips_alex": 0.10590576380491257,
+        "mobileface_cosine": 0.42606809735298157
+      },
+      "bicubic": {
+        "psnr": 24.62015151977539,
+        "ssim": 0.6698722667353649,
+        "lpips_alex": 0.6176174879074097,
+        "mobileface_cosine": 0.40690502524375916
+      }
+    }
+  },
+  {
+    "index": 27,
+    "input_png_sha256": "77a1ff98ad6a5bdff7aa06e25c18bf3e4060f49fb882142680c61210b6d229bc",
+    "models": {
+      "identity_v4": {
+        "psnr": 23.4720516204834,
+        "ssim": 0.7181506492281516,
+        "lpips_alex": 0.29103973507881165,
+        "mobileface_cosine": 0.2621697187423706
+      },
+      "restoration": {
+        "psnr": 21.89895248413086,
+        "ssim": 0.6877354618677216,
+        "lpips_alex": 0.17660236358642578,
+        "mobileface_cosine": 0.4392564594745636
+      },
+      "codeformer": {
+        "psnr": 22.02947425842285,
+        "ssim": 0.6468675857348464,
+        "lpips_alex": 0.1617491990327835,
+        "mobileface_cosine": 0.48729369044303894
+      },
+      "bicubic": {
+        "psnr": 22.900476455688477,
+        "ssim": 0.651815617451626,
+        "lpips_alex": 0.6146563291549683,
+        "mobileface_cosine": 0.3049888014793396
+      }
+    }
+  },
+  {
+    "index": 28,
+    "input_png_sha256": "6b59826625cd934ee45aea08dcbc58bc54cd6481f5a7416b4f96724aec601ddd",
+    "models": {
+      "identity_v4": {
+        "psnr": 22.548118591308594,
+        "ssim": 0.6527569482160125,
+        "lpips_alex": 0.24112235009670258,
+        "mobileface_cosine": 0.38761550188064575
+      },
+      "restoration": {
+        "psnr": 21.235565185546875,
+        "ssim": 0.6187175967440174,
+        "lpips_alex": 0.12906338274478912,
+        "mobileface_cosine": 0.3288627564907074
+      },
+      "codeformer": {
+        "psnr": 21.086498260498047,
+        "ssim": 0.5695147775344225,
+        "lpips_alex": 0.14729838073253632,
+        "mobileface_cosine": 0.30263909697532654
+      },
+      "bicubic": {
+        "psnr": 22.3311767578125,
+        "ssim": 0.6005297118322716,
+        "lpips_alex": 0.5213419198989868,
+        "mobileface_cosine": 0.4475841224193573
+      }
+    }
+  },
+  {
+    "index": 29,
+    "input_png_sha256": "96f715a31336ec8b00cebdeb54295b9115a4808e2a373e5d11fd01f5df04d4b6",
+    "models": {
+      "identity_v4": {
+        "psnr": 25.190412521362305,
+        "ssim": 0.7373136540044561,
+        "lpips_alex": 0.2813354730606079,
+        "mobileface_cosine": 0.2497977912425995
+      },
+      "restoration": {
+        "psnr": 22.799381256103516,
+        "ssim": 0.6823582857660324,
+        "lpips_alex": 0.14279548823833466,
+        "mobileface_cosine": 0.27857059240341187
+      },
+      "codeformer": {
+        "psnr": 22.152441024780273,
+        "ssim": 0.5768625806307832,
+        "lpips_alex": 0.20242366194725037,
+        "mobileface_cosine": 0.155720055103302
+      },
+      "bicubic": {
+        "psnr": 24.45442008972168,
+        "ssim": 0.6526936159408713,
+        "lpips_alex": 0.5594852566719055,
+        "mobileface_cosine": 0.20307275652885437
+      }
+    }
+  },
+  {
+    "index": 30,
+    "input_png_sha256": "2bd345ea44ee5ff76bec96cba50851888135dfa9fbd3f4bdc9639ea9be4e33e5",
+    "models": {
+      "identity_v4": {
+        "psnr": 26.460189819335938,
+        "ssim": 0.7274172165170236,
+        "lpips_alex": 0.1980518400669098,
+        "mobileface_cosine": 0.20381669700145721
+      },
+      "restoration": {
+        "psnr": 24.762508392333984,
+        "ssim": 0.67516933900399,
+        "lpips_alex": 0.08900964260101318,
+        "mobileface_cosine": 0.1724923998117447
+      },
+      "codeformer": {
+        "psnr": 24.956432342529297,
+        "ssim": 0.6613958988783073,
+        "lpips_alex": 0.11920230090618134,
+        "mobileface_cosine": 0.3471251130104065
+      },
+      "bicubic": {
+        "psnr": 26.1310977935791,
+        "ssim": 0.682730972422394,
+        "lpips_alex": 0.5239671468734741,
+        "mobileface_cosine": 0.31310200691223145
+      }
+    }
+  },
+  {
+    "index": 31,
+    "input_png_sha256": "4e9d227cdeb2e5b453999f6ad614661334f0bf0fdb6c534c50e0e5159a7fe94d",
+    "models": {
+      "identity_v4": {
+        "psnr": 24.834718704223633,
+        "ssim": 0.8142308389512192,
+        "lpips_alex": 0.1747247278690338,
+        "mobileface_cosine": 0.34234797954559326
+      },
+      "restoration": {
+        "psnr": 22.506792068481445,
+        "ssim": 0.7809627943519534,
+        "lpips_alex": 0.07659713178873062,
+        "mobileface_cosine": 0.10272157937288284
+      },
+      "codeformer": {
+        "psnr": 23.230182647705078,
+        "ssim": 0.7480524863459822,
+        "lpips_alex": 0.09246495366096497,
+        "mobileface_cosine": 0.14538612961769104
+      },
+      "bicubic": {
+        "psnr": 23.086679458618164,
+        "ssim": 0.7079328399288889,
+        "lpips_alex": 0.4938739538192749,
+        "mobileface_cosine": 0.3429064452648163
+      }
+    }
+  },
+  {
+    "index": 32,
+    "input_png_sha256": "6b444dbf47b24f0c7a1c44519ed531ed3e4ece1a0346477cd36435f71ec4cbcb",
+    "models": {
+      "identity_v4": {
+        "psnr": 26.82012367248535,
+        "ssim": 0.7614398066040862,
+        "lpips_alex": 0.2680397629737854,
+        "mobileface_cosine": 0.4086696207523346
+      },
+      "restoration": {
+        "psnr": 23.959327697753906,
+        "ssim": 0.6698345027239321,
+        "lpips_alex": 0.14004655182361603,
+        "mobileface_cosine": 0.2974632978439331
+      },
+      "codeformer": {
+        "psnr": 25.401805877685547,
+        "ssim": 0.6874656536643311,
+        "lpips_alex": 0.12227888405323029,
+        "mobileface_cosine": 0.4095470905303955
+      },
+      "bicubic": {
+        "psnr": 26.444847106933594,
+        "ssim": 0.710147045340749,
+        "lpips_alex": 0.5194705128669739,
+        "mobileface_cosine": 0.4419470429420471
+      }
+    }
+  },
+  {
+    "index": 33,
+    "input_png_sha256": "b7319b31cb17f2ac7c036cc5f594bc2f34d362cb55bbb89b47dd5dc964bc68a6",
+    "models": {
+      "identity_v4": {
+        "psnr": 24.896896362304688,
+        "ssim": 0.7449981306218637,
+        "lpips_alex": 0.22984415292739868,
+        "mobileface_cosine": 0.4510955214500427
+      },
+      "restoration": {
+        "psnr": 23.125301361083984,
+        "ssim": 0.684578517721708,
+        "lpips_alex": 0.10008330643177032,
+        "mobileface_cosine": 0.5053476095199585
+      },
+      "codeformer": {
+        "psnr": 22.213247299194336,
+        "ssim": 0.5748089537409199,
+        "lpips_alex": 0.17889487743377686,
+        "mobileface_cosine": 0.40066012740135193
+      },
+      "bicubic": {
+        "psnr": 24.238719940185547,
+        "ssim": 0.669560581211142,
+        "lpips_alex": 0.5227540135383606,
+        "mobileface_cosine": 0.45093047618865967
+      }
+    }
+  },
+  {
+    "index": 34,
+    "input_png_sha256": "661889e37392b0542f19661369ebecea5c3ffb6af8d0788c4e897e27e69af938",
+    "models": {
+      "identity_v4": {
+        "psnr": 25.40827751159668,
+        "ssim": 0.8049758134774353,
+        "lpips_alex": 0.19794023036956787,
+        "mobileface_cosine": 0.5551618933677673
+      },
+      "restoration": {
+        "psnr": 23.724119186401367,
+        "ssim": 0.7594843974830341,
+        "lpips_alex": 0.08499128371477127,
+        "mobileface_cosine": 0.5681028366088867
+      },
+      "codeformer": {
+        "psnr": 24.454410552978516,
+        "ssim": 0.7597540680565187,
+        "lpips_alex": 0.1076633483171463,
+        "mobileface_cosine": 0.6094739437103271
+      },
+      "bicubic": {
+        "psnr": 24.349590301513672,
+        "ssim": 0.7161236667677043,
+        "lpips_alex": 0.5464810132980347,
+        "mobileface_cosine": 0.6073622703552246
+      }
+    }
+  },
+  {
+    "index": 35,
+    "input_png_sha256": "2e10ad1fe54c14fdb78b41c265495024c118691c98f4598275f9d456e9b1a6a1",
+    "models": {
+      "identity_v4": {
+        "psnr": 25.480072021484375,
+        "ssim": 0.7530539232144942,
+        "lpips_alex": 0.22822305560112,
+        "mobileface_cosine": 0.20111510157585144
+      },
+      "restoration": {
+        "psnr": 24.160985946655273,
+        "ssim": 0.7337390953958487,
+        "lpips_alex": 0.0787164717912674,
+        "mobileface_cosine": 0.2854161560535431
+      },
+      "codeformer": {
+        "psnr": 24.49293327331543,
+        "ssim": 0.7068841654389179,
+        "lpips_alex": 0.10751981288194656,
+        "mobileface_cosine": 0.2773767411708832
+      },
+      "bicubic": {
+        "psnr": 24.832096099853516,
+        "ssim": 0.6895705630616422,
+        "lpips_alex": 0.5295942425727844,
+        "mobileface_cosine": 0.18358857929706573
+      }
+    }
+  },
+  {
+    "index": 36,
+    "input_png_sha256": "743e54286bf71b433949930cf0c732ecde433e618b37e1b8a857338340979647",
+    "models": {
+      "identity_v4": {
+        "psnr": 26.348316192626953,
+        "ssim": 0.8419296472569596,
+        "lpips_alex": 0.18450023233890533,
+        "mobileface_cosine": 0.4332265555858612
+      },
+      "restoration": {
+        "psnr": 25.229759216308594,
+        "ssim": 0.8194342554121887,
+        "lpips_alex": 0.07126560807228088,
+        "mobileface_cosine": 0.3806006908416748
+      },
+      "codeformer": {
+        "psnr": 24.685413360595703,
+        "ssim": 0.7682309978746202,
+        "lpips_alex": 0.10223177075386047,
+        "mobileface_cosine": 0.37728017568588257
+      },
+      "bicubic": {
+        "psnr": 24.746761322021484,
+        "ssim": 0.7693231515356628,
+        "lpips_alex": 0.5304667353630066,
+        "mobileface_cosine": 0.3182114362716675
+      }
+    }
+  },
+  {
+    "index": 37,
+    "input_png_sha256": "c25b44b9d1b201109d0c4261cf33942b2d7f0635796c9cf5668c5ee556cb5abb",
+    "models": {
+      "identity_v4": {
+        "psnr": 26.188621520996094,
+        "ssim": 0.7031411065097144,
+        "lpips_alex": 0.2626297175884247,
+        "mobileface_cosine": 0.2246323525905609
+      },
+      "restoration": {
+        "psnr": 23.99748992919922,
+        "ssim": 0.6409539459192598,
+        "lpips_alex": 0.10842068493366241,
+        "mobileface_cosine": 0.3151145875453949
+      },
+      "codeformer": {
+        "psnr": 24.491985321044922,
+        "ssim": 0.6232581654773395,
+        "lpips_alex": 0.11060074716806412,
+        "mobileface_cosine": 0.32181409001350403
+      },
+      "bicubic": {
+        "psnr": 25.124351501464844,
+        "ssim": 0.6150706133184398,
+        "lpips_alex": 0.595441460609436,
+        "mobileface_cosine": 0.29577314853668213
+      }
+    }
+  },
+  {
+    "index": 38,
+    "input_png_sha256": "d129938a7027debff666f2d429b1e97f6ad674bac9ed8629cf27eaf76f31bf06",
+    "models": {
+      "identity_v4": {
+        "psnr": 25.085060119628906,
+        "ssim": 0.6906675787300993,
+        "lpips_alex": 0.26422104239463806,
+        "mobileface_cosine": 0.26947399973869324
+      },
+      "restoration": {
+        "psnr": 22.557159423828125,
+        "ssim": 0.5913959179675352,
+        "lpips_alex": 0.12570182979106903,
+        "mobileface_cosine": 0.39768385887145996
+      },
+      "codeformer": {
+        "psnr": 22.44194221496582,
+        "ssim": 0.5440427832699648,
+        "lpips_alex": 0.19778096675872803,
+        "mobileface_cosine": 0.17204982042312622
+      },
+      "bicubic": {
+        "psnr": 24.080642700195312,
+        "ssim": 0.5992283364321429,
+        "lpips_alex": 0.6201350688934326,
+        "mobileface_cosine": 0.15470623970031738
+      }
+    }
+  },
+  {
+    "index": 39,
+    "input_png_sha256": "d47d8c22cb552f736d7a8faf40ed2a1d8b6774dc4a38ead4e80d15bfad3671e8",
+    "models": {
+      "identity_v4": {
+        "psnr": 24.78074836730957,
+        "ssim": 0.6995995422421303,
+        "lpips_alex": 0.26754605770111084,
+        "mobileface_cosine": 0.3614562451839447
+      },
+      "restoration": {
+        "psnr": 22.934852600097656,
+        "ssim": 0.6386944943498087,
+        "lpips_alex": 0.14527249336242676,
+        "mobileface_cosine": 0.3791355490684509
+      },
+      "codeformer": {
+        "psnr": 22.7371768951416,
+        "ssim": 0.577211062375023,
+        "lpips_alex": 0.17230470478534698,
+        "mobileface_cosine": 0.3208855390548706
+      },
+      "bicubic": {
+        "psnr": 24.539653778076172,
+        "ssim": 0.6517964209342972,
+        "lpips_alex": 0.530857264995575,
+        "mobileface_cosine": 0.3931371569633484
+      }
+    }
+  },
+  {
+    "index": 40,
+    "input_png_sha256": "64b67abbb67aa40304cd1e876ba6d3cd4a5be0d719c89ebaad802793760ec919",
+    "models": {
+      "identity_v4": {
+        "psnr": 23.731725692749023,
+        "ssim": 0.7479845151482755,
+        "lpips_alex": 0.22779341042041779,
+        "mobileface_cosine": 0.44068825244903564
+      },
+      "restoration": {
+        "psnr": 21.952905654907227,
+        "ssim": 0.7467470251380858,
+        "lpips_alex": 0.08932720124721527,
+        "mobileface_cosine": 0.47860679030418396
+      },
+      "codeformer": {
+        "psnr": 21.75957489013672,
+        "ssim": 0.6158830069334463,
+        "lpips_alex": 0.15853092074394226,
+        "mobileface_cosine": 0.38135358691215515
+      },
+      "bicubic": {
+        "psnr": 23.588361740112305,
+        "ssim": 0.6809557130822536,
+        "lpips_alex": 0.516075849533081,
+        "mobileface_cosine": 0.3623342514038086
+      }
+    }
+  },
+  {
+    "index": 41,
+    "input_png_sha256": "0afa80908ec329e0943e5ae8be2801680f30084bf0a5a9cd9683390a8ffe942b",
+    "models": {
+      "identity_v4": {
+        "psnr": 24.007564544677734,
+        "ssim": 0.6198118826974119,
+        "lpips_alex": 0.4093814492225647,
+        "mobileface_cosine": 0.32041019201278687
+      },
+      "restoration": {
+        "psnr": 22.378385543823242,
+        "ssim": 0.5789891024409575,
+        "lpips_alex": 0.15165507793426514,
+        "mobileface_cosine": 0.32242220640182495
+      },
+      "codeformer": {
+        "psnr": 23.276897430419922,
+        "ssim": 0.597337829590672,
+        "lpips_alex": 0.19320271909236908,
+        "mobileface_cosine": 0.43944329023361206
+      },
+      "bicubic": {
+        "psnr": 23.605106353759766,
+        "ssim": 0.5729031809027748,
+        "lpips_alex": 0.6605627536773682,
+        "mobileface_cosine": 0.2221645712852478
+      }
+    }
+  },
+  {
+    "index": 42,
+    "input_png_sha256": "47aabdb3b48c7bbcd7bd115fa91e4c9360e051cb22670715d8b0bf834fc22c6b",
+    "models": {
+      "identity_v4": {
+        "psnr": 24.35578155517578,
+        "ssim": 0.6925430872283719,
+        "lpips_alex": 0.4405084550380707,
+        "mobileface_cosine": 0.22764423489570618
+      },
+      "restoration": {
+        "psnr": 21.486583709716797,
+        "ssim": 0.6204090741797826,
+        "lpips_alex": 0.1424596607685089,
+        "mobileface_cosine": 0.31143537163734436
+      },
+      "codeformer": {
+        "psnr": 22.076114654541016,
+        "ssim": 0.6150094738444203,
+        "lpips_alex": 0.19148598611354828,
+        "mobileface_cosine": 0.338528037071228
+      },
+      "bicubic": {
+        "psnr": 24.07132911682129,
+        "ssim": 0.6584090475566042,
+        "lpips_alex": 0.7306269407272339,
+        "mobileface_cosine": 0.19740073382854462
+      }
+    }
+  },
+  {
+    "index": 43,
+    "input_png_sha256": "a60d2d0769c770f7f3aa6c3133a0617bef1cae985537ebca36ea9d24bea8890a",
+    "models": {
+      "identity_v4": {
+        "psnr": 25.19635009765625,
+        "ssim": 0.7099363442055335,
+        "lpips_alex": 0.35147809982299805,
+        "mobileface_cosine": 0.26509320735931396
+      },
+      "restoration": {
+        "psnr": 23.026914596557617,
+        "ssim": 0.652639393652578,
+        "lpips_alex": 0.20567330718040466,
+        "mobileface_cosine": 0.4805207848548889
+      },
+      "codeformer": {
+        "psnr": 22.833812713623047,
+        "ssim": 0.5933861321575128,
+        "lpips_alex": 0.24795451760292053,
+        "mobileface_cosine": 0.3254815936088562
+      },
+      "bicubic": {
+        "psnr": 24.875991821289062,
+        "ssim": 0.6647400482605619,
+        "lpips_alex": 0.6894264221191406,
+        "mobileface_cosine": 0.2405928075313568
+      }
+    }
+  },
+  {
+    "index": 44,
+    "input_png_sha256": "799701ba632afd7dc8a6282b6246c4c818afec99fbd198ef45ab61f61e69def9",
+    "models": {
+      "identity_v4": {
+        "psnr": 27.451904296875,
+        "ssim": 0.7431522347500491,
+        "lpips_alex": 0.20777367055416107,
+        "mobileface_cosine": 0.28302866220474243
+      },
+      "restoration": {
+        "psnr": 26.306900024414062,
+        "ssim": 0.7459756765545741,
+        "lpips_alex": 0.0852162092924118,
+        "mobileface_cosine": 0.4063243567943573
+      },
+      "codeformer": {
+        "psnr": 25.2675724029541,
+        "ssim": 0.6188866187198295,
+        "lpips_alex": 0.15227696299552917,
+        "mobileface_cosine": 0.3999224305152893
+      },
+      "bicubic": {
+        "psnr": 26.740781784057617,
+        "ssim": 0.6810159871047612,
+        "lpips_alex": 0.5363805890083313,
+        "mobileface_cosine": 0.22644713521003723
+      }
+    }
+  },
+  {
+    "index": 45,
+    "input_png_sha256": "0ddd41a1683b648f8da4e6299255e74ad7dbfc467ecae19e4eaabd367eb092ff",
+    "models": {
+      "identity_v4": {
+        "psnr": 22.695507049560547,
+        "ssim": 0.658371950335279,
+        "lpips_alex": 0.32538098096847534,
+        "mobileface_cosine": 0.4134989082813263
+      },
+      "restoration": {
+        "psnr": 20.88568878173828,
+        "ssim": 0.6063100414448498,
+        "lpips_alex": 0.1953255981206894,
+        "mobileface_cosine": 0.30535781383514404
+      },
+      "codeformer": {
+        "psnr": 20.69173812866211,
+        "ssim": 0.5370572669504745,
+        "lpips_alex": 0.19741342961788177,
+        "mobileface_cosine": 0.28042072057724
+      },
+      "bicubic": {
+        "psnr": 21.773189544677734,
+        "ssim": 0.5886814131168809,
+        "lpips_alex": 0.5880825519561768,
+        "mobileface_cosine": 0.40387770533561707
+      }
+    }
+  },
+  {
+    "index": 46,
+    "input_png_sha256": "4f833fbec225692ce2967d41b326cdcdc693c3ba6867d679ac63ca55409454e1",
+    "models": {
+      "identity_v4": {
+        "psnr": 26.993633270263672,
+        "ssim": 0.7713819569537679,
+        "lpips_alex": 0.21377058327198029,
+        "mobileface_cosine": 0.3510948717594147
+      },
+      "restoration": {
+        "psnr": 25.206478118896484,
+        "ssim": 0.7071689308860675,
+        "lpips_alex": 0.0976589173078537,
+        "mobileface_cosine": 0.2995387017726898
+      },
+      "codeformer": {
+        "psnr": 25.737733840942383,
+        "ssim": 0.7021415623852486,
+        "lpips_alex": 0.07827212661504745,
+        "mobileface_cosine": 0.4608209729194641
+      },
+      "bicubic": {
+        "psnr": 26.23199462890625,
+        "ssim": 0.6859609436530859,
+        "lpips_alex": 0.5997146368026733,
+        "mobileface_cosine": 0.42023834586143494
+      }
+    }
+  },
+  {
+    "index": 47,
+    "input_png_sha256": "b3f9e3a801455a9b743c998f11544d25d4f0ba42e3a23a9319b0b0510b5b3d0e",
+    "models": {
+      "identity_v4": {
+        "psnr": 23.803020477294922,
+        "ssim": 0.7073728294498441,
+        "lpips_alex": 0.36118125915527344,
+        "mobileface_cosine": 0.3665024936199188
+      },
+      "restoration": {
+        "psnr": 22.12398910522461,
+        "ssim": 0.6226989717324836,
+        "lpips_alex": 0.23961292207241058,
+        "mobileface_cosine": 0.42537882924079895
+      },
+      "codeformer": {
+        "psnr": 22.77448844909668,
+        "ssim": 0.6221608039655725,
+        "lpips_alex": 0.21761789917945862,
+        "mobileface_cosine": 0.4297727942466736
+      },
+      "bicubic": {
+        "psnr": 23.65083885192871,
+        "ssim": 0.6676558347195871,
+        "lpips_alex": 0.69769686460495,
+        "mobileface_cosine": 0.295884370803833
+      }
+    }
+  },
+  {
+    "index": 48,
+    "input_png_sha256": "9f5e6f564f580f6ba302c6a57b535994ec723441b19525c8d2e9531b7637475e",
+    "models": {
+      "identity_v4": {
+        "psnr": 23.757116317749023,
+        "ssim": 0.7023860505338758,
+        "lpips_alex": 0.25052621960639954,
+        "mobileface_cosine": 0.3489845395088196
+      },
+      "restoration": {
+        "psnr": 22.128952026367188,
+        "ssim": 0.6457014183462255,
+        "lpips_alex": 0.11724898219108582,
+        "mobileface_cosine": 0.29189375042915344
+      },
+      "codeformer": {
+        "psnr": 21.41192626953125,
+        "ssim": 0.5862610657601924,
+        "lpips_alex": 0.14185108244419098,
+        "mobileface_cosine": 0.2743995785713196
+      },
+      "bicubic": {
+        "psnr": 22.35787582397461,
+        "ssim": 0.6230762589190785,
+        "lpips_alex": 0.6407380700111389,
+        "mobileface_cosine": 0.32154354453086853
+      }
+    }
+  },
+  {
+    "index": 49,
+    "input_png_sha256": "85422cf01f0730c3d8000c260988a6ef4f55cfdfdaca15367778388bb7663343",
+    "models": {
+      "identity_v4": {
+        "psnr": 24.16437339782715,
+        "ssim": 0.7086815199552572,
+        "lpips_alex": 0.3191673457622528,
+        "mobileface_cosine": 0.3826388716697693
+      },
+      "restoration": {
+        "psnr": 22.485424041748047,
+        "ssim": 0.63403573259198,
+        "lpips_alex": 0.13766199350357056,
+        "mobileface_cosine": 0.24948756396770477
+      },
+      "codeformer": {
+        "psnr": 22.778139114379883,
+        "ssim": 0.5810128181203549,
+        "lpips_alex": 0.18756063282489777,
+        "mobileface_cosine": 0.38040000200271606
+      },
+      "bicubic": {
+        "psnr": 23.375146865844727,
+        "ssim": 0.6319483308241325,
+        "lpips_alex": 0.7256453037261963,
+        "mobileface_cosine": 0.45186135172843933
+      }
+    }
+  },
+  {
+    "index": 50,
+    "input_png_sha256": "6389202a4183077d4edd4adf929f6ea6bbd46685161148d4442ce78c0b80a804",
+    "models": {
+      "identity_v4": {
+        "psnr": 26.442886352539062,
+        "ssim": 0.8169665986062863,
+        "lpips_alex": 0.2553892731666565,
+        "mobileface_cosine": 0.5752372741699219
+      },
+      "restoration": {
+        "psnr": 25.333959579467773,
+        "ssim": 0.800055792707799,
+        "lpips_alex": 0.09415482729673386,
+        "mobileface_cosine": 0.6220881938934326
+      },
+      "codeformer": {
+        "psnr": 25.017841339111328,
+        "ssim": 0.7817481588627538,
+        "lpips_alex": 0.10475729405879974,
+        "mobileface_cosine": 0.5902356505393982
+      },
+      "bicubic": {
+        "psnr": 25.159770965576172,
+        "ssim": 0.7418303909983159,
+        "lpips_alex": 0.5554353594779968,
+        "mobileface_cosine": 0.5498893857002258
+      }
+    }
+  },
+  {
+    "index": 51,
+    "input_png_sha256": "4727f5fa81390eb603775569348b5c782a3b1dd6b1aee4695be4d4709baaed4a",
+    "models": {
+      "identity_v4": {
+        "psnr": 27.623870849609375,
+        "ssim": 0.8028419741144696,
+        "lpips_alex": 0.1811729520559311,
+        "mobileface_cosine": 0.5719029307365417
+      },
+      "restoration": {
+        "psnr": 25.96573829650879,
+        "ssim": 0.7711577811510893,
+        "lpips_alex": 0.1087835282087326,
+        "mobileface_cosine": 0.4912732243537903
+      },
+      "codeformer": {
+        "psnr": 25.568687438964844,
+        "ssim": 0.7069458247262453,
+        "lpips_alex": 0.12025387585163116,
+        "mobileface_cosine": 0.41597050428390503
+      },
+      "bicubic": {
+        "psnr": 27.01679039001465,
+        "ssim": 0.7432393900068875,
+        "lpips_alex": 0.511010468006134,
+        "mobileface_cosine": 0.5286696553230286
+      }
+    }
+  },
+  {
+    "index": 52,
+    "input_png_sha256": "11ac8be47e5cd85804e555612bac2c76d65fd54dab3f4ad6769198107648e5c6",
+    "models": {
+      "identity_v4": {
+        "psnr": 23.04621124267578,
+        "ssim": 0.6467478201535802,
+        "lpips_alex": 0.33386462926864624,
+        "mobileface_cosine": 0.5265100598335266
+      },
+      "restoration": {
+        "psnr": 21.598388671875,
+        "ssim": 0.611846400967544,
+        "lpips_alex": 0.16995149850845337,
+        "mobileface_cosine": 0.5450071692466736
+      },
+      "codeformer": {
+        "psnr": 21.81088638305664,
+        "ssim": 0.6059084084654164,
+        "lpips_alex": 0.13266994059085846,
+        "mobileface_cosine": 0.6173070073127747
+      },
+      "bicubic": {
+        "psnr": 22.49817657470703,
+        "ssim": 0.6101918297735294,
+        "lpips_alex": 0.575311541557312,
+        "mobileface_cosine": 0.5152877569198608
+      }
+    }
+  },
+  {
+    "index": 53,
+    "input_png_sha256": "79ee460285968d0e11c3bce5f209022c75d7e08fa42dc07fbfd58169bbd84c73",
+    "models": {
+      "identity_v4": {
+        "psnr": 24.652395248413086,
+        "ssim": 0.6378568543616048,
+        "lpips_alex": 0.3789888620376587,
+        "mobileface_cosine": 0.268429160118103
+      },
+      "restoration": {
+        "psnr": 23.38111686706543,
+        "ssim": 0.5648326457757593,
+        "lpips_alex": 0.24591310322284698,
+        "mobileface_cosine": 0.25146448612213135
+      },
+      "codeformer": {
+        "psnr": 23.606138229370117,
+        "ssim": 0.5709115641076459,
+        "lpips_alex": 0.20436090230941772,
+        "mobileface_cosine": 0.30830302834510803
+      },
+      "bicubic": {
+        "psnr": 24.503154754638672,
+        "ssim": 0.616746103987407,
+        "lpips_alex": 0.6956743597984314,
+        "mobileface_cosine": 0.26177215576171875
+      }
+    }
+  },
+  {
+    "index": 54,
+    "input_png_sha256": "a809715bbeaccd1502245f289767e03fbeba7f61659ba7842f506131424e6984",
+    "models": {
+      "identity_v4": {
+        "psnr": 26.297119140625,
+        "ssim": 0.742618125138117,
+        "lpips_alex": 0.15801645815372467,
+        "mobileface_cosine": 0.44946980476379395
+      },
+      "restoration": {
+        "psnr": 24.628314971923828,
+        "ssim": 0.7098249932027191,
+        "lpips_alex": 0.06996019184589386,
+        "mobileface_cosine": 0.4837336838245392
+      },
+      "codeformer": {
+        "psnr": 23.790786743164062,
+        "ssim": 0.5913660437294824,
+        "lpips_alex": 0.20050477981567383,
+        "mobileface_cosine": 0.2075432538986206
+      },
+      "bicubic": {
+        "psnr": 26.031375885009766,
+        "ssim": 0.6846878236948165,
+        "lpips_alex": 0.5265838503837585,
+        "mobileface_cosine": 0.3043730854988098
+      }
+    }
+  },
+  {
+    "index": 55,
+    "input_png_sha256": "252a432df2b2d95512f22cacbe4f2d50babcacb013a7631cc995ce4c557bb33e",
+    "models": {
+      "identity_v4": {
+        "psnr": 25.87947654724121,
+        "ssim": 0.7211803786493871,
+        "lpips_alex": 0.2388049066066742,
+        "mobileface_cosine": 0.533889889717102
+      },
+      "restoration": {
+        "psnr": 23.780746459960938,
+        "ssim": 0.679092132594812,
+        "lpips_alex": 0.10824143141508102,
+        "mobileface_cosine": 0.6142280101776123
+      },
+      "codeformer": {
+        "psnr": 24.951766967773438,
+        "ssim": 0.6875024862964044,
+        "lpips_alex": 0.10575254261493683,
+        "mobileface_cosine": 0.6262273192405701
+      },
+      "bicubic": {
+        "psnr": 25.08499526977539,
+        "ssim": 0.6651067302654553,
+        "lpips_alex": 0.5542723536491394,
+        "mobileface_cosine": 0.43257367610931396
+      }
+    }
+  },
+  {
+    "index": 56,
+    "input_png_sha256": "9779f9c549820feb24ad3ca661c9caa35f7169c043d0aabeb053bc45b8ef2b1c",
+    "models": {
+      "identity_v4": {
+        "psnr": 25.533418655395508,
+        "ssim": 0.8190338401931322,
+        "lpips_alex": 0.13450337946414948,
+        "mobileface_cosine": 0.4523772597312927
+      },
+      "restoration": {
+        "psnr": 23.00122833251953,
+        "ssim": 0.7765338218331563,
+        "lpips_alex": 0.07568460702896118,
+        "mobileface_cosine": 0.4458821415901184
+      },
+      "codeformer": {
+        "psnr": 23.6380615234375,
+        "ssim": 0.7711002105665397,
+        "lpips_alex": 0.0843658298254013,
+        "mobileface_cosine": 0.42621371150016785
+      },
+      "bicubic": {
+        "psnr": 24.074060440063477,
+        "ssim": 0.7235596013311879,
+        "lpips_alex": 0.5164505243301392,
+        "mobileface_cosine": 0.41690579056739807
+      }
+    }
+  },
+  {
+    "index": 57,
+    "input_png_sha256": "ec47dfa7ab2cb8613350e6ff9acd9abe22d0ab9d1a0264b807b9a8fbb93673e4",
+    "models": {
+      "identity_v4": {
+        "psnr": 26.33943748474121,
+        "ssim": 0.7555461492167216,
+        "lpips_alex": 0.16750900447368622,
+        "mobileface_cosine": 0.44848400354385376
+      },
+      "restoration": {
+        "psnr": 23.932096481323242,
+        "ssim": 0.6668231782988709,
+        "lpips_alex": 0.0694303959608078,
+        "mobileface_cosine": 0.4233873188495636
+      },
+      "codeformer": {
+        "psnr": 24.441455841064453,
+        "ssim": 0.654972055613174,
+        "lpips_alex": 0.08018748462200165,
+        "mobileface_cosine": 0.47879618406295776
+      },
+      "bicubic": {
+        "psnr": 25.12926483154297,
+        "ssim": 0.6665940667245339,
+        "lpips_alex": 0.5741673707962036,
+        "mobileface_cosine": 0.4342353641986847
+      }
+    }
+  },
+  {
+    "index": 58,
+    "input_png_sha256": "9ec95df4311a12956599669ee8fd842283302e32265e5960816ae590561963ce",
+    "models": {
+      "identity_v4": {
+        "psnr": 25.230758666992188,
+        "ssim": 0.6754651538555188,
+        "lpips_alex": 0.2500426173210144,
+        "mobileface_cosine": 0.2898619472980499
+      },
+      "restoration": {
+        "psnr": 24.374874114990234,
+        "ssim": 0.6486763106657842,
+        "lpips_alex": 0.14095544815063477,
+        "mobileface_cosine": 0.23389217257499695
+      },
+      "codeformer": {
+        "psnr": 22.743118286132812,
+        "ssim": 0.5345956025825227,
+        "lpips_alex": 0.2090395838022232,
+        "mobileface_cosine": 0.14636127650737762
+      },
+      "bicubic": {
+        "psnr": 24.443485260009766,
+        "ssim": 0.5989620901502177,
+        "lpips_alex": 0.603785514831543,
+        "mobileface_cosine": 0.21149645745754242
+      }
+    }
+  },
+  {
+    "index": 59,
+    "input_png_sha256": "cfeaed4a2e2031a5b59785a7e4f97f2065f86e7240c00a03b8350ea3ea767806",
+    "models": {
+      "identity_v4": {
+        "psnr": 24.58978271484375,
+        "ssim": 0.7187960052222613,
+        "lpips_alex": 0.26943105459213257,
+        "mobileface_cosine": 0.4243333041667938
+      },
+      "restoration": {
+        "psnr": 23.499242782592773,
+        "ssim": 0.6960095871474126,
+        "lpips_alex": 0.11819922178983688,
+        "mobileface_cosine": 0.45995500683784485
+      },
+      "codeformer": {
+        "psnr": 22.795604705810547,
+        "ssim": 0.6250052087076889,
+        "lpips_alex": 0.16600705683231354,
+        "mobileface_cosine": 0.38933244347572327
+      },
+      "bicubic": {
+        "psnr": 24.19722557067871,
+        "ssim": 0.658649246645203,
+        "lpips_alex": 0.6188569068908691,
+        "mobileface_cosine": 0.4055097997188568
+      }
+    }
+  },
+  {
+    "index": 60,
+    "input_png_sha256": "6acb9ec416081823ee47814191dc1e6b07bce41cbb78a58a86768622aa617881",
+    "models": {
+      "identity_v4": {
+        "psnr": 25.810260772705078,
+        "ssim": 0.7480717307388213,
+        "lpips_alex": 0.28541916608810425,
+        "mobileface_cosine": 0.37001103162765503
+      },
+      "restoration": {
+        "psnr": 24.292831420898438,
+        "ssim": 0.6983934921501206,
+        "lpips_alex": 0.1743258386850357,
+        "mobileface_cosine": 0.4449208080768585
+      },
+      "codeformer": {
+        "psnr": 23.492530822753906,
+        "ssim": 0.6574009604520324,
+        "lpips_alex": 0.12043219804763794,
+        "mobileface_cosine": 0.3815940022468567
+      },
+      "bicubic": {
+        "psnr": 26.107223510742188,
+        "ssim": 0.7008199335326297,
+        "lpips_alex": 0.6477099657058716,
+        "mobileface_cosine": 0.4035677909851074
+      }
+    }
+  },
+  {
+    "index": 61,
+    "input_png_sha256": "6d9903470062e7e21ec6da16468f31777eb128368903577b41bae679b8b85b9f",
+    "models": {
+      "identity_v4": {
+        "psnr": 26.565021514892578,
+        "ssim": 0.713679164917124,
+        "lpips_alex": 0.31075209379196167,
+        "mobileface_cosine": 0.48935845494270325
+      },
+      "restoration": {
+        "psnr": 24.61846923828125,
+        "ssim": 0.6559294279726902,
+        "lpips_alex": 0.08869507163763046,
+        "mobileface_cosine": 0.5391429662704468
+      },
+      "codeformer": {
+        "psnr": 25.970745086669922,
+        "ssim": 0.6911234466748981,
+        "lpips_alex": 0.13831010460853577,
+        "mobileface_cosine": 0.4801667034626007
+      },
+      "bicubic": {
+        "psnr": 26.00736427307129,
+        "ssim": 0.6700582752036818,
+        "lpips_alex": 0.6033864617347717,
+        "mobileface_cosine": 0.38995128870010376
+      }
+    }
+  },
+  {
+    "index": 62,
+    "input_png_sha256": "ffca150539695a0115698f205be9006f2419c6734723945e36efb1154f742a64",
+    "models": {
+      "identity_v4": {
+        "psnr": 26.897783279418945,
+        "ssim": 0.754638296759596,
+        "lpips_alex": 0.2129848748445511,
+        "mobileface_cosine": 0.06683928519487381
+      },
+      "restoration": {
+        "psnr": 24.3535213470459,
+        "ssim": 0.666579326418108,
+        "lpips_alex": 0.11935663968324661,
+        "mobileface_cosine": 0.14073844254016876
+      },
+      "codeformer": {
+        "psnr": 24.90692138671875,
+        "ssim": 0.6455077031777702,
+        "lpips_alex": 0.14071688055992126,
+        "mobileface_cosine": 0.07827050238847733
+      },
+      "bicubic": {
+        "psnr": 25.35928726196289,
+        "ssim": 0.6395602022085165,
+        "lpips_alex": 0.7005548477172852,
+        "mobileface_cosine": 0.13120116293430328
+      }
+    }
+  },
+  {
+    "index": 63,
+    "input_png_sha256": "4d08062d60df201604d9c740889bd408e44b84e52dab653213cf3bf69a468eef",
+    "models": {
+      "identity_v4": {
+        "psnr": 27.75383949279785,
+        "ssim": 0.7708722273462123,
+        "lpips_alex": 0.3092357814311981,
+        "mobileface_cosine": 0.21158000826835632
+      },
+      "restoration": {
+        "psnr": 25.472904205322266,
+        "ssim": 0.7199678147311952,
+        "lpips_alex": 0.17076750099658966,
+        "mobileface_cosine": 0.24159269034862518
+      },
+      "codeformer": {
+        "psnr": 25.206790924072266,
+        "ssim": 0.6421267074846655,
+        "lpips_alex": 0.1906079351902008,
+        "mobileface_cosine": 0.40067338943481445
+      },
+      "bicubic": {
+        "psnr": 26.61627769470215,
+        "ssim": 0.6785627001097049,
+        "lpips_alex": 0.6453077793121338,
+        "mobileface_cosine": 0.24430309236049652
+      }
+    }
+  },
+  {
+    "index": 64,
+    "input_png_sha256": "0dcc79266c162be0438274f5f36ceeb8e84208b34552c91289261aa727ca5e66",
+    "models": {
+      "identity_v4": {
+        "psnr": 27.624292373657227,
+        "ssim": 0.7923089441483708,
+        "lpips_alex": 0.20537929236888885,
+        "mobileface_cosine": 0.4219072461128235
+      },
+      "restoration": {
+        "psnr": 25.163822174072266,
+        "ssim": 0.7344524737910106,
+        "lpips_alex": 0.07526525110006332,
+        "mobileface_cosine": 0.39039909839630127
+      },
+      "codeformer": {
+        "psnr": 26.35694694519043,
+        "ssim": 0.7593291147941208,
+        "lpips_alex": 0.08114880323410034,
+        "mobileface_cosine": 0.4903690814971924
+      },
+      "bicubic": {
+        "psnr": 26.74239158630371,
+        "ssim": 0.729696554758211,
+        "lpips_alex": 0.46659135818481445,
+        "mobileface_cosine": 0.410767525434494
+      }
+    }
+  },
+  {
+    "index": 65,
+    "input_png_sha256": "083c1bf43b1f5cf35e905aa0c13964ca83415a143ed1d26805ee851cdce4a5e5",
+    "models": {
+      "identity_v4": {
+        "psnr": 27.343700408935547,
+        "ssim": 0.7957484278238701,
+        "lpips_alex": 0.20342087745666504,
+        "mobileface_cosine": 0.5891404151916504
+      },
+      "restoration": {
+        "psnr": 24.778369903564453,
+        "ssim": 0.717915125299554,
+        "lpips_alex": 0.09944496303796768,
+        "mobileface_cosine": 0.5705606341362
+      },
+      "codeformer": {
+        "psnr": 25.703622817993164,
+        "ssim": 0.725093099781662,
+        "lpips_alex": 0.10867592692375183,
+        "mobileface_cosine": 0.5679384469985962
+      },
+      "bicubic": {
+        "psnr": 26.567392349243164,
+        "ssim": 0.7401306106354413,
+        "lpips_alex": 0.47622257471084595,
+        "mobileface_cosine": 0.5698870420455933
+      }
+    }
+  },
+  {
+    "index": 66,
+    "input_png_sha256": "8fc8f5bcde2ef160321b1fed94c52606e8d624635d307cc873d13dc791d49dbc",
+    "models": {
+      "identity_v4": {
+        "psnr": 27.0862979888916,
+        "ssim": 0.8193230884824986,
+        "lpips_alex": 0.21609549224376678,
+        "mobileface_cosine": 0.5737255215644836
+      },
+      "restoration": {
+        "psnr": 26.004287719726562,
+        "ssim": 0.8390675953178993,
+        "lpips_alex": 0.08615048229694366,
+        "mobileface_cosine": 0.5722705721855164
+      },
+      "codeformer": {
+        "psnr": 25.498201370239258,
+        "ssim": 0.7824920369115859,
+        "lpips_alex": 0.10121992230415344,
+        "mobileface_cosine": 0.43578559160232544
+      },
+      "bicubic": {
+        "psnr": 25.7679386138916,
+        "ssim": 0.7406338865280416,
+        "lpips_alex": 0.5193570256233215,
+        "mobileface_cosine": 0.47646963596343994
+      }
+    }
+  },
+  {
+    "index": 67,
+    "input_png_sha256": "6aa108b7937b593d8627103ffbd1f0b05cc08374128bd550c0d5b185629c644b",
+    "models": {
+      "identity_v4": {
+        "psnr": 25.123992919921875,
+        "ssim": 0.790245240388803,
+        "lpips_alex": 0.2074795663356781,
+        "mobileface_cosine": 0.3880312442779541
+      },
+      "restoration": {
+        "psnr": 23.585269927978516,
+        "ssim": 0.7593019730444955,
+        "lpips_alex": 0.10147935897111893,
+        "mobileface_cosine": 0.33802443742752075
+      },
+      "codeformer": {
+        "psnr": 22.286901473999023,
+        "ssim": 0.6233523312049248,
+        "lpips_alex": 0.19929379224777222,
+        "mobileface_cosine": 0.31202131509780884
+      },
+      "bicubic": {
+        "psnr": 23.61502456665039,
+        "ssim": 0.6683665523814579,
+        "lpips_alex": 0.5357959270477295,
+        "mobileface_cosine": 0.28008031845092773
+      }
+    }
+  },
+  {
+    "index": 68,
+    "input_png_sha256": "49a00467ebb9be6c4ef3a53d8f8c464fc29afc219abd737e560b3302eb021962",
+    "models": {
+      "identity_v4": {
+        "psnr": 27.199222564697266,
+        "ssim": 0.7446662029528555,
+        "lpips_alex": 0.18913358449935913,
+        "mobileface_cosine": 0.35606569051742554
+      },
+      "restoration": {
+        "psnr": 25.199377059936523,
+        "ssim": 0.6845676778128431,
+        "lpips_alex": 0.10225817561149597,
+        "mobileface_cosine": 0.3732541501522064
+      },
+      "codeformer": {
+        "psnr": 25.57896614074707,
+        "ssim": 0.6562344130265451,
+        "lpips_alex": 0.1104964166879654,
+        "mobileface_cosine": 0.34014129638671875
+      },
+      "bicubic": {
+        "psnr": 26.825475692749023,
+        "ssim": 0.7087627525208445,
+        "lpips_alex": 0.5364637970924377,
+        "mobileface_cosine": 0.28822821378707886
+      }
+    }
+  },
+  {
+    "index": 69,
+    "input_png_sha256": "30c3c99ccfd176991e0501a3136605640823103e6ae89a191bbcc057996e5fde",
+    "models": {
+      "identity_v4": {
+        "psnr": 27.306941986083984,
+        "ssim": 0.7912100637099841,
+        "lpips_alex": 0.19664552807807922,
+        "mobileface_cosine": 0.34700390696525574
+      },
+      "restoration": {
+        "psnr": 25.389610290527344,
+        "ssim": 0.7559270221150755,
+        "lpips_alex": 0.10546354204416275,
+        "mobileface_cosine": 0.4067361652851105
+      },
+      "codeformer": {
+        "psnr": 24.31974220275879,
+        "ssim": 0.628691190896626,
+        "lpips_alex": 0.15590211749076843,
+        "mobileface_cosine": 0.4043586850166321
+      },
+      "bicubic": {
+        "psnr": 26.495790481567383,
+        "ssim": 0.7092189136872193,
+        "lpips_alex": 0.4756146967411041,
+        "mobileface_cosine": 0.4164630174636841
+      }
+    }
+  },
+  {
+    "index": 70,
+    "input_png_sha256": "655c7dd57bda1fab225e2169dcad273445a2ac876bfca7e6293b168e7800d047",
+    "models": {
+      "identity_v4": {
+        "psnr": 27.217411041259766,
+        "ssim": 0.7635114676169386,
+        "lpips_alex": 0.2500070631504059,
+        "mobileface_cosine": 0.5689468383789062
+      },
+      "restoration": {
+        "psnr": 25.672977447509766,
+        "ssim": 0.7164864508792086,
+        "lpips_alex": 0.1602640151977539,
+        "mobileface_cosine": 0.4828513264656067
+      },
+      "codeformer": {
+        "psnr": 25.230466842651367,
+        "ssim": 0.6532529538794137,
+        "lpips_alex": 0.17515821754932404,
+        "mobileface_cosine": 0.48821455240249634
+      },
+      "bicubic": {
+        "psnr": 26.42461585998535,
+        "ssim": 0.7109727075398483,
+        "lpips_alex": 0.5623810291290283,
+        "mobileface_cosine": 0.4813763499259949
+      }
+    }
+  },
+  {
+    "index": 71,
+    "input_png_sha256": "fa58908446651221229616242abfb9e491b0834896d31672d0e673d0c15c2936",
+    "models": {
+      "identity_v4": {
+        "psnr": 26.2691707611084,
+        "ssim": 0.7025739273367378,
+        "lpips_alex": 0.2831275761127472,
+        "mobileface_cosine": 0.4424474835395813
+      },
+      "restoration": {
+        "psnr": 23.858497619628906,
+        "ssim": 0.6006447441030018,
+        "lpips_alex": 0.15135419368743896,
+        "mobileface_cosine": 0.2889282703399658
+      },
+      "codeformer": {
+        "psnr": 23.100784301757812,
+        "ssim": 0.4936633403920151,
+        "lpips_alex": 0.30259260535240173,
+        "mobileface_cosine": 0.3047690987586975
+      },
+      "bicubic": {
+        "psnr": 25.685606002807617,
+        "ssim": 0.6336447272077067,
+        "lpips_alex": 0.6256273984909058,
+        "mobileface_cosine": 0.39330074191093445
+      }
+    }
+  },
+  {
+    "index": 72,
+    "input_png_sha256": "8d15ff2e072d8396523fe1fc694cdb46d4c362778d6f3f13e2e1c5cc5f87ce9c",
+    "models": {
+      "identity_v4": {
+        "psnr": 24.520538330078125,
+        "ssim": 0.7328497906664374,
+        "lpips_alex": 0.1909191608428955,
+        "mobileface_cosine": 0.4184567928314209
+      },
+      "restoration": {
+        "psnr": 23.08220672607422,
+        "ssim": 0.7041894603642066,
+        "lpips_alex": 0.09131518006324768,
+        "mobileface_cosine": 0.2628762423992157
+      },
+      "codeformer": {
+        "psnr": 22.775850296020508,
+        "ssim": 0.6066753083575608,
+        "lpips_alex": 0.17003504931926727,
+        "mobileface_cosine": 0.15461991727352142
+      },
+      "bicubic": {
+        "psnr": 23.167404174804688,
+        "ssim": 0.6174624984758574,
+        "lpips_alex": 0.6097232699394226,
+        "mobileface_cosine": 0.2781684398651123
+      }
+    }
+  },
+  {
+    "index": 73,
+    "input_png_sha256": "0991c22b87e93e333ba66047b8711fcdd46b663ccbdb1cd060c15d535010ff37",
+    "models": {
+      "identity_v4": {
+        "psnr": 25.19469451904297,
+        "ssim": 0.6838948488849697,
+        "lpips_alex": 0.2925138473510742,
+        "mobileface_cosine": 0.2812398076057434
+      },
+      "restoration": {
+        "psnr": 23.128721237182617,
+        "ssim": 0.6178935149122006,
+        "lpips_alex": 0.12627974152565002,
+        "mobileface_cosine": 0.5897173285484314
+      },
+      "codeformer": {
+        "psnr": 23.92806625366211,
+        "ssim": 0.6039671324722728,
+        "lpips_alex": 0.1585661917924881,
+        "mobileface_cosine": 0.4251451790332794
+      },
+      "bicubic": {
+        "psnr": 24.648635864257812,
+        "ssim": 0.6274826222713975,
+        "lpips_alex": 0.6022025346755981,
+        "mobileface_cosine": 0.11348678171634674
+      }
+    }
+  },
+  {
+    "index": 74,
+    "input_png_sha256": "8ce708d7b1a3537c3fcaa0fe4f92832921a442fe11ebc3f09a54e4ce961181e9",
+    "models": {
+      "identity_v4": {
+        "psnr": 24.786518096923828,
+        "ssim": 0.7110620225089609,
+        "lpips_alex": 0.27525922656059265,
+        "mobileface_cosine": 0.36831119656562805
+      },
+      "restoration": {
+        "psnr": 21.942134857177734,
+        "ssim": 0.6022943803193863,
+        "lpips_alex": 0.16959577798843384,
+        "mobileface_cosine": 0.40291038155555725
+      },
+      "codeformer": {
+        "psnr": 22.37158203125,
+        "ssim": 0.6018126412080078,
+        "lpips_alex": 0.15498068928718567,
+        "mobileface_cosine": 0.4433661699295044
+      },
+      "bicubic": {
+        "psnr": 24.302453994750977,
+        "ssim": 0.6497008130252891,
+        "lpips_alex": 0.5528233051300049,
+        "mobileface_cosine": 0.4574918746948242
+      }
+    }
+  },
+  {
+    "index": 75,
+    "input_png_sha256": "8a35a2181f77e22ee05b5987fc1dba2c97936855133c21451c68f78af2969911",
+    "models": {
+      "identity_v4": {
+        "psnr": 25.927528381347656,
+        "ssim": 0.8184953478741666,
+        "lpips_alex": 0.17148306965827942,
+        "mobileface_cosine": 0.43565627932548523
+      },
+      "restoration": {
+        "psnr": 23.6865234375,
+        "ssim": 0.8195072007505649,
+        "lpips_alex": 0.08878485858440399,
+        "mobileface_cosine": 0.418904185295105
+      },
+      "codeformer": {
+        "psnr": 23.982398986816406,
+        "ssim": 0.6877142827633217,
+        "lpips_alex": 0.13404865562915802,
+        "mobileface_cosine": 0.33445581793785095
+      },
+      "bicubic": {
+        "psnr": 24.452898025512695,
+        "ssim": 0.6986105144212992,
+        "lpips_alex": 0.49479785561561584,
+        "mobileface_cosine": 0.37000444531440735
+      }
+    }
+  },
+  {
+    "index": 76,
+    "input_png_sha256": "a1246ac2144a27ffbdfc1adafe9b02acdb3b961599b7d0cca112899331edb84c",
+    "models": {
+      "identity_v4": {
+        "psnr": 21.370075225830078,
+        "ssim": 0.5975209010588531,
+        "lpips_alex": 0.345192551612854,
+        "mobileface_cosine": 0.20960643887519836
+      },
+      "restoration": {
+        "psnr": 19.492250442504883,
+        "ssim": 0.5337153243294879,
+        "lpips_alex": 0.17178604006767273,
+        "mobileface_cosine": 0.2566032409667969
+      },
+      "codeformer": {
+        "psnr": 19.74246597290039,
+        "ssim": 0.47789798258786803,
+        "lpips_alex": 0.28552186489105225,
+        "mobileface_cosine": 0.09490243345499039
+      },
+      "bicubic": {
+        "psnr": 20.396400451660156,
+        "ssim": 0.5160622827273382,
+        "lpips_alex": 0.7577353715896606,
+        "mobileface_cosine": 0.202805757522583
+      }
+    }
+  },
+  {
+    "index": 77,
+    "input_png_sha256": "c797f93aaaaedafa08196cd70899163f4742b9decbedd90db899c7a2e7d1997b",
+    "models": {
+      "identity_v4": {
+        "psnr": 25.532573699951172,
+        "ssim": 0.7638066943791262,
+        "lpips_alex": 0.25810959935188293,
+        "mobileface_cosine": 0.45242729783058167
+      },
+      "restoration": {
+        "psnr": 23.66347885131836,
+        "ssim": 0.712142776670043,
+        "lpips_alex": 0.10466749221086502,
+        "mobileface_cosine": 0.53143310546875
+      },
+      "codeformer": {
+        "psnr": 23.934995651245117,
+        "ssim": 0.6820100772236659,
+        "lpips_alex": 0.11655573546886444,
+        "mobileface_cosine": 0.43863558769226074
+      },
+      "bicubic": {
+        "psnr": 24.950429916381836,
+        "ssim": 0.6956245687857416,
+        "lpips_alex": 0.564038872718811,
+        "mobileface_cosine": 0.4502723813056946
+      }
+    }
+  },
+  {
+    "index": 78,
+    "input_png_sha256": "68465e591f39b5face4d918ab2ead6057de03d79c2454d73de5ea75e08555d0f",
+    "models": {
+      "identity_v4": {
+        "psnr": 26.94635772705078,
+        "ssim": 0.7632480927072745,
+        "lpips_alex": 0.22142620384693146,
+        "mobileface_cosine": 0.49769750237464905
+      },
+      "restoration": {
+        "psnr": 24.91391944885254,
+        "ssim": 0.7303355274898857,
+        "lpips_alex": 0.11143456399440765,
+        "mobileface_cosine": 0.6813493371009827
+      },
+      "codeformer": {
+        "psnr": 25.518762588500977,
+        "ssim": 0.7080982105192253,
+        "lpips_alex": 0.08742499351501465,
+        "mobileface_cosine": 0.6596760153770447
+      },
+      "bicubic": {
+        "psnr": 26.251850128173828,
+        "ssim": 0.70568678070452,
+        "lpips_alex": 0.49877387285232544,
+        "mobileface_cosine": 0.43530964851379395
+      }
+    }
+  },
+  {
+    "index": 79,
+    "input_png_sha256": "192137708fbd4797978402793276f797e3416c504b00c8aaef526796c02e2c4c",
+    "models": {
+      "identity_v4": {
+        "psnr": 27.078210830688477,
+        "ssim": 0.7287120742679514,
+        "lpips_alex": 0.29864513874053955,
+        "mobileface_cosine": 0.3514704406261444
+      },
+      "restoration": {
+        "psnr": 25.023738861083984,
+        "ssim": 0.6805554955942229,
+        "lpips_alex": 0.1012464165687561,
+        "mobileface_cosine": 0.4721667170524597
+      },
+      "codeformer": {
+        "psnr": 24.74504280090332,
+        "ssim": 0.5878542287255535,
+        "lpips_alex": 0.16764961183071136,
+        "mobileface_cosine": 0.3901287317276001
+      },
+      "bicubic": {
+        "psnr": 25.65981674194336,
+        "ssim": 0.6182989379906749,
+        "lpips_alex": 0.6195776462554932,
+        "mobileface_cosine": 0.3650052845478058
+      }
+    }
+  },
+  {
+    "index": 80,
+    "input_png_sha256": "75a3cd3a3ada31f6a55600b8d03ca12a1b22868135792c2cc66c9ff372ef1840",
+    "models": {
+      "identity_v4": {
+        "psnr": 25.1084041595459,
+        "ssim": 0.6970857112307753,
+        "lpips_alex": 0.2566850185394287,
+        "mobileface_cosine": 0.29315268993377686
+      },
+      "restoration": {
+        "psnr": 24.067678451538086,
+        "ssim": 0.6514323391036057,
+        "lpips_alex": 0.1089339405298233,
+        "mobileface_cosine": 0.31267249584198
+      },
+      "codeformer": {
+        "psnr": 22.885591506958008,
+        "ssim": 0.532434611570411,
+        "lpips_alex": 0.16341820359230042,
+        "mobileface_cosine": 0.10045957565307617
+      },
+      "bicubic": {
+        "psnr": 24.77277374267578,
+        "ssim": 0.6303263373920557,
+        "lpips_alex": 0.5742394924163818,
+        "mobileface_cosine": 0.27223512530326843
+      }
+    }
+  },
+  {
+    "index": 81,
+    "input_png_sha256": "b58136ad8276258a0c4b5ac273f9aa0e25761c59a3688fc36a9ea080d92fb7ec",
+    "models": {
+      "identity_v4": {
+        "psnr": 26.078996658325195,
+        "ssim": 0.8177804215019171,
+        "lpips_alex": 0.1441698521375656,
+        "mobileface_cosine": 0.4728369414806366
+      },
+      "restoration": {
+        "psnr": 23.775720596313477,
+        "ssim": 0.7654606290706697,
+        "lpips_alex": 0.06908243894577026,
+        "mobileface_cosine": 0.4133225083351135
+      },
+      "codeformer": {
+        "psnr": 23.707353591918945,
+        "ssim": 0.7201760597991396,
+        "lpips_alex": 0.07831244170665741,
+        "mobileface_cosine": 0.31317687034606934
+      },
+      "bicubic": {
+        "psnr": 24.50403594970703,
+        "ssim": 0.7198854342584151,
+        "lpips_alex": 0.45884037017822266,
+        "mobileface_cosine": 0.46459680795669556
+      }
+    }
+  },
+  {
+    "index": 82,
+    "input_png_sha256": "0e1839cb62a89e34aacb8ed303e811d863e6493a273e0c5208a4a0417d4304f0",
+    "models": {
+      "identity_v4": {
+        "psnr": 25.905731201171875,
+        "ssim": 0.7260229675198069,
+        "lpips_alex": 0.2040128856897354,
+        "mobileface_cosine": 0.42896246910095215
+      },
+      "restoration": {
+        "psnr": 24.534578323364258,
+        "ssim": 0.6775123220055078,
+        "lpips_alex": 0.09275522083044052,
+        "mobileface_cosine": 0.28016340732574463
+      },
+      "codeformer": {
+        "psnr": 24.23027992248535,
+        "ssim": 0.6314934664541735,
+        "lpips_alex": 0.16207776963710785,
+        "mobileface_cosine": 0.289487361907959
+      },
+      "bicubic": {
+        "psnr": 24.101076126098633,
+        "ssim": 0.6261455987509652,
+        "lpips_alex": 0.5330870151519775,
+        "mobileface_cosine": 0.23967422544956207
+      }
+    }
+  },
+  {
+    "index": 83,
+    "input_png_sha256": "939b2391ffd7872f62c203767f0c0e41cdd4fab3837b6b02f0143c1c28e4385f",
+    "models": {
+      "identity_v4": {
+        "psnr": 25.486373901367188,
+        "ssim": 0.7437256909010264,
+        "lpips_alex": 0.28027111291885376,
+        "mobileface_cosine": 0.40027984976768494
+      },
+      "restoration": {
+        "psnr": 24.091432571411133,
+        "ssim": 0.6841383413046092,
+        "lpips_alex": 0.11457821726799011,
+        "mobileface_cosine": 0.32422465085983276
+      },
+      "codeformer": {
+        "psnr": 24.57135009765625,
+        "ssim": 0.7076151982607285,
+        "lpips_alex": 0.13506338000297546,
+        "mobileface_cosine": 0.5072060227394104
+      },
+      "bicubic": {
+        "psnr": 24.23480224609375,
+        "ssim": 0.685971407732415,
+        "lpips_alex": 0.5038690567016602,
+        "mobileface_cosine": 0.36372166872024536
+      }
+    }
+  },
+  {
+    "index": 84,
+    "input_png_sha256": "17e3a2d691bd8007b046ce3ea481b73d0b00ad099b20ced24e42dbcbdb804e50",
+    "models": {
+      "identity_v4": {
+        "psnr": 25.667423248291016,
+        "ssim": 0.7076893938075587,
+        "lpips_alex": 0.27026277780532837,
+        "mobileface_cosine": 0.300100713968277
+      },
+      "restoration": {
+        "psnr": 23.418209075927734,
+        "ssim": 0.6497897742274937,
+        "lpips_alex": 0.12105292826890945,
+        "mobileface_cosine": 0.2742733359336853
+      },
+      "codeformer": {
+        "psnr": 23.89215850830078,
+        "ssim": 0.6006445831330456,
+        "lpips_alex": 0.17619723081588745,
+        "mobileface_cosine": 0.28574615716934204
+      },
+      "bicubic": {
+        "psnr": 25.29843521118164,
+        "ssim": 0.6506148390175625,
+        "lpips_alex": 0.6110150814056396,
+        "mobileface_cosine": 0.18727822601795197
+      }
+    }
+  },
+  {
+    "index": 85,
+    "input_png_sha256": "867a16a8956fb56ff852c0219662c5f865dbe7eb007d82929519b228a27f6970",
+    "models": {
+      "identity_v4": {
+        "psnr": 24.740304946899414,
+        "ssim": 0.6761797731606016,
+        "lpips_alex": 0.3301328122615814,
+        "mobileface_cosine": 0.2993146479129791
+      },
+      "restoration": {
+        "psnr": 23.184879302978516,
+        "ssim": 0.6579531647363609,
+        "lpips_alex": 0.15344130992889404,
+        "mobileface_cosine": 0.43955597281455994
+      },
+      "codeformer": {
+        "psnr": 23.28357696533203,
+        "ssim": 0.6298840513850584,
+        "lpips_alex": 0.13383959233760834,
+        "mobileface_cosine": 0.5119830965995789
+      },
+      "bicubic": {
+        "psnr": 24.443927764892578,
+        "ssim": 0.63957545967081,
+        "lpips_alex": 0.5382272601127625,
+        "mobileface_cosine": 0.30526211857795715
+      }
+    }
+  },
+  {
+    "index": 86,
+    "input_png_sha256": "761a3a9e14ba68746a9e41a98c2c0583cf2f1469e432b2d76c37ee6870e40940",
+    "models": {
+      "identity_v4": {
+        "psnr": 23.890972137451172,
+        "ssim": 0.6859328649064119,
+        "lpips_alex": 0.27687475085258484,
+        "mobileface_cosine": 0.3967790901660919
+      },
+      "restoration": {
+        "psnr": 22.571929931640625,
+        "ssim": 0.6742918999918598,
+        "lpips_alex": 0.16957707703113556,
+        "mobileface_cosine": 0.48062193393707275
+      },
+      "codeformer": {
+        "psnr": 22.61333656311035,
+        "ssim": 0.6328935256457621,
+        "lpips_alex": 0.1666938066482544,
+        "mobileface_cosine": 0.4015592634677887
+      },
+      "bicubic": {
+        "psnr": 23.19650650024414,
+        "ssim": 0.6328028163859738,
+        "lpips_alex": 0.5697077512741089,
+        "mobileface_cosine": 0.2836857736110687
+      }
+    }
+  },
+  {
+    "index": 87,
+    "input_png_sha256": "d31967fdf2bd12fe24c8f5810045b232e51376e2a977a4b1493fdd879be0e943",
+    "models": {
+      "identity_v4": {
+        "psnr": 25.918428421020508,
+        "ssim": 0.794584296694693,
+        "lpips_alex": 0.18438352644443512,
+        "mobileface_cosine": 0.31057363748550415
+      },
+      "restoration": {
+        "psnr": 24.277381896972656,
+        "ssim": 0.7628689611232371,
+        "lpips_alex": 0.10682506114244461,
+        "mobileface_cosine": 0.26302456855773926
+      },
+      "codeformer": {
+        "psnr": 23.3737735748291,
+        "ssim": 0.6365295836039649,
+        "lpips_alex": 0.18221785128116608,
+        "mobileface_cosine": 0.218909353017807
+      },
+      "bicubic": {
+        "psnr": 24.463943481445312,
+        "ssim": 0.6777011670351232,
+        "lpips_alex": 0.5765883922576904,
+        "mobileface_cosine": 0.22578300535678864
+      }
+    }
+  },
+  {
+    "index": 88,
+    "input_png_sha256": "082bb293a002440bfe8ee04bad067c0374587b8802942ed68c83269e979a67ff",
+    "models": {
+      "identity_v4": {
+        "psnr": 24.811317443847656,
+        "ssim": 0.7421357577563809,
+        "lpips_alex": 0.19805774092674255,
+        "mobileface_cosine": 0.35665732622146606
+      },
+      "restoration": {
+        "psnr": 22.514249801635742,
+        "ssim": 0.7305118718823167,
+        "lpips_alex": 0.12012532353401184,
+        "mobileface_cosine": 0.4400910437107086
+      },
+      "codeformer": {
+        "psnr": 23.37724494934082,
+        "ssim": 0.6982285942778199,
+        "lpips_alex": 0.13387301564216614,
+        "mobileface_cosine": 0.3513599634170532
+      },
+      "bicubic": {
+        "psnr": 23.815845489501953,
+        "ssim": 0.6645351691388296,
+        "lpips_alex": 0.5790067315101624,
+        "mobileface_cosine": 0.27129578590393066
+      }
+    }
+  },
+  {
+    "index": 89,
+    "input_png_sha256": "15b22b4b7d016e32695b77d65539e23a8bade2021f1c8b12918d7dd26085e768",
+    "models": {
+      "identity_v4": {
+        "psnr": 26.314273834228516,
+        "ssim": 0.7577740499181376,
+        "lpips_alex": 0.22780387103557587,
+        "mobileface_cosine": 0.42618972063064575
+      },
+      "restoration": {
+        "psnr": 23.389076232910156,
+        "ssim": 0.6825354934171787,
+        "lpips_alex": 0.10511940717697144,
+        "mobileface_cosine": 0.3802558183670044
+      },
+      "codeformer": {
+        "psnr": 24.290462493896484,
+        "ssim": 0.6529372737775335,
+        "lpips_alex": 0.11140664666891098,
+        "mobileface_cosine": 0.2922840416431427
+      },
+      "bicubic": {
+        "psnr": 25.03609848022461,
+        "ssim": 0.6735435257586048,
+        "lpips_alex": 0.6139776706695557,
+        "mobileface_cosine": 0.23505926132202148
+      }
+    }
+  },
+  {
+    "index": 90,
+    "input_png_sha256": "0abc6d7ef208a46d19b658df42dcdf77f6bc102e142b77175c08dec21fdeadf7",
+    "models": {
+      "identity_v4": {
+        "psnr": 22.436717987060547,
+        "ssim": 0.6207358014622724,
+        "lpips_alex": 0.3558448553085327,
+        "mobileface_cosine": 0.3722986578941345
+      },
+      "restoration": {
+        "psnr": 21.130266189575195,
+        "ssim": 0.579839280320479,
+        "lpips_alex": 0.1854652464389801,
+        "mobileface_cosine": 0.43935519456863403
+      },
+      "codeformer": {
+        "psnr": 20.722930908203125,
+        "ssim": 0.5025826824024375,
+        "lpips_alex": 0.24941499531269073,
+        "mobileface_cosine": 0.3209846317768097
+      },
+      "bicubic": {
+        "psnr": 22.07839584350586,
+        "ssim": 0.56721779933265,
+        "lpips_alex": 0.7096956968307495,
+        "mobileface_cosine": 0.2658698260784149
+      }
+    }
+  },
+  {
+    "index": 91,
+    "input_png_sha256": "d22c514ad01593636acbc9e0856574417f95d22da2c810068ae5ba23ae58c94c",
+    "models": {
+      "identity_v4": {
+        "psnr": 26.152124404907227,
+        "ssim": 0.7647378294097915,
+        "lpips_alex": 0.18740753829479218,
+        "mobileface_cosine": 0.28799888491630554
+      },
+      "restoration": {
+        "psnr": 24.180198669433594,
+        "ssim": 0.72689747059371,
+        "lpips_alex": 0.09846225380897522,
+        "mobileface_cosine": 0.23017804324626923
+      },
+      "codeformer": {
+        "psnr": 23.45513153076172,
+        "ssim": 0.6431729417040968,
+        "lpips_alex": 0.13063909113407135,
+        "mobileface_cosine": 0.25723782181739807
+      },
+      "bicubic": {
+        "psnr": 25.77833366394043,
+        "ssim": 0.7178532875953002,
+        "lpips_alex": 0.44772249460220337,
+        "mobileface_cosine": 0.2514346241950989
+      }
+    }
+  },
+  {
+    "index": 92,
+    "input_png_sha256": "483215c41d7d534067d66a621c282047f02929cefdd8007231f577432676131f",
+    "models": {
+      "identity_v4": {
+        "psnr": 24.430198669433594,
+        "ssim": 0.6841225288493428,
+        "lpips_alex": 0.21605432033538818,
+        "mobileface_cosine": 0.21243134140968323
+      },
+      "restoration": {
+        "psnr": 22.60881805419922,
+        "ssim": 0.6251826030187255,
+        "lpips_alex": 0.11612105369567871,
+        "mobileface_cosine": 0.2991722822189331
+      },
+      "codeformer": {
+        "psnr": 21.97710418701172,
+        "ssim": 0.5462443409484211,
+        "lpips_alex": 0.1514320969581604,
+        "mobileface_cosine": 0.3374280333518982
+      },
+      "bicubic": {
+        "psnr": 23.87342071533203,
+        "ssim": 0.6141470398819083,
+        "lpips_alex": 0.5445142984390259,
+        "mobileface_cosine": 0.17033347487449646
+      }
+    }
+  },
+  {
+    "index": 93,
+    "input_png_sha256": "7877b0e86fbbfec534269b9087f627f5a0adb3aa52ce62ae96455122807db174",
+    "models": {
+      "identity_v4": {
+        "psnr": 26.374732971191406,
+        "ssim": 0.7390856693085821,
+        "lpips_alex": 0.23516489565372467,
+        "mobileface_cosine": 0.4547182321548462
+      },
+      "restoration": {
+        "psnr": 24.609758377075195,
+        "ssim": 0.6802110770715997,
+        "lpips_alex": 0.09088579565286636,
+        "mobileface_cosine": 0.348457008600235
+      },
+      "codeformer": {
+        "psnr": 24.740737915039062,
+        "ssim": 0.6398420292276888,
+        "lpips_alex": 0.11566727608442307,
+        "mobileface_cosine": 0.35103726387023926
+      },
+      "bicubic": {
+        "psnr": 25.8608341217041,
+        "ssim": 0.6808104974288006,
+        "lpips_alex": 0.5361461043357849,
+        "mobileface_cosine": 0.3983122706413269
+      }
+    }
+  },
+  {
+    "index": 94,
+    "input_png_sha256": "93360a813d4b0b59e6ec3bdaa88e15a6e3f14e7a8d148308f6c6d32e0639b375",
+    "models": {
+      "identity_v4": {
+        "psnr": 25.0213623046875,
+        "ssim": 0.7322543326487401,
+        "lpips_alex": 0.29071006178855896,
+        "mobileface_cosine": 0.4384428858757019
+      },
+      "restoration": {
+        "psnr": 22.91796875,
+        "ssim": 0.7053796096875765,
+        "lpips_alex": 0.13201797008514404,
+        "mobileface_cosine": 0.4467455744743347
+      },
+      "codeformer": {
+        "psnr": 23.742523193359375,
+        "ssim": 0.7038124867339707,
+        "lpips_alex": 0.13560888171195984,
+        "mobileface_cosine": 0.4724021553993225
+      },
+      "bicubic": {
+        "psnr": 24.385581970214844,
+        "ssim": 0.6889367132334633,
+        "lpips_alex": 0.5567955374717712,
+        "mobileface_cosine": 0.3427368700504303
+      }
+    }
+  },
+  {
+    "index": 95,
+    "input_png_sha256": "0db9b321df4fdec6ad376be13d6fb75fcaad8af64ef628e5fbeeb96d48b7e505",
+    "models": {
+      "identity_v4": {
+        "psnr": 25.46169090270996,
+        "ssim": 0.6900523589959379,
+        "lpips_alex": 0.3437378704547882,
+        "mobileface_cosine": 0.3424023389816284
+      },
+      "restoration": {
+        "psnr": 22.42803955078125,
+        "ssim": 0.6139977686776753,
+        "lpips_alex": 0.1802731156349182,
+        "mobileface_cosine": 0.3705776035785675
+      },
+      "codeformer": {
+        "psnr": 24.20721435546875,
+        "ssim": 0.6461097281851658,
+        "lpips_alex": 0.16253168880939484,
+        "mobileface_cosine": 0.3480219542980194
+      },
+      "bicubic": {
+        "psnr": 24.960342407226562,
+        "ssim": 0.6640507556823558,
+        "lpips_alex": 0.594871997833252,
+        "mobileface_cosine": 0.24426665902137756
+      }
+    }
+  },
+  {
+    "index": 96,
+    "input_png_sha256": "7e414ac45540e454a0bbc8da8c16ee04d5cc05568b5b04ea911d1f266c99918a",
+    "models": {
+      "identity_v4": {
+        "psnr": 23.978979110717773,
+        "ssim": 0.7086076158056476,
+        "lpips_alex": 0.3653906583786011,
+        "mobileface_cosine": 0.3241753578186035
+      },
+      "restoration": {
+        "psnr": 21.78827667236328,
+        "ssim": 0.6562247566947295,
+        "lpips_alex": 0.10773487389087677,
+        "mobileface_cosine": 0.38337475061416626
+      },
+      "codeformer": {
+        "psnr": 21.425872802734375,
+        "ssim": 0.5807964325483053,
+        "lpips_alex": 0.14885057508945465,
+        "mobileface_cosine": 0.32910680770874023
+      },
+      "bicubic": {
+        "psnr": 23.730457305908203,
+        "ssim": 0.6524056885470286,
+        "lpips_alex": 0.6952166557312012,
+        "mobileface_cosine": 0.24241720139980316
+      }
+    }
+  },
+  {
+    "index": 97,
+    "input_png_sha256": "235ca17accae15dc8739b3264817e8dfff3bb72b5bc01041d8fa496102037f7e",
+    "models": {
+      "identity_v4": {
+        "psnr": 26.643722534179688,
+        "ssim": 0.8149131328802903,
+        "lpips_alex": 0.1422547549009323,
+        "mobileface_cosine": 0.42612752318382263
+      },
+      "restoration": {
+        "psnr": 24.93208122253418,
+        "ssim": 0.7769516618196127,
+        "lpips_alex": 0.08215301483869553,
+        "mobileface_cosine": 0.4806385636329651
+      },
+      "codeformer": {
+        "psnr": 24.215848922729492,
+        "ssim": 0.7273041057389086,
+        "lpips_alex": 0.11550973355770111,
+        "mobileface_cosine": 0.4961000978946686
+      },
+      "bicubic": {
+        "psnr": 24.5249080657959,
+        "ssim": 0.7133964173174785,
+        "lpips_alex": 0.5996212959289551,
+        "mobileface_cosine": 0.3966933786869049
+      }
+    }
+  },
+  {
+    "index": 98,
+    "input_png_sha256": "7d7d9a77653e323c63ea96eecd8efcd69116a3fbe62d7ec441ea098a1a4e9cc6",
+    "models": {
+      "identity_v4": {
+        "psnr": 24.367998123168945,
+        "ssim": 0.7453978901465144,
+        "lpips_alex": 0.18551459908485413,
+        "mobileface_cosine": 0.5320665240287781
+      },
+      "restoration": {
+        "psnr": 22.898418426513672,
+        "ssim": 0.7393109101557631,
+        "lpips_alex": 0.06762419641017914,
+        "mobileface_cosine": 0.49159514904022217
+      },
+      "codeformer": {
+        "psnr": 21.994979858398438,
+        "ssim": 0.6241045742531531,
+        "lpips_alex": 0.16369163990020752,
+        "mobileface_cosine": 0.37574270367622375
+      },
+      "bicubic": {
+        "psnr": 22.91173553466797,
+        "ssim": 0.6432045029960083,
+        "lpips_alex": 0.5313500165939331,
+        "mobileface_cosine": 0.35066327452659607
+      }
+    }
+  },
+  {
+    "index": 99,
+    "input_png_sha256": "643e8a4545667ee2344a30771848de95ea6127b437f6bc1d45342919c428be76",
+    "models": {
+      "identity_v4": {
+        "psnr": 25.804405212402344,
+        "ssim": 0.7200292358362107,
+        "lpips_alex": 0.1974632889032364,
+        "mobileface_cosine": 0.20950038731098175
+      },
+      "restoration": {
+        "psnr": 23.89825439453125,
+        "ssim": 0.6565787248053335,
+        "lpips_alex": 0.0892118513584137,
+        "mobileface_cosine": 0.2207425832748413
+      },
+      "codeformer": {
+        "psnr": 23.70925521850586,
+        "ssim": 0.6095659833634632,
+        "lpips_alex": 0.12742115557193756,
+        "mobileface_cosine": 0.27486324310302734
+      },
+      "bicubic": {
+        "psnr": 25.116863250732422,
+        "ssim": 0.6581093280205177,
+        "lpips_alex": 0.5127472281455994,
+        "mobileface_cosine": 0.26006513833999634
+      }
+    }
+  },
+  {
+    "index": 100,
+    "input_png_sha256": "b6cfa57908b847f1b02eeee174ec2b08bb30546dfe0ea5079878db18b31ce9cf",
+    "models": {
+      "identity_v4": {
+        "psnr": 27.42109489440918,
+        "ssim": 0.7930371289869544,
+        "lpips_alex": 0.20463982224464417,
+        "mobileface_cosine": 0.22838672995567322
+      },
+      "restoration": {
+        "psnr": 25.359745025634766,
+        "ssim": 0.7772944788310417,
+        "lpips_alex": 0.09074413776397705,
+        "mobileface_cosine": 0.25092875957489014
+      },
+      "codeformer": {
+        "psnr": 25.53286361694336,
+        "ssim": 0.7360566721411088,
+        "lpips_alex": 0.10508765280246735,
+        "mobileface_cosine": 0.22572512924671173
+      },
+      "bicubic": {
+        "psnr": 25.788814544677734,
+        "ssim": 0.7034258002429864,
+        "lpips_alex": 0.5709010362625122,
+        "mobileface_cosine": 0.22960610687732697
+      }
+    }
+  },
+  {
+    "index": 101,
+    "input_png_sha256": "be17c74127b9d3c7c45c120d630d44c8e172d6825a7ffaf62a6b6d1cf9816b99",
+    "models": {
+      "identity_v4": {
+        "psnr": 27.884912490844727,
+        "ssim": 0.8333630973010827,
+        "lpips_alex": 0.1770380437374115,
+        "mobileface_cosine": 0.4298148453235626
+      },
+      "restoration": {
+        "psnr": 25.658451080322266,
+        "ssim": 0.7857111544098511,
+        "lpips_alex": 0.08265235275030136,
+        "mobileface_cosine": 0.5102331638336182
+      },
+      "codeformer": {
+        "psnr": 26.895587921142578,
+        "ssim": 0.8022740341340701,
+        "lpips_alex": 0.08050848543643951,
+        "mobileface_cosine": 0.39237940311431885
+      },
+      "bicubic": {
+        "psnr": 27.252944946289062,
+        "ssim": 0.767595287981554,
+        "lpips_alex": 0.45502275228500366,
+        "mobileface_cosine": 0.4324909746646881
+      }
+    }
+  },
+  {
+    "index": 102,
+    "input_png_sha256": "a10c3294b4376d3c9c75c5948fadfda065cb9a5167b598d19e4065f45bc5523d",
+    "models": {
+      "identity_v4": {
+        "psnr": 24.698196411132812,
+        "ssim": 0.7224843636662985,
+        "lpips_alex": 0.22122609615325928,
+        "mobileface_cosine": 0.27705806493759155
+      },
+      "restoration": {
+        "psnr": 23.503402709960938,
+        "ssim": 0.6902223845218649,
+        "lpips_alex": 0.10473550111055374,
+        "mobileface_cosine": 0.36137473583221436
+      },
+      "codeformer": {
+        "psnr": 22.559886932373047,
+        "ssim": 0.6182640501954416,
+        "lpips_alex": 0.1777704656124115,
+        "mobileface_cosine": 0.261933833360672
+      },
+      "bicubic": {
+        "psnr": 23.816566467285156,
+        "ssim": 0.6555723813103503,
+        "lpips_alex": 0.5273348689079285,
+        "mobileface_cosine": 0.23893196880817413
+      }
+    }
+  },
+  {
+    "index": 103,
+    "input_png_sha256": "3caa7612ef6d5112d2d1392573a2d6a76a81c0bcf4759dd27c4fb184130120b3",
+    "models": {
+      "identity_v4": {
+        "psnr": 24.28390884399414,
+        "ssim": 0.6875211261754356,
+        "lpips_alex": 0.32828450202941895,
+        "mobileface_cosine": 0.2771482765674591
+      },
+      "restoration": {
+        "psnr": 22.13521957397461,
+        "ssim": 0.6053397257361343,
+        "lpips_alex": 0.14370141923427582,
+        "mobileface_cosine": 0.3780670166015625
+      },
+      "codeformer": {
+        "psnr": 22.8824405670166,
+        "ssim": 0.5984748604062754,
+        "lpips_alex": 0.21724256873130798,
+        "mobileface_cosine": 0.3268018960952759
+      },
+      "bicubic": {
+        "psnr": 23.71892547607422,
+        "ssim": 0.6149231955571212,
+        "lpips_alex": 0.6725378632545471,
+        "mobileface_cosine": 0.3692486584186554
+      }
+    }
+  },
+  {
+    "index": 104,
+    "input_png_sha256": "ccd26df18de7b42fd5330f06dde441cd5634d695c765bef7cec074e984dae8f5",
+    "models": {
+      "identity_v4": {
+        "psnr": 27.31179428100586,
+        "ssim": 0.8045621282925406,
+        "lpips_alex": 0.1455465704202652,
+        "mobileface_cosine": 0.2952083647251129
+      },
+      "restoration": {
+        "psnr": 25.49530029296875,
+        "ssim": 0.7548477288270966,
+        "lpips_alex": 0.06956763565540314,
+        "mobileface_cosine": 0.2563525140285492
+      },
+      "codeformer": {
+        "psnr": 24.359024047851562,
+        "ssim": 0.6060257820123177,
+        "lpips_alex": 0.1297389715909958,
+        "mobileface_cosine": 0.1849956065416336
+      },
+      "bicubic": {
+        "psnr": 25.93116569519043,
+        "ssim": 0.6888853558615429,
+        "lpips_alex": 0.5567405223846436,
+        "mobileface_cosine": 0.26188331842422485
+      }
+    }
+  },
+  {
+    "index": 105,
+    "input_png_sha256": "5bbc694dfb8a3dbb0d5813f62418fb5cea17f6d8edd440917477f083dad98487",
+    "models": {
+      "identity_v4": {
+        "psnr": 26.08548927307129,
+        "ssim": 0.7761202173704386,
+        "lpips_alex": 0.2687495946884155,
+        "mobileface_cosine": 0.4071038067340851
+      },
+      "restoration": {
+        "psnr": 23.921680450439453,
+        "ssim": 0.749570408454942,
+        "lpips_alex": 0.08445659279823303,
+        "mobileface_cosine": 0.42369264364242554
+      },
+      "codeformer": {
+        "psnr": 25.28793716430664,
+        "ssim": 0.7416587739330538,
+        "lpips_alex": 0.12135157734155655,
+        "mobileface_cosine": 0.41855522990226746
+      },
+      "bicubic": {
+        "psnr": 25.231861114501953,
+        "ssim": 0.7067688550012842,
+        "lpips_alex": 0.5049906373023987,
+        "mobileface_cosine": 0.3171105682849884
+      }
+    }
+  },
+  {
+    "index": 106,
+    "input_png_sha256": "43f09238c8d4d995a1818f4c7fff898a643d302e4efd8c00cb4470869c399077",
+    "models": {
+      "identity_v4": {
+        "psnr": 27.63385009765625,
+        "ssim": 0.7738201621652372,
+        "lpips_alex": 0.1911238133907318,
+        "mobileface_cosine": 0.17230857908725739
+      },
+      "restoration": {
+        "psnr": 26.252614974975586,
+        "ssim": 0.7524406050002378,
+        "lpips_alex": 0.08861681073904037,
+        "mobileface_cosine": 0.5160982608795166
+      },
+      "codeformer": {
+        "psnr": 25.08069610595703,
+        "ssim": 0.6361441689544929,
+        "lpips_alex": 0.12123659253120422,
+        "mobileface_cosine": 0.47075268626213074
+      },
+      "bicubic": {
+        "psnr": 27.004798889160156,
+        "ssim": 0.7194139447937608,
+        "lpips_alex": 0.5419926643371582,
+        "mobileface_cosine": 0.1825435757637024
+      }
+    }
+  },
+  {
+    "index": 107,
+    "input_png_sha256": "6418dac1bd5b1d2fa7526d285f01b6d241714aafcced57aa80164011f29ed980",
+    "models": {
+      "identity_v4": {
+        "psnr": 24.765655517578125,
+        "ssim": 0.7110222295069168,
+        "lpips_alex": 0.2563273310661316,
+        "mobileface_cosine": 0.4523654282093048
+      },
+      "restoration": {
+        "psnr": 22.976444244384766,
+        "ssim": 0.6600364399319228,
+        "lpips_alex": 0.10726873576641083,
+        "mobileface_cosine": 0.35345765948295593
+      },
+      "codeformer": {
+        "psnr": 23.077762603759766,
+        "ssim": 0.6313699641510219,
+        "lpips_alex": 0.1412794291973114,
+        "mobileface_cosine": 0.48614776134490967
+      },
+      "bicubic": {
+        "psnr": 24.645381927490234,
+        "ssim": 0.669206640928691,
+        "lpips_alex": 0.5861263871192932,
+        "mobileface_cosine": 0.3757891058921814
+      }
+    }
+  },
+  {
+    "index": 108,
+    "input_png_sha256": "7ddd3fb128b26d02fb712c6c756a7ed927b8b9def4f81e09c8ae13e9cb79368b",
+    "models": {
+      "identity_v4": {
+        "psnr": 24.686851501464844,
+        "ssim": 0.7361236576552941,
+        "lpips_alex": 0.2509879767894745,
+        "mobileface_cosine": 0.49176204204559326
+      },
+      "restoration": {
+        "psnr": 22.401962280273438,
+        "ssim": 0.6762967746513419,
+        "lpips_alex": 0.11908536404371262,
+        "mobileface_cosine": 0.44315165281295776
+      },
+      "codeformer": {
+        "psnr": 23.143522262573242,
+        "ssim": 0.6608097124078405,
+        "lpips_alex": 0.12845923006534576,
+        "mobileface_cosine": 0.5138999819755554
+      },
+      "bicubic": {
+        "psnr": 24.367061614990234,
+        "ssim": 0.6968563295723993,
+        "lpips_alex": 0.5360034704208374,
+        "mobileface_cosine": 0.5154785513877869
+      }
+    }
+  },
+  {
+    "index": 109,
+    "input_png_sha256": "923747b5fa7da1f4302f86f7f17c85b8e20c50f5d27059796daa221af48829b8",
+    "models": {
+      "identity_v4": {
+        "psnr": 26.084674835205078,
+        "ssim": 0.7408923369311341,
+        "lpips_alex": 0.332783579826355,
+        "mobileface_cosine": 0.4072977900505066
+      },
+      "restoration": {
+        "psnr": 23.87456703186035,
+        "ssim": 0.6785526996168636,
+        "lpips_alex": 0.1805557906627655,
+        "mobileface_cosine": 0.31488823890686035
+      },
+      "codeformer": {
+        "psnr": 23.68456268310547,
+        "ssim": 0.6083146294777979,
+        "lpips_alex": 0.2981233298778534,
+        "mobileface_cosine": 0.3282666802406311
+      },
+      "bicubic": {
+        "psnr": 25.66938591003418,
+        "ssim": 0.6863156373230257,
+        "lpips_alex": 0.6254136562347412,
+        "mobileface_cosine": 0.3812413513660431
+      }
+    }
+  },
+  {
+    "index": 110,
+    "input_png_sha256": "59a4148438d5c89d3794f700b8aeb9c14caf369a8db8c8fe572b72cf6bd9d09e",
+    "models": {
+      "identity_v4": {
+        "psnr": 26.56549835205078,
+        "ssim": 0.7781975239648539,
+        "lpips_alex": 0.3046109676361084,
+        "mobileface_cosine": 0.380884051322937
+      },
+      "restoration": {
+        "psnr": 24.178884506225586,
+        "ssim": 0.7368364376691934,
+        "lpips_alex": 0.14808744192123413,
+        "mobileface_cosine": 0.47151488065719604
+      },
+      "codeformer": {
+        "psnr": 24.439668655395508,
+        "ssim": 0.6771557062538223,
+        "lpips_alex": 0.15132403373718262,
+        "mobileface_cosine": 0.4832688570022583
+      },
+      "bicubic": {
+        "psnr": 25.355361938476562,
+        "ssim": 0.6919041016813122,
+        "lpips_alex": 0.5982967615127563,
+        "mobileface_cosine": 0.3966638147830963
+      }
+    }
+  },
+  {
+    "index": 111,
+    "input_png_sha256": "98a0782fba762ae90730b35e33ad63e06d1988cf5f21511922f5b8112fc2fc5d",
+    "models": {
+      "identity_v4": {
+        "psnr": 25.985898971557617,
+        "ssim": 0.6978372034457291,
+        "lpips_alex": 0.2625023126602173,
+        "mobileface_cosine": 0.2368098646402359
+      },
+      "restoration": {
+        "psnr": 23.60323715209961,
+        "ssim": 0.628901264855787,
+        "lpips_alex": 0.14063763618469238,
+        "mobileface_cosine": 0.29462096095085144
+      },
+      "codeformer": {
+        "psnr": 23.864078521728516,
+        "ssim": 0.5878081464763333,
+        "lpips_alex": 0.15756022930145264,
+        "mobileface_cosine": 0.14332371950149536
+      },
+      "bicubic": {
+        "psnr": 25.715831756591797,
+        "ssim": 0.6589706446325634,
+        "lpips_alex": 0.5175935626029968,
+        "mobileface_cosine": 0.16175414621829987
+      }
+    }
+  },
+  {
+    "index": 112,
+    "input_png_sha256": "825e020213866cac408f9df106a6e5a5bdf9a74e110dc40e3ff38da78ac6e8ea",
+    "models": {
+      "identity_v4": {
+        "psnr": 25.057058334350586,
+        "ssim": 0.7358362456504166,
+        "lpips_alex": 0.26872169971466064,
+        "mobileface_cosine": 0.07505160570144653
+      },
+      "restoration": {
+        "psnr": 23.004016876220703,
+        "ssim": 0.6804251415341893,
+        "lpips_alex": 0.09650622308254242,
+        "mobileface_cosine": 0.2647842466831207
+      },
+      "codeformer": {
+        "psnr": 23.154903411865234,
+        "ssim": 0.6169518985729748,
+        "lpips_alex": 0.12377230823040009,
+        "mobileface_cosine": 0.1975565254688263
+      },
+      "bicubic": {
+        "psnr": 24.191612243652344,
+        "ssim": 0.6628501613959785,
+        "lpips_alex": 0.5699909925460815,
+        "mobileface_cosine": 0.19019272923469543
+      }
+    }
+  },
+  {
+    "index": 113,
+    "input_png_sha256": "0b60da93fa153df74e14121ee4ebc68cbf216b93dd3cb3f1f465c6742e23b219",
+    "models": {
+      "identity_v4": {
+        "psnr": 21.28179931640625,
+        "ssim": 0.6416881618785799,
+        "lpips_alex": 0.3405994176864624,
+        "mobileface_cosine": 0.319875568151474
+      },
+      "restoration": {
+        "psnr": 20.633773803710938,
+        "ssim": 0.6325024583588453,
+        "lpips_alex": 0.15799695253372192,
+        "mobileface_cosine": 0.36689701676368713
+      },
+      "codeformer": {
+        "psnr": 19.941370010375977,
+        "ssim": 0.5751772906285234,
+        "lpips_alex": 0.16466721892356873,
+        "mobileface_cosine": 0.16531361639499664
+      },
+      "bicubic": {
+        "psnr": 20.694480895996094,
+        "ssim": 0.5648726784724059,
+        "lpips_alex": 0.6355652809143066,
+        "mobileface_cosine": 0.181301087141037
+      }
+    }
+  },
+  {
+    "index": 114,
+    "input_png_sha256": "844f99fef587c9917cba9c95ea76858ab9d2bb30d35827f4a34ca1393b6fbb52",
+    "models": {
+      "identity_v4": {
+        "psnr": 27.035282135009766,
+        "ssim": 0.7320883334360754,
+        "lpips_alex": 0.24583280086517334,
+        "mobileface_cosine": 0.39169710874557495
+      },
+      "restoration": {
+        "psnr": 25.03940773010254,
+        "ssim": 0.6709400642467198,
+        "lpips_alex": 0.11823704093694687,
+        "mobileface_cosine": 0.4439254701137543
+      },
+      "codeformer": {
+        "psnr": 25.043352127075195,
+        "ssim": 0.6099039809556205,
+        "lpips_alex": 0.1714991182088852,
+        "mobileface_cosine": 0.42666104435920715
+      },
+      "bicubic": {
+        "psnr": 26.696596145629883,
+        "ssim": 0.6798728356971567,
+        "lpips_alex": 0.6105973720550537,
+        "mobileface_cosine": 0.24688701331615448
+      }
+    }
+  },
+  {
+    "index": 115,
+    "input_png_sha256": "fc42f1ba86cb583c536dc80a1d3b68c5314f445c979f29a8497783b6443fbee8",
+    "models": {
+      "identity_v4": {
+        "psnr": 24.063941955566406,
+        "ssim": 0.758940438173358,
+        "lpips_alex": 0.22862106561660767,
+        "mobileface_cosine": 0.5023137927055359
+      },
+      "restoration": {
+        "psnr": 22.2952938079834,
+        "ssim": 0.7191739318388491,
+        "lpips_alex": 0.07594162225723267,
+        "mobileface_cosine": 0.47284406423568726
+      },
+      "codeformer": {
+        "psnr": 21.941604614257812,
+        "ssim": 0.680269665579311,
+        "lpips_alex": 0.07855181396007538,
+        "mobileface_cosine": 0.5872103571891785
+      },
+      "bicubic": {
+        "psnr": 22.709941864013672,
+        "ssim": 0.6748671570687773,
+        "lpips_alex": 0.563877522945404,
+        "mobileface_cosine": 0.4447932243347168
+      }
+    }
+  },
+  {
+    "index": 116,
+    "input_png_sha256": "25467111c064712adfd63eebf9bd59024fd87184b8c52ac28358d0aafc3d354e",
+    "models": {
+      "identity_v4": {
+        "psnr": 29.047107696533203,
+        "ssim": 0.6962784565495492,
+        "lpips_alex": 0.4388176500797272,
+        "mobileface_cosine": 0.4664674997329712
+      },
+      "restoration": {
+        "psnr": 26.354450225830078,
+        "ssim": 0.6089772609762991,
+        "lpips_alex": 0.2549798786640167,
+        "mobileface_cosine": 0.12023529410362244
+      },
+      "codeformer": {
+        "psnr": 26.191612243652344,
+        "ssim": 0.5536931069693324,
+        "lpips_alex": 0.36621397733688354,
+        "mobileface_cosine": 0.3386112451553345
+      },
+      "bicubic": {
+        "psnr": 28.882558822631836,
+        "ssim": 0.671881444179771,
+        "lpips_alex": 0.6353635787963867,
+        "mobileface_cosine": 0.45581284165382385
+      }
+    }
+  },
+  {
+    "index": 117,
+    "input_png_sha256": "e8dc12d695512b73dbb82ea05bc01cd82eb4dd8160d0cad144cceccc523d17d1",
+    "models": {
+      "identity_v4": {
+        "psnr": 28.005596160888672,
+        "ssim": 0.8170524555724672,
+        "lpips_alex": 0.16758398711681366,
+        "mobileface_cosine": 0.47405368089675903
+      },
+      "restoration": {
+        "psnr": 26.175813674926758,
+        "ssim": 0.791417367926838,
+        "lpips_alex": 0.05742863565683365,
+        "mobileface_cosine": 0.6280858516693115
+      },
+      "codeformer": {
+        "psnr": 26.386430740356445,
+        "ssim": 0.7497722793417323,
+        "lpips_alex": 0.07807793468236923,
+        "mobileface_cosine": 0.45499467849731445
+      },
+      "bicubic": {
+        "psnr": 27.19295883178711,
+        "ssim": 0.7467558959045015,
+        "lpips_alex": 0.4308518171310425,
+        "mobileface_cosine": 0.2971293330192566
+      }
+    }
+  },
+  {
+    "index": 118,
+    "input_png_sha256": "7a3b284f33bb504894f43ed15bfc0f9c9b552fa15b5972df852ac19afad4b157",
+    "models": {
+      "identity_v4": {
+        "psnr": 28.087575912475586,
+        "ssim": 0.7799562957800726,
+        "lpips_alex": 0.2287244200706482,
+        "mobileface_cosine": 0.3638187646865845
+      },
+      "restoration": {
+        "psnr": 25.86175537109375,
+        "ssim": 0.7338448929120247,
+        "lpips_alex": 0.11062894761562347,
+        "mobileface_cosine": 0.4759100675582886
+      },
+      "codeformer": {
+        "psnr": 26.673738479614258,
+        "ssim": 0.7209179362895919,
+        "lpips_alex": 0.0887041762471199,
+        "mobileface_cosine": 0.5069345831871033
+      },
+      "bicubic": {
+        "psnr": 27.72219467163086,
+        "ssim": 0.7288282716090536,
+        "lpips_alex": 0.5051526427268982,
+        "mobileface_cosine": 0.5041781663894653
+      }
+    }
+  },
+  {
+    "index": 119,
+    "input_png_sha256": "51817faceb67f299038fdfd41f98c6b03114c83876183e20a3b2a5778686ef89",
+    "models": {
+      "identity_v4": {
+        "psnr": 25.009185791015625,
+        "ssim": 0.6433478712851991,
+        "lpips_alex": 0.3314627408981323,
+        "mobileface_cosine": 0.27599504590034485
+      },
+      "restoration": {
+        "psnr": 22.984172821044922,
+        "ssim": 0.5842704326401593,
+        "lpips_alex": 0.1292235404253006,
+        "mobileface_cosine": 0.37594860792160034
+      },
+      "codeformer": {
+        "psnr": 22.751445770263672,
+        "ssim": 0.5166000461951588,
+        "lpips_alex": 0.17660336196422577,
+        "mobileface_cosine": 0.15861092507839203
+      },
+      "bicubic": {
+        "psnr": 24.533252716064453,
+        "ssim": 0.5879070479897851,
+        "lpips_alex": 0.6089380979537964,
+        "mobileface_cosine": 0.2512723505496979
+      }
+    }
+  },
+  {
+    "index": 120,
+    "input_png_sha256": "4965e3cb0c11307de2999605463441454e8e75c29f39fe10c630066cab250e5b",
+    "models": {
+      "identity_v4": {
+        "psnr": 26.75244140625,
+        "ssim": 0.7682957550244963,
+        "lpips_alex": 0.24365924298763275,
+        "mobileface_cosine": 0.23620951175689697
+      },
+      "restoration": {
+        "psnr": 24.3919677734375,
+        "ssim": 0.7242219109698902,
+        "lpips_alex": 0.09097109735012054,
+        "mobileface_cosine": 0.6154088377952576
+      },
+      "codeformer": {
+        "psnr": 23.972824096679688,
+        "ssim": 0.6520398247913199,
+        "lpips_alex": 0.14910724759101868,
+        "mobileface_cosine": 0.5630767345428467
+      },
+      "bicubic": {
+        "psnr": 25.679420471191406,
+        "ssim": 0.7012813451660833,
+        "lpips_alex": 0.559467077255249,
+        "mobileface_cosine": 0.14642851054668427
+      }
+    }
+  },
+  {
+    "index": 121,
+    "input_png_sha256": "1de3e47913ecaf5fcd4b810810a80ab6bf76dcfa9f9e1db49fce961132d40bc5",
+    "models": {
+      "identity_v4": {
+        "psnr": 26.280345916748047,
+        "ssim": 0.7318639848387111,
+        "lpips_alex": 0.138498917222023,
+        "mobileface_cosine": 0.23660160601139069
+      },
+      "restoration": {
+        "psnr": 24.966344833374023,
+        "ssim": 0.686712918022602,
+        "lpips_alex": 0.06249786913394928,
+        "mobileface_cosine": 0.37017765641212463
+      },
+      "codeformer": {
+        "psnr": 24.84307289123535,
+        "ssim": 0.6591699541183768,
+        "lpips_alex": 0.08305434882640839,
+        "mobileface_cosine": 0.2636810541152954
+      },
+      "bicubic": {
+        "psnr": 24.7072696685791,
+        "ssim": 0.6154932407781245,
+        "lpips_alex": 0.48288407921791077,
+        "mobileface_cosine": 0.2317110002040863
+      }
+    }
+  },
+  {
+    "index": 122,
+    "input_png_sha256": "ba5ee53324661d815b36eb07967dd24a742834a447cbf874f9bd34de993c0da9",
+    "models": {
+      "identity_v4": {
+        "psnr": 25.061859130859375,
+        "ssim": 0.691893625877848,
+        "lpips_alex": 0.307075560092926,
+        "mobileface_cosine": 0.1672552078962326
+      },
+      "restoration": {
+        "psnr": 22.67298698425293,
+        "ssim": 0.6038727071467518,
+        "lpips_alex": 0.1866784691810608,
+        "mobileface_cosine": 0.22745469212532043
+      },
+      "codeformer": {
+        "psnr": 22.53508758544922,
+        "ssim": 0.5778562045950106,
+        "lpips_alex": 0.20751935243606567,
+        "mobileface_cosine": 0.2708260118961334
+      },
+      "bicubic": {
+        "psnr": 24.76811981201172,
+        "ssim": 0.664750677798346,
+        "lpips_alex": 0.6272146701812744,
+        "mobileface_cosine": 0.21787308156490326
+      }
+    }
+  },
+  {
+    "index": 123,
+    "input_png_sha256": "487e67ac5ea2d245e47c328e04ea4837ea7dfc42abffec29ab26216342d1ebf0",
+    "models": {
+      "identity_v4": {
+        "psnr": 24.817211151123047,
+        "ssim": 0.7345521836041761,
+        "lpips_alex": 0.21263645589351654,
+        "mobileface_cosine": 0.2796088755130768
+      },
+      "restoration": {
+        "psnr": 23.161800384521484,
+        "ssim": 0.6893389814401717,
+        "lpips_alex": 0.10180942714214325,
+        "mobileface_cosine": 0.37694305181503296
+      },
+      "codeformer": {
+        "psnr": 22.627742767333984,
+        "ssim": 0.5956737125243821,
+        "lpips_alex": 0.17762427031993866,
+        "mobileface_cosine": 0.3007267713546753
+      },
+      "bicubic": {
+        "psnr": 24.76656723022461,
+        "ssim": 0.6723031979946722,
+        "lpips_alex": 0.54343581199646,
+        "mobileface_cosine": 0.2348214089870453
+      }
+    }
+  },
+  {
+    "index": 124,
+    "input_png_sha256": "d79ad0ab074d1b7dc5da3a5eae496f22da4b7b98912fa17c7088abd070c2cc74",
+    "models": {
+      "identity_v4": {
+        "psnr": 22.529630661010742,
+        "ssim": 0.6618564961113764,
+        "lpips_alex": 0.38163140416145325,
+        "mobileface_cosine": 0.42281851172447205
+      },
+      "restoration": {
+        "psnr": 20.88620376586914,
+        "ssim": 0.6082635008537589,
+        "lpips_alex": 0.2238786816596985,
+        "mobileface_cosine": 0.45903149247169495
+      },
+      "codeformer": {
+        "psnr": 20.509483337402344,
+        "ssim": 0.5790104538267847,
+        "lpips_alex": 0.2803244888782501,
+        "mobileface_cosine": 0.44953423738479614
+      },
+      "bicubic": {
+        "psnr": 22.302249908447266,
+        "ssim": 0.6346568710204432,
+        "lpips_alex": 0.6440273523330688,
+        "mobileface_cosine": 0.3371323347091675
+      }
+    }
+  },
+  {
+    "index": 125,
+    "input_png_sha256": "1c87809c1f6b630dd6c9945ae74df198589d5435f01e4ee5a352f3e3e0144a96",
+    "models": {
+      "identity_v4": {
+        "psnr": 24.27989959716797,
+        "ssim": 0.660110826931481,
+        "lpips_alex": 0.42543044686317444,
+        "mobileface_cosine": 0.3965628147125244
+      },
+      "restoration": {
+        "psnr": 22.544248580932617,
+        "ssim": 0.6019175646688741,
+        "lpips_alex": 0.2537819743156433,
+        "mobileface_cosine": 0.18350356817245483
+      },
+      "codeformer": {
+        "psnr": 23.301414489746094,
+        "ssim": 0.614779241494503,
+        "lpips_alex": 0.22884754836559296,
+        "mobileface_cosine": 0.31760144233703613
+      },
+      "bicubic": {
+        "psnr": 23.688039779663086,
+        "ssim": 0.6057309235681386,
+        "lpips_alex": 0.6985630989074707,
+        "mobileface_cosine": 0.29713746905326843
+      }
+    }
+  },
+  {
+    "index": 126,
+    "input_png_sha256": "eeead0f54d5674b53cf19a94b95ca4cecd2c8e7744520cff077baf141336b36e",
+    "models": {
+      "identity_v4": {
+        "psnr": 23.881614685058594,
+        "ssim": 0.7105142436333217,
+        "lpips_alex": 0.262003630399704,
+        "mobileface_cosine": 0.24202103912830353
+      },
+      "restoration": {
+        "psnr": 22.355995178222656,
+        "ssim": 0.6872093821284901,
+        "lpips_alex": 0.11641448736190796,
+        "mobileface_cosine": 0.28556519746780396
+      },
+      "codeformer": {
+        "psnr": 22.53626823425293,
+        "ssim": 0.607992863034156,
+        "lpips_alex": 0.12343441694974899,
+        "mobileface_cosine": 0.3693960905075073
+      },
+      "bicubic": {
+        "psnr": 23.448734283447266,
+        "ssim": 0.6274012439680307,
+        "lpips_alex": 0.5891231894493103,
+        "mobileface_cosine": 0.389442503452301
+      }
+    }
+  },
+  {
+    "index": 127,
+    "input_png_sha256": "db2557fa4c30d9806fa374643421fb1b63747b82b75eee16cc199be90cd97a85",
+    "models": {
+      "identity_v4": {
+        "psnr": 22.764883041381836,
+        "ssim": 0.7955668818613534,
+        "lpips_alex": 0.1936444193124771,
+        "mobileface_cosine": 0.4749886989593506
+      },
+      "restoration": {
+        "psnr": 20.26132583618164,
+        "ssim": 0.7297367421069301,
+        "lpips_alex": 0.09321976453065872,
+        "mobileface_cosine": 0.2855116128921509
+      },
+      "codeformer": {
+        "psnr": 21.28032684326172,
+        "ssim": 0.7243312467229175,
+        "lpips_alex": 0.09318594634532928,
+        "mobileface_cosine": 0.32210278511047363
+      },
+      "bicubic": {
+        "psnr": 21.433277130126953,
+        "ssim": 0.690912825355562,
+        "lpips_alex": 0.5574732422828674,
+        "mobileface_cosine": 0.42169612646102905
+      }
+    }
+  }
+]

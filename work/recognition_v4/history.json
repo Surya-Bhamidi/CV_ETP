@@ -1,0 +1,66 @@
+[
+  {
+    "epoch": 1,
+    "seconds": 284.955973600001,
+    "validation": {
+      "ffhq": {
+        "standard28": {
+          "psnr_y": 25.57247631251812,
+          "ssim_y": 0.7340690796208895,
+          "lpips": 0.19495764293242246
+        },
+        "clean28": {
+          "psnr_y": 28.163089618086815,
+          "ssim_y": 0.8496808609702777,
+          "lpips": 0.11224943544948474
+        }
+      },
+      "domain_validation_arcface_auc": 0.7529296875,
+      "domain_validation_pairs": 512
+    },
+    "eligible": true,
+    "losses": {
+      "pixel": 0.04302406870556297,
+      "structure": 0.25249425318907015,
+      "laplacian": 0.02404931171258795,
+      "vgg": 0.9357635584892705,
+      "lpips": 0.18614997660915833,
+      "ffhq_identity": 0.5529579747235402,
+      "camera_lr_consistency": 0.003793875853943973,
+      "camera_identity": 0.037903431395534426,
+      "paired_identity_contrastive": 2.173637338622939
+    }
+  },
+  {
+    "epoch": 2,
+    "seconds": 289.41165469999396,
+    "validation": {
+      "ffhq": {
+        "standard28": {
+          "psnr_y": 25.5606769323349,
+          "ssim_y": 0.7330467922782484,
+          "lpips": 0.19613639311864972
+        },
+        "clean28": {
+          "psnr_y": 28.224314212799072,
+          "ssim_y": 0.8509579162563773,
+          "lpips": 0.11280696652829647
+        }
+      },
+      "domain_validation_arcface_auc": 0.7549591064453125,
+      "domain_validation_pairs": 512
+    },
+    "eligible": true,
+    "losses": {
+      "pixel": 0.04305731871863827,
+      "structure": 0.2519523982628016,
+      "laplacian": 0.024090632676234236,
+      "vgg": 0.9357434756238945,
+      "lpips": 0.18344404574600048,
+      "ffhq_identity": 0.547555475612171,
+      "camera_lr_consistency": 0.0035444162003841484,
+      "camera_identity": 0.034243850444909185,
+      "paired_identity_contrastive": 2.15868166621658
+    }
+  }
+]

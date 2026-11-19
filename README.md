@@ -1,107 +1,111 @@
-# CV_ETP — Face Super-Resolution
+# Face super-resolution with sparse sampling and adaptive linear attention
 
-Reconstruct low-resolution face crops at **4× resolution** and compare the output with the input, bicubic enlargement, original custom model, and an optional clean reference. The custom model outputs an image; downstream recognition experiments are separate evaluations.
+This project enlarges a low-resolution face crop by **4x**. The comparison app runs our **479,109-parameter v4 model**, **GFPGAN 1.4**, and **CodeFormer** (fidelity weight 0.5) on the same input pixels. Its slider and side-by-side views let you inspect each reconstruction against the input, bicubic enlargement, or an available clean reference.
 
-The local comparison UI includes image uploads, paired examples, a before/after slider, side-by-side comparison, zoom, PNG downloads, and reference-based PSNR/SSIM.
+For a class presentation, start with the [executable walkthrough](notebooks/Walkthrough.ipynb). Its four steps load the released checkpoint, create the observation, run the actual network and score its prediction. The [scorecard](work/final_scores/FINAL_SCORES.md) gives the measured results and explains each metric.
 
-![Comparison interface](work/ui/final_custom_comparison.png)
+## Run the comparison app
 
-## Current model and results
-
-The custom network uses sparse sampling/deformable convolutions, adaptive sparse linear attention, residual blocks and PixelShuffle. It has **479,109 parameters**. The current default retains that architecture and adds reconstruction-focused fine-tuning with pixel, structural similarity, VGG feature and multiscale-detail losses. No recognizer is used in the current training objective or checkpoint selection.
-
-| Custom model | PSNR-Y ↑ | SSIM-Y ↑ | LPIPS-Squeeze ↓ |
-|---|---:|---:|---:|
-| Original, 30 epochs | 25.6829 | 0.7345 | 0.3222 |
-| Previous refinement, retired | 25.4873 | 0.7190 | 0.2943 |
-| Current, 30 + 5 epochs | 25.6224 | 0.7346 | 0.2509 |
-
-These are repeated comparisons on the same 2,000-image FFHQ test split, held out from custom-model training. The current model reduces LPIPS by **22.13%** relative to the original, with essentially unchanged SSIM and a 0.0605 dB PSNR reduction. A lower perceptual distance does not establish exact recovery or human recognizability. Difficult 28 × 28 inputs remain soft.
-
-- [Detailed quality investigation](work/visual_sr/full_reconstruction/quality_report.md)
-- [Test comparison](work/visual_sr/full_reconstruction/test_comparison.png) and [additional examples](work/visual_sr/full_reconstruction/additional_examples.png)
-- [Training curves](work/visual_sr/full_reconstruction/training_curves.png)
-- [Original full experiment](work/full/performance_report.md)
-- [Experiment design and rejected alternatives](work/visual_sr/EXPERIMENT.md)
-
-## Run the comparison UI
-
-The project was developed on Windows with Python 3.14 and an NVIDIA RTX 4060 Laptop GPU. Exact observed package versions are in [work/runtime_versions.json](work/runtime_versions.json); requirements include the additional UI and quality-evaluation packages. CPU inference is supported, although training was performed with CUDA.
+From the repository root on Windows, use the project's tested Python 3.14 environment. The dependency files pin the recorded package versions. A compatible CUDA build of PyTorch enables GPU inference. CPU inference is also supported.
 
 ```powershell
-git clone https://github.com/Surya-Bhamidi/CV_ETP.git
-cd CV_ETP
-python -m venv .venv
+py -3.14 -m venv .venv
 .\.venv\Scripts\python.exe -m pip install -r requirements.txt
+.\.venv\Scripts\python.exe setup_demo.py
 .\.venv\Scripts\python.exe comparison_app.py --open-browser
 ```
 
-Open **http://127.0.0.1:8765**. On Windows, `Open_Comparison_UI.cmd` starts the same application. On other platforms, use your environment's `python` executable instead of the Windows `.venv\Scripts\python.exe` path. For GPU acceleration, install the appropriate matching PyTorch/CUDA wheels for your system.
+The server listens at **http://127.0.0.1:8765**. The repository includes the trained v4 weights. Setup downloads about 725 MB of official baseline weights and checks each file against its recorded SHA-256 digest. Once the weights are present, the app runs locally. Use **Your image** to try an upload immediately. Subsequent launches can use [Open_Comparison_UI.cmd](Open_Comparison_UI.cmd).
 
-The repository includes the **project-trained checkpoints**, so inference does not require retraining. The default is **Reconstruction refinement (ours)**; **Pixel model (original)** remains selectable. Active checkpoint metadata uses repository-relative paths.
-
-Without the FFHQ cache, the app opens the upload workflow. To enable the paired test gallery, download/build the dataset:
+For the paired FFHQ gallery and walkthrough, run the following command and restart the app. It downloads FFHQ128 and builds a local uint8 cache. The cache alone needs about 3.44 GB. Allow additional space for the download.
 
 ```powershell
 .\.venv\Scripts\python.exe prepare_data.py
 ```
 
-This fetches the FFHQ128 archive and builds `work/data/ffhq128_u8.npy`. The archive is about 2 GB and the resulting cache about 3.4 GB, so allow space for both. Dataset: [nuwandaa/ffhq128](https://huggingface.co/datasets/nuwandaa/ffhq128), obtained from its `thumbnails128x128.zip` archive. Fixed splits are saved in `work/full/split_ids.npz`: 67,000 train, 1,000 validation, 2,000 test. HR crops are 112 × 112; degraded inputs are 28 × 28.
+The gallery opens on four labeled validation case studies selected after measuring their outputs. Choose **FFHQ test** for the fixed first 12 test images. To enable the six native QMUL examples, obtain the official QMUL-SurvFace data under its terms and put the verification JPEGs in `work/recognition/qmul_data/QMUL-SurvFace/Face_Verification_Test_Set/verification_images/`. The [example manifest](work/identity_investigation/mixed_quality_v1/qmul_examples.json) identifies the six files. The repository includes evaluated comparison sheets for offline viewing. [UI guide](COMPARISON_UI.md) | [FFHQ comparison sheet](work/visual_tradeoff/case_studies.html)
 
-See [COMPARISON_UI.md](COMPARISON_UI.md) for upload limits, reference requirements and controls.
+## Architecture and data flow
 
-## Optional pretrained restoration
-
-```powershell
-.\.venv\Scripts\python.exe prepare_restoration.py
+```mermaid
+flowchart TD
+    FF[Clean FFHQ crop] --> D[Blur / downsample / noise / JPEG according to profile]
+    D --> LR[Observed RGB crop]
+    CAM[Native QMUL crop or upload] --> LR
+    LR --> H[3 by 3 convolution to 48 channels]
+    H --> B[Six residual blocks]
+    subgraph block[Inside each residual block]
+      A[GroupNorm and sparse sampling convolution] --> R[Add local residual]
+      R --> Q[GroupNorm and adaptive sparse linear attention]
+      Q --> S[Add attention residual]
+      S --> M[GroupNorm and pointwise feed-forward network]
+      M --> Z[Add channel residual]
+    end
+    B -. block detail .-> A
+    B --> T[3 by 3 tail convolution]
+    H --> L[Add feature skip]
+    T --> L
+    L --> U[Conv and PixelShuffle x2 twice]
+    U --> RGB[3 by 3 RGB reconstruction]
+    RGB --> SUM[Add bicubic skip]
+    LR --> BI[Bicubic x4]
+    BI --> SUM
+    SUM --> O[Our reconstructed image]
+    O --> C[Optional clean bicubic consistency correction]
+    LR --> C
+    LR --> EXT[GFPGAN or CodeFormer at internal 512 by 512]
+    EXT --> E[Resize back to common x4 output shape]
+    O --> UI[Comparison viewer]
+    C --> UI
+    E --> UI
+    BI --> UI
+    FF --> SCORE[Reference PSNR and SSIM for paired inputs]
+    UI --> SCORE
+    O --> REC[Offline frozen recognizer and labeled QMUL pair verification]
 ```
 
-Restart the app to enable **GFPGAN 1.4 (pretrained)**. This is an external pretrained model, separate from the custom SR network. Its strength slider blends the original custom reconstruction with the generated restoration. It can make faces clearer while changing eyes, glasses, hair or other features. Its FFHQ pretraining may overlap the example images; those scores are diagnostic, not independent held-out evidence.
+Each sparse convolution predicts **nine sampling locations per pixel**. Bounded offsets let the model gather local features within a 7 by 7 region. Attention scores the spatial locations, keeps the top half as keys and aggregates their values with normalized linear attention. The locations depend on the image. The implementation uses dense masked tensors, so the keep ratio alone does not measure runtime savings. Read the four cells in [network.py](face_sr/network.py) in diagram order.
 
-CodeFormer, landmark alignment and a compact general Real-ESRGAN baseline were also investigated. They produced artifacts or poorer reconstruction in the recorded trials and are not active UI choices. Their code, provenance, licenses and experiment evidence are retained.
+## Code map
 
-## Training, evaluation and checks
+| Question for the walkthrough | Source |
+|---|---|
+| What layers make the prediction? | [Network and residual blocks](face_sr/network.py) |
+| How are inputs degraded and scores calculated? | [Degradation and luminance metrics](face_sr/runtime.py), [input profiles](input_quality.py) |
+| How does the app verify weights and keep inputs identical? | [Reconstruction service](face_sr/service.py), [image decoding](face_sr/images.py) |
+| Where does a request enter the system? | [FastAPI routes and server lifecycle](backend/api.py) |
+| Where are the comparison controls rendered? | [HTML](comparison_ui/index.html), [interaction logic](comparison_ui/app.js), [styles](comparison_ui/styles.css) |
+| How was v4 trained? | [Training data preparation](prepare_recognition_v4.py), [paired camera training and validation selection](training/train_recognition_v4.py) |
+| How was the checkpoint evaluated? | [Verification and reconstruction evaluation](evaluation/evaluate_recognition_v4.py), [leakage audit](audit_restoration_leakage.py) |
+| What are the baselines and optional correction? | [GFPGAN wrapper](restoration_model.py), [CodeFormer wrapper](codeformer_model.py), [inference methods](restoration_passes.py) |
 
-The original notebooks are retained:
+The root launch scripts preserve the original commands. Training and evaluation share the project architecture. The historical training stages use the research notebooks, downloaded datasets, preprocessing caches and auxiliary feature networks. To explain the released checkpoint, follow the walkthrough and [training manifest](work/recognition_v4/training_manifest.json). Training experiments should use a separate checkout and output directory to preserve the released selection records.
 
-- `sr_part1_clean.ipynb`: dataset, degradation, custom SR model and original training.
-- `sr_part2a_recognition.ipynb`: separate downstream recognition evaluation.
-- `sr_part2b1_variants.ipynb`: model variants and ablations.
+### Follow one face through the code
 
-`run_project.py` executes notebook definitions without notebook download/training side effects. `audit_project.py` and `audit_visual_sr.py` check the numerical/data pipeline. Historical run manifests and checkpoints are kept intact, including their original paths and hashes. Do not overwrite an archived run with a different configuration; choose a new run name/directory.
+1. In `comparison_ui/app.js`, `chooseSample` sends the split, image index, degradation profile and model name to `/api/compare`.
+2. In `face_sr/service.py`, `pair` builds the low-resolution input. For FFHQ it also returns the clean crop so the app can score the prediction. Native QMUL samples have only the observed crop.
+3. In `face_sr/network.py`, step through `SRNet.forward` and then `Block.forward`. Open `AdaptiveSparseLinearAttention.key_mask` to see exactly how the model chooses its spatial keys.
+4. Back in the browser, `showResult` displays the returned images and available scores. You can switch to either pretrained model using the same crop.
 
-To fine-tune a new reconstruction run from the included original checkpoint:
+## Results and interpretation
 
-```powershell
-.\.venv\Scripts\python.exe prepare_data.py
-.\.venv\Scripts\python.exe prepare_refinement.py
-.\.venv\Scripts\python.exe train_visual_sr.py --mode perceptual --name new_reconstruction --epochs 5 --train-limit 0 --val-count 1000 --batch 64
-```
+All three methods received the same benchmark-degraded inputs on the first **128 FFHQ validation images**. PSNR and SSIM measure agreement with the clean image. Lower LPIPS indicates a closer match in learned perceptual features. Times are median selected-model inference on an RTX 4060 Laptop GPU.
 
-The preparation step downloads frozen VGG/MobileFace assets; the selected reconstruction objective uses VGG, not a recognizer. The training script expects CUDA. The original baseline can be reproduced from the first notebook using a fresh `Config.work_dir`; archived CLI runs intentionally reject mismatched resume configurations.
+| Model | Parameters | PSNR-Y dB (higher) | SSIM-Y (higher) | LPIPS-Alex (lower) | Time ms (lower) |
+|---|---:|---:|---:|---:|---:|
+| Ours v4 | 479,109 | 25.56 | 0.7331 | 0.2544 | 10.2 |
+| GFPGAN 1.4 | 86,444,252 | 23.65 | 0.6839 | 0.1223 | 60.6 |
+| CodeFormer | 94,112,707 | 23.65 | 0.6360 | 0.1558 | 134.2 |
 
-For quality evaluation, download the optional GFPGAN and LPIPS assets first:
+V4 achieved higher PSNR and SSIM with lower inference time. Both heavy baselines achieved lower perceptual distance. V4 used our FFHQ training split and official QMUL training identities. The baselines use published pretrained weights with different training procedures. Upstream FFHQ overlap is possible.
 
-```powershell
-.\.venv\Scripts\python.exe prepare_restoration.py
-.\.venv\Scripts\python.exe prepare_quality_metric.py
-.\.venv\Scripts\python.exe evaluate_visual_sr.py --run new_reconstruction
-```
+On **512 FFHQ test faces** under blur, noise and JPEG, v4 reached **25.46 dB PSNR and 0.7358 SSIM**. In a separate clean-downsampling experiment, one prediction followed by three consistency corrections increased PSNR from **28.12 to 28.32 dB**. The app offers that setting for known clean-downsampled inputs. [Repeated-pass experiment](work/restoration_passes_v1/comparison.html)
 
-Evaluation requires the dataset and all expected assets. Full recognition experiments download their own benchmark/model assets through the notebook helpers; they are not necessary for the comparison UI.
+Real QMUL crops lack a paired clean reference. The project therefore evaluates whether a frozen recognizer can tell if two restored crops show the same person. With mirrored MobileFace recognition features, v4 reached **70.03% on 10,640 main-cohort pairs** and **62.44% on 3,416 harder pairs**. These percentages describe pair decisions. Human recognizability remains unmeasured. The project audit checked direct overlap, and repeated historical evaluation limits generalization claims. [Verification scores](work/recognition_flip_v5/evaluation.json) | [Leakage audit](work/leakage_review_v2/audit.json)
 
-Browser tests require the development requirements and system Microsoft Edge, as used in the recorded Windows checks:
+## Verification and third-party credits
 
-```powershell
-.\.venv\Scripts\python.exe -m pip install -r requirements-dev.txt
-.\.venv\Scripts\python.exe test_comparison_ui.py
-.\.venv\Scripts\python.exe test_restoration_ui.py
-```
+With the app running and both galleries prepared, install `requirements-dev.txt` and run `test_three_model_ui.py`, `test_visual_case_studies.py` and `test_restoration_passes_ui.py` with the project interpreter. The browser checks use Microsoft Edge via Playwright. They exercise model switching, reference isolation, native crop dimensions, gallery behavior and the clean-only correction.
 
-## Repository contents and downloaded files
-
-Included: source code, notebooks, UI, project-trained best/last checkpoints, split IDs, audit records, training logs, metrics, reports, plots, screenshots, external-model provenance, and third-party source licenses.
-
-Excluded by `.gitignore`: the local Python environment, bytecode, credentials, downloaded FFHQ/LFW/QMUL datasets, large recognition embedding caches, re-downloadable third-party model binaries, incomplete downloads, and live UI PID/log state. These remain local; the preparation scripts recreate the downloads as needed. No Git LFS or paid storage is required for the included project files.
-
-Third-party code retains its original licenses in `restoration_vendor` and `codeformer_vendor`. CodeFormer has a noncommercial S-Lab license. Dataset/model terms remain with their respective upstream sources; this repository does not redistribute the complete face datasets.
+GFPGAN and CodeFormer use their upstream implementations and licenses. Third-party model and dataset terms apply independently. [GFPGAN notice](restoration_vendor/NOTICE.md) | [CodeFormer notice and noncommercial license](codeformer_vendor/NOTICE.md)

@@ -1,0 +1,23 @@
+{
+  "fusion_parameters": {
+    "arcface": {
+      "negative_mean": 0.1445195972919464,
+      "negative_std": 0.1287875771522522
+    },
+    "mobileface": {
+      "negative_mean": 0.15400250256061554,
+      "negative_std": 0.11463931947946548
+    }
+  },
+  "thresholds": {
+    "arcface": 0.275638610124588,
+    "mobileface": 0.1980598419904709,
+    "fusion": 0.10637687519192696
+  },
+  "validation_pairs": 512,
+  "validation_auc": {
+    "arcface": 0.74456787109375,
+    "mobileface": 0.7454071044921875,
+    "fusion": 0.7585296630859375
+  }
+}

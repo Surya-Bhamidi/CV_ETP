@@ -1,6 +1,0 @@
-{
-  "same_image_distance_zero": true,
-  "different_image_distance_positive": true,
-  "official_pretrained_backbone_loaded": true,
-  "calibrated_metric_frozen": true
-}

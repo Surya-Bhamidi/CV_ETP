@@ -1,0 +1,91 @@
+{
+  "selected_epoch": 2,
+  "selected_new_checkpoint": true,
+  "validation_only": true,
+  "checkpoint_sha256": "1cc9cc06944d97cc86c58a0eadfc45cc981d54b13002ec2878062bcc8082f658",
+  "baseline": {
+    "ffhq": {
+      "standard28": {
+        "psnr_y": 25.715248942375183,
+        "ssim_y": 0.7330840035244235,
+        "lpips": 0.22885400097584352
+      },
+      "clean28": {
+        "psnr_y": 28.372216418385506,
+        "ssim_y": 0.8497802239276745,
+        "lpips": 0.1412563268095255
+      }
+    },
+    "domain_validation_arcface_auc": 0.750457763671875,
+    "domain_validation_pairs": 512
+  },
+  "history": [
+    {
+      "epoch": 1,
+      "seconds": 278.06333910000103,
+      "validation": {
+        "ffhq": {
+          "standard28": {
+            "psnr_y": 25.55988574028015,
+            "ssim_y": 0.7328791709582262,
+            "lpips": 0.19958145858254284
+          },
+          "clean28": {
+            "psnr_y": 28.210722908377647,
+            "ssim_y": 0.8502834189972774,
+            "lpips": 0.11598446004791185
+          }
+        },
+        "domain_validation_arcface_auc": 0.7510986328125,
+        "domain_validation_pairs": 512
+      },
+      "eligible": false,
+      "selection_score": 0.02855394285870716,
+      "losses": {
+        "pixel": 0.04292684815663961,
+        "structure": 0.2525383285537828,
+        "laplacian": 0.023980531834240537,
+        "vgg": 0.9325607548817061,
+        "lpips": 0.18985831245663576,
+        "ffhq_identity": 0.5547525211586617,
+        "camera_lr_consistency": 0.004165539759469539,
+        "camera_identity": 0.038947933178860694
+      }
+    },
+    {
+      "epoch": 2,
+      "seconds": 284.84898229999817,
+      "validation": {
+        "ffhq": {
+          "standard28": {
+            "psnr_y": 25.563068687915802,
+            "ssim_y": 0.7331637548878388,
+            "lpips": 0.19789572671288624
+          },
+          "clean28": {
+            "psnr_y": 28.211869060993195,
+            "ssim_y": 0.8505790073093689,
+            "lpips": 0.11462316240067594
+          }
+        },
+        "domain_validation_arcface_auc": 0.7514495849609375,
+        "domain_validation_pairs": 512
+      },
+      "eligible": false,
+      "selection_score": 0.030779361914028414,
+      "losses": {
+        "pixel": 0.043011744986870326,
+        "structure": 0.2515940345620038,
+        "laplacian": 0.024057668220848427,
+        "vgg": 0.9351940264459699,
+        "lpips": 0.1840849145228276,
+        "ffhq_identity": 0.5521218745852821,
+        "camera_lr_consistency": 0.003918801636018543,
+        "camera_identity": 0.034684543148614466
+      }
+    }
+  ],
+  "checkpoint": "work/restoration_v3/final.pt",
+  "selected_parameter_update_fraction": 0.75,
+  "final_selection_manifest_sha256": "e7841cc43166bd837fc090a3c87a7e9c04ebd04b7a2c3ee6bfe35e533b433caa"
+}

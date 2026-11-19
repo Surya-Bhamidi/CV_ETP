@@ -1,0 +1,14 @@
+{
+  "source_sha256": "5cf8a9fae2e821f8c45ea64d32dbac5f277d49e5512df24e2d4b93edfd101403",
+  "protocol_sha256": "372aa9a3efc53b1ea9967f065d4232cc4e15e88de701b34d0f59367007f81cd6",
+  "selection_sha256": "3b456651443b0c06a04bd44a4761d8b2ee4038e433001158c8b23655b523798e",
+  "checkpoint_sha256": {
+    "restoration_v3": "1cc9cc06944d97cc86c58a0eadfc45cc981d54b13002ec2878062bcc8082f658",
+    "identity_v4": "2fd49ea0226e05c7f9fcc1263fde429995c0a15b4be00fba52d045b25284fe11"
+  },
+  "primary_calibration": "Original512 crops, original256 positive plus256 negative pairs from held-out official-training identities; unchanged from v3.",
+  "expanded_calibration": "Separate secondary pipeline: all11135 held-out-training crops, frozen4968 balanced validation pairs.",
+  "fusion": "Fixed equal average of negative-validation-standardized ArcFace and MobileFace scores; separate recognition pipeline, unchanged reconstruction pixels.",
+  "test_does_not_select_model_or_availability": true,
+  "historical_test_reuse": true
+}

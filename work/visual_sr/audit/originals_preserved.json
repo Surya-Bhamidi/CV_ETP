@@ -1,8 +1,0 @@
-{
-  "all_original_artifacts_unchanged": true,
-  "sha256": {
-    "sr_part1_clean.ipynb": "ecdea0ed3e94089b2258a18b631928acd8841b7d052a3d72f438824e0a97d125",
-    "work/full/ckpt/ours_ssc_attn_best.pt": "f2b3fa876841c63fae3cebaf938d036459b9510dc6750fa8efc49761d7003c0b",
-    "work/refinement/detail_full/best.pt": "4a6a3a56383178476862735dabe831615e139dc224d2ada1bdd33355c8fac61e"
-  }
-}

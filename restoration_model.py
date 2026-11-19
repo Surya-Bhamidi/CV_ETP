@@ -24,11 +24,12 @@ class FaceRestoration(nn.Module):
         self.to(device).eval().requires_grad_(False)
 
     def forward(self, low):
+        low = low.contiguous()
         target = (low.shape[-2] * 4, low.shape[-1] * 4)
         # Batches of two bound memory for 512-pixel StyleGAN synthesis.
         outputs = []
         for chunk in low.split(2):
-            up = F.interpolate(chunk, size=(512, 512), mode='bicubic', align_corners=False).clamp(0, 1)
+            up = F.interpolate(chunk, size=(512, 512), mode='bicubic', align_corners=False).clamp(0, 1).contiguous()
             result, _ = self.net(up * 2 - 1, return_rgb=False, randomize_noise=False)
             restored = ((result + 1) / 2).clamp(0, 1)
             outputs.append(F.interpolate(restored, size=target, mode='bicubic', align_corners=False, antialias=True).clamp(0, 1))

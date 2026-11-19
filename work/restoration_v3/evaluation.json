@@ -1,0 +1,159 @@
+{
+  "protocol": {
+    "checkpoint_sha256": {
+      "balanced_previous": "0f837d57d280606e8cccb12345d908d7b7fde0bc4a8d05930f7413cd1774bc89",
+      "restoration_v3": "1cc9cc06944d97cc86c58a0eadfc45cc981d54b13002ec2878062bcc8082f658"
+    },
+    "additional_cohort_sha256": "2d619ab619dbaf911bb5d7819c676d59edc230cfb59e68fd0706ed9cbffd95e0",
+    "source_sha256": "c646b13680501a72ef9fb2ba4445a48d838a6bb348ddc0b1a2c08c0d9ee12a91",
+    "selection_sha256": "3d8198576f5818dcc202f8182447c714933214b2527f88d25f2f2797a8f6d758",
+    "threshold_calibration": "Only 512 crops from 256 official-training validation identities; never the verification/test fold scores.",
+    "release_selection": "Already frozen in review.json before evaluation; results do not alter availability.",
+    "lpips_alex_excluded_from_training_and_selection": true,
+    "recognizer_sha256": {
+      "arcface": "4c06341c33c2ca1f86781dab0e829f88ad5b64be9fba56e56bc9ebdefc619e43",
+      "mobileface": "9cc6e4a75f0e2bf0b1aed94578f144d15175f357bdc05e815e5c4a02b319eb4f"
+    }
+  },
+  "qmul": {
+    "bicubic": {
+      "prior_9913_images": {
+        "arcface": {
+          "accuracy": 0.6803571428571429,
+          "auc": 0.75647966250212,
+          "threshold_from_training_validation": 0.2722158133983612,
+          "correct_pairs": 7239,
+          "pairs": 10640
+        },
+        "mobileface": {
+          "accuracy": 0.6695488721804511,
+          "auc": 0.7695725450845158,
+          "threshold_from_training_validation": 0.15070952475070953,
+          "correct_pairs": 7124,
+          "pairs": 10640
+        }
+      },
+      "additional_identity_disjoint": {
+        "arcface": {
+          "accuracy": 0.6173887587822015,
+          "auc": 0.6646954132365119,
+          "threshold_from_training_validation": 0.2722158133983612,
+          "correct_pairs": 2109,
+          "pairs": 3416
+        },
+        "mobileface": {
+          "accuracy": 0.5980679156908665,
+          "auc": 0.6927475538723955,
+          "threshold_from_training_validation": 0.15070952475070953,
+          "correct_pairs": 2043,
+          "pairs": 3416
+        }
+      }
+    },
+    "balanced_previous": {
+      "prior_9913_images": {
+        "arcface": {
+          "accuracy": 0.6796992481203008,
+          "auc": 0.7508965140765447,
+          "threshold_from_training_validation": 0.238507941365242,
+          "correct_pairs": 7232,
+          "pairs": 10640
+        },
+        "mobileface": {
+          "accuracy": 0.6717105263157894,
+          "auc": 0.7654053366498954,
+          "threshold_from_training_validation": 0.1593482792377472,
+          "correct_pairs": 7147,
+          "pairs": 10640
+        }
+      },
+      "additional_identity_disjoint": {
+        "arcface": {
+          "accuracy": 0.620023419203747,
+          "auc": 0.6612781702307368,
+          "threshold_from_training_validation": 0.238507941365242,
+          "correct_pairs": 2118,
+          "pairs": 3416
+        },
+        "mobileface": {
+          "accuracy": 0.5986533957845434,
+          "auc": 0.6854158554042418,
+          "threshold_from_training_validation": 0.1593482792377472,
+          "correct_pairs": 2045,
+          "pairs": 3416
+        }
+      }
+    },
+    "restoration_v3": {
+      "prior_9913_images": {
+        "arcface": {
+          "accuracy": 0.6818609022556391,
+          "auc": 0.7516872244049974,
+          "threshold_from_training_validation": 0.23806693404912949,
+          "correct_pairs": 7255,
+          "pairs": 10640
+        },
+        "mobileface": {
+          "accuracy": 0.6808270676691729,
+          "auc": 0.7675431588840522,
+          "threshold_from_training_validation": 0.16568291187286377,
+          "correct_pairs": 7244,
+          "pairs": 10640
+        }
+      },
+      "additional_identity_disjoint": {
+        "arcface": {
+          "accuracy": 0.617096018735363,
+          "auc": 0.6623462943360627,
+          "threshold_from_training_validation": 0.23806693404912949,
+          "correct_pairs": 2108,
+          "pairs": 3416
+        },
+        "mobileface": {
+          "accuracy": 0.6071428571428571,
+          "auc": 0.6884015296524415,
+          "threshold_from_training_validation": 0.16568291187286377,
+          "correct_pairs": 2074,
+          "pairs": 3416
+        }
+      }
+    }
+  },
+  "paired_ffhq": {
+    "standard28": {
+      "balanced_previous": {
+        "psnr_y": 25.606300707906485,
+        "ssim_y": 0.735459289683905,
+        "lpips_squeeze": 0.23172926125698723,
+        "lpips_alex": 0.2612280483881477
+      },
+      "restoration_v3": {
+        "psnr_y": 25.509790662676096,
+        "ssim_y": 0.7362949034471102,
+        "lpips_squeeze": 0.20554447900212836,
+        "lpips_alex": 0.2573392662452534
+      }
+    },
+    "clean28": {
+      "balanced_previous": {
+        "psnr_y": 28.280985571444035,
+        "ssim_y": 0.8521675213152747,
+        "lpips_squeeze": 0.14254616253310814,
+        "lpips_alex": 0.18156465876381844
+      },
+      "restoration_v3": {
+        "psnr_y": 28.171803664416075,
+        "ssim_y": 0.853228755066412,
+        "lpips_squeeze": 0.12095453905203613,
+        "lpips_alex": 0.1759794055542443
+      }
+    }
+  },
+  "additional_images": 1423,
+  "additional_identities": 456,
+  "additional_pairs": 3416,
+  "additional_identical_positive_pairs_excluded": 0,
+  "additional_scope": "Additional diagnostic cohort, not the official verification protocol and not guaranteed historically unseen: the original pixel model previously ran a larger identification evaluation.",
+  "selection_was_validation_only": true,
+  "lpips_alex_asset_sha256": "7be5be791159472b1fbf3c69796f7cb30dca7ad8466c2df70058c37116cdee02"
+}

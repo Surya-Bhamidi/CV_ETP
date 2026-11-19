@@ -1,0 +1,13 @@
+{
+  "source_sha256": "7814ccc990dae58889a63dee773f590d18214cc7cbf8998827bfff714ed04e59",
+  "checkpoints": {
+    "app_default": "d320936014d5ed01b7dc9950e06fd4d9a451eb558dd14358db5067a99bf5c7a6",
+    "camera_v3": "1cc9cc06944d97cc86c58a0eadfc45cc981d54b13002ec2878062bcc8082f658",
+    "identity_v4": "2fd49ea0226e05c7f9fcc1263fde429995c0a15b4be00fba52d045b25284fe11"
+  },
+  "pipeline": "Native crop -> app min8/max256 handling -> x4 SR or bicubic -> round to8-bit RGB -> bicubic antialias resize112 -> same frozen MobileFace single/mirrored features.",
+  "unsupported": "Reject min side<8, or resizing max256 makes min side<8, exactly as app. Retain every pair; report coverage and count abstentions as unsuccessful in all-pair success.",
+  "calibration": "Original512 native crops from256 held-out official-training identities, original balanced512 pairs. Fit using supported calibration pairs only; report count. No test threshold fitting.",
+  "batching": "Exact native shapes grouped for throughput; no padding/resizing to a batch shape. Recognition112 normalization only after exported SR.",
+  "scope": "Recorded still-crop replay; not live camera/video or full-frame detector/tracker. Repeatedly evaluated cohorts; unknown upstream/FFHQ person overlap remains."
+}

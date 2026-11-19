@@ -1,0 +1,37 @@
+{
+  "source_sha256": "5d56ed98ad1941c4f0c6266aa2369335a87d077d2eb2a0bad84967f3a0ae116a",
+  "protocol_sha256": "372aa9a3efc53b1ea9967f065d4232cc4e15e88de701b34d0f59367007f81cd6",
+  "base_checkpoint_sha256": "1cc9cc06944d97cc86c58a0eadfc45cc981d54b13002ec2878062bcc8082f658",
+  "parameters": 479109,
+  "architecture": {
+    "use_ssc": true,
+    "use_attn": true
+  },
+  "epochs": 2,
+  "updates_per_epoch": 1024,
+  "training_plan": {
+    "epochs": 2,
+    "ffhq_images": 16384,
+    "audited_camera_pool": 32768,
+    "batch_ffhq": 16,
+    "batch_camera": 32,
+    "lr": 1e-05,
+    "weights": {
+      "pixel": 1.0,
+      "structure": 0.5,
+      "laplacian": 0.1,
+      "vgg": 0.02,
+      "lpips": 0.04,
+      "ffhq_identity": 0.02,
+      "camera_lr_consistency": 0.2,
+      "camera_identity": 0.02,
+      "paired_identity_contrastive": 0.005
+    },
+    "selection": "Max original512 ArcFace validation AUC, retaining only epochs with mean paired FFHQ validation LPIPS<=base+0.005, each PSNR>=base-0.15dB and SSIM>=base-0.003. Baseline retained if no eligible AUC improvement."
+  },
+  "camera_training_identities": 5063,
+  "contrastive_temperature": 0.1,
+  "arcface_supervised_camera_pairs_per_batch": 8,
+  "mobileface_in_loss_or_selection": false,
+  "test_used_for_selection": false
+}

@@ -1,0 +1,88 @@
+{
+  "validation/standard28": {
+    "identity_v4": {
+      "images": 128,
+      "median_selected_model_ms": 10.2,
+      "psnr_y": 25.560803711414337,
+      "ssim_y": 0.7330526435175995
+    },
+    "restoration": {
+      "images": 128,
+      "median_selected_model_ms": 60.6,
+      "psnr_y": 23.649574160575867,
+      "ssim_y": 0.6839000066162609
+    },
+    "codeformer": {
+      "images": 128,
+      "median_selected_model_ms": 134.14999999999998,
+      "psnr_y": 23.654644340276718,
+      "ssim_y": 0.6359727711469845
+    },
+    "bicubic_reference": {
+      "psnr_y": 24.78071692585945,
+      "ssim_y": 0.665415679546291
+    }
+  },
+  "test/standard28": {
+    "identity_v4": {
+      "images": 12,
+      "median_selected_model_ms": 10.2,
+      "psnr_y": 24.589325586954754,
+      "ssim_y": 0.7098693766341466
+    },
+    "restoration": {
+      "images": 12,
+      "median_selected_model_ms": 60.8,
+      "psnr_y": 23.318915526072185,
+      "ssim_y": 0.6858328806116494
+    },
+    "codeformer": {
+      "images": 12,
+      "median_selected_model_ms": 135.64999999999998,
+      "psnr_y": 22.799893220265705,
+      "ssim_y": 0.6184126078441821
+    },
+    "bicubic_reference": {
+      "psnr_y": 23.86475372314453,
+      "ssim_y": 0.6414672643442936
+    }
+  },
+  "test/clean28": {
+    "identity_v4": {
+      "images": 12,
+      "median_selected_model_ms": 10.149999999999999,
+      "psnr_y": 27.370257536570232,
+      "ssim_y": 0.8366750497110618
+    },
+    "restoration": {
+      "images": 12,
+      "median_selected_model_ms": 60.849999999999994,
+      "psnr_y": 25.652094682057697,
+      "ssim_y": 0.8042481347622779
+    },
+    "codeformer": {
+      "images": 12,
+      "median_selected_model_ms": 134.95,
+      "psnr_y": 25.78341801961263,
+      "ssim_y": 0.8041739508288592
+    },
+    "bicubic_reference": {
+      "psnr_y": 25.956044514973957,
+      "ssim_y": 0.7774557831220283
+    }
+  },
+  "qmul/native": {
+    "identity_v4": {
+      "images": 6,
+      "median_selected_model_ms": 14.75
+    },
+    "restoration": {
+      "images": 6,
+      "median_selected_model_ms": 61.4
+    },
+    "codeformer": {
+      "images": 6,
+      "median_selected_model_ms": 135.85000000000002
+    }
+  }
+}

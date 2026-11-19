@@ -1,0 +1,98 @@
+{
+  "restoration_v3": {
+    "primary": {
+      "fusion_parameters": {
+        "arcface": {
+          "negative_mean": 0.13119898736476898,
+          "negative_std": 0.11894413083791733
+        },
+        "mobileface": {
+          "negative_mean": 0.14748699963092804,
+          "negative_std": 0.11059167236089706
+        }
+      },
+      "thresholds": {
+        "arcface": 0.23806693404912949,
+        "mobileface": 0.16568291187286377,
+        "fusion": 1.0160279273986816
+      },
+      "validation_pairs": 512,
+      "validation_auc": {
+        "arcface": 0.7510833740234375,
+        "mobileface": 0.740936279296875,
+        "fusion": 0.7591552734375
+      }
+    },
+    "expanded": {
+      "fusion_parameters": {
+        "arcface": {
+          "negative_mean": 0.1469213366508484,
+          "negative_std": 0.12733584642410278
+        },
+        "mobileface": {
+          "negative_mean": 0.15771034359931946,
+          "negative_std": 0.10654918849468231
+        }
+      },
+      "thresholds": {
+        "arcface": 0.23216767609119415,
+        "mobileface": 0.2567526251077652,
+        "fusion": 0.5786926448345184
+      },
+      "validation_pairs": 4968,
+      "validation_auc": {
+        "arcface": 0.7622531382814587,
+        "mobileface": 0.7745043317489582,
+        "fusion": 0.7819069419485999
+      }
+    }
+  },
+  "identity_v4": {
+    "primary": {
+      "fusion_parameters": {
+        "arcface": {
+          "negative_mean": 0.13026323914527893,
+          "negative_std": 0.11881642043590546
+        },
+        "mobileface": {
+          "negative_mean": 0.14771398901939392,
+          "negative_std": 0.11234092712402344
+        }
+      },
+      "thresholds": {
+        "arcface": 0.24948640167713165,
+        "mobileface": 0.16115549951791763,
+        "fusion": 0.2876647263765335
+      },
+      "validation_pairs": 512,
+      "validation_auc": {
+        "arcface": 0.7549591064453125,
+        "mobileface": 0.7441558837890625,
+        "fusion": 0.7644500732421875
+      }
+    },
+    "expanded": {
+      "fusion_parameters": {
+        "arcface": {
+          "negative_mean": 0.14566121995449066,
+          "negative_std": 0.12674249708652496
+        },
+        "mobileface": {
+          "negative_mean": 0.1599169373512268,
+          "negative_std": 0.10704211890697479
+        }
+      },
+      "thresholds": {
+        "arcface": 0.19695784151554108,
+        "mobileface": 0.2558412402868271,
+        "fusion": 0.8096916377544403
+      },
+      "validation_pairs": 4968,
+      "validation_auc": {
+        "arcface": 0.7657269001480652,
+        "mobileface": 0.7768724668798183,
+        "fusion": 0.7852768183362246
+      }
+    }
+  }
+}

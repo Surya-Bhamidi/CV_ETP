@@ -1,0 +1,236 @@
+{
+  "validation": {
+    "standard28": {
+      "single": {
+        "psnr_y": 25.56067679822445,
+        "ssim_y": 0.7330467926231601,
+        "lpips_alex": 0.25443088298197836,
+        "mobileface_cosine": 0.36644193454412743
+      },
+      "feedback2": {
+        "psnr_y": 25.139269679784775,
+        "ssim_y": 0.7314067025684159,
+        "lpips_alex": 0.237188549246639,
+        "mobileface_cosine": 0.35669438130571507
+      },
+      "feedback3": {
+        "psnr_y": 24.592744186520576,
+        "ssim_y": 0.7218040393212861,
+        "lpips_alex": 0.235188570630271,
+        "mobileface_cosine": 0.34327735798433423
+      },
+      "feedback5": {
+        "psnr_y": 23.48591800034046,
+        "ssim_y": 0.6953870641375075,
+        "lpips_alex": 0.24047243333188817,
+        "mobileface_cosine": 0.31415942206513137
+      },
+      "feedback8": {
+        "psnr_y": 22.00847414135933,
+        "ssim_y": 0.6507314731361166,
+        "lpips_alex": 0.258109119720757,
+        "mobileface_cosine": 0.2753074389474932
+      },
+      "ensemble2": {
+        "psnr_y": 25.620721831917763,
+        "ssim_y": 0.7353319291339553,
+        "lpips_alex": 0.27168880810495466,
+        "mobileface_cosine": 0.3689328335458413
+      },
+      "ensemble4": {
+        "psnr_y": 25.560295522212982,
+        "ssim_y": 0.7283593673529891,
+        "lpips_alex": 0.30867555807344615,
+        "mobileface_cosine": 0.3666815370088443
+      },
+      "ensemble8": {
+        "psnr_y": 25.484916105866432,
+        "ssim_y": 0.7213455407654641,
+        "lpips_alex": 0.3431003396399319,
+        "mobileface_cosine": 0.368915198254399
+      },
+      "backprojection3": {
+        "psnr_y": 25.52461141347885,
+        "ssim_y": 0.7184996730858577,
+        "lpips_alex": 0.2719181823777035,
+        "mobileface_cosine": 0.3522973326034844
+      }
+    },
+    "mild28": {
+      "single": {
+        "psnr_y": 27.699058398604393,
+        "ssim_y": 0.8282664074457434,
+        "lpips_alex": 0.18937893689144403,
+        "mobileface_cosine": 0.6065845380071551
+      },
+      "feedback2": {
+        "psnr_y": 26.953526362776756,
+        "ssim_y": 0.8158944491261075,
+        "lpips_alex": 0.1918661540839821,
+        "mobileface_cosine": 0.5622183294035494
+      },
+      "feedback3": {
+        "psnr_y": 26.16894944012165,
+        "ssim_y": 0.7997793602227952,
+        "lpips_alex": 0.19825797766679898,
+        "mobileface_cosine": 0.5182850905694067
+      },
+      "feedback5": {
+        "psnr_y": 24.69417667388916,
+        "ssim_y": 0.763152726893369,
+        "lpips_alex": 0.2143545732833445,
+        "mobileface_cosine": 0.4464027479989454
+      },
+      "feedback8": {
+        "psnr_y": 22.851862132549286,
+        "ssim_y": 0.7064819848119182,
+        "lpips_alex": 0.24134298018179834,
+        "mobileface_cosine": 0.3710208271513693
+      },
+      "ensemble2": {
+        "psnr_y": 27.79873462021351,
+        "ssim_y": 0.8308417594877642,
+        "lpips_alex": 0.20328534994041547,
+        "mobileface_cosine": 0.6110254658851773
+      },
+      "ensemble4": {
+        "psnr_y": 27.764002665877342,
+        "ssim_y": 0.8274690315734948,
+        "lpips_alex": 0.2286030696122907,
+        "mobileface_cosine": 0.6138550743926316
+      },
+      "ensemble8": {
+        "psnr_y": 27.691265374422073,
+        "ssim_y": 0.8233051785033552,
+        "lpips_alex": 0.2498898395569995,
+        "mobileface_cosine": 0.6128749360796064
+      },
+      "backprojection3": {
+        "psnr_y": 27.877161771059036,
+        "ssim_y": 0.8286045177440622,
+        "lpips_alex": 0.19384874060051516,
+        "mobileface_cosine": 0.6182152463588864
+      }
+    },
+    "clean28": {
+      "single": {
+        "psnr_y": 28.224314138293266,
+        "ssim_y": 0.850957913208471,
+        "lpips_alex": 0.17032639734679833,
+        "mobileface_cosine": 0.7071184751112014
+      },
+      "feedback2": {
+        "psnr_y": 27.401381358504295,
+        "ssim_y": 0.8352925202493378,
+        "lpips_alex": 0.18038470268948004,
+        "mobileface_cosine": 0.6417102774139494
+      },
+      "feedback3": {
+        "psnr_y": 26.50699584186077,
+        "ssim_y": 0.8154697312696686,
+        "lpips_alex": 0.19094464153749868,
+        "mobileface_cosine": 0.5829528861213475
+      },
+      "feedback5": {
+        "psnr_y": 24.841959670186043,
+        "ssim_y": 0.7718061996980006,
+        "lpips_alex": 0.21222463878802955,
+        "mobileface_cosine": 0.4907488995231688
+      },
+      "feedback8": {
+        "psnr_y": 22.83398950099945,
+        "ssim_y": 0.7073451667240027,
+        "lpips_alex": 0.2451838754932396,
+        "mobileface_cosine": 0.39778948691673577
+      },
+      "ensemble2": {
+        "psnr_y": 28.329993054270744,
+        "ssim_y": 0.8538464385990188,
+        "lpips_alex": 0.18415619462030008,
+        "mobileface_cosine": 0.71241789101623
+      },
+      "ensemble4": {
+        "psnr_y": 28.30358836054802,
+        "ssim_y": 0.8517000451056813,
+        "lpips_alex": 0.2034469586214982,
+        "mobileface_cosine": 0.7151819448918104
+      },
+      "ensemble8": {
+        "psnr_y": 28.228273019194603,
+        "ssim_y": 0.848601037080856,
+        "lpips_alex": 0.2177070059115067,
+        "mobileface_cosine": 0.7107425283174962
+      },
+      "backprojection3": {
+        "psnr_y": 28.409918636083603,
+        "ssim_y": 0.8532087771782193,
+        "lpips_alex": 0.16472545108990744,
+        "mobileface_cosine": 0.7260475014336407
+      }
+    }
+  },
+  "literal_cascade_validation16": {
+    "standard28": {
+      "cascade1": {
+        "psnr_y": 25.951908946037292,
+        "ssim_y": 0.7287252207841333,
+        "lpips_alex": 0.25070976186543703,
+        "mobileface_cosine": 0.3809466287493706
+      },
+      "cascade2": {
+        "psnr_y": 25.928719997406006,
+        "ssim_y": 0.7285192214430256,
+        "lpips_alex": 0.249212808907032,
+        "mobileface_cosine": 0.3801724333316088
+      },
+      "cascade3": {
+        "psnr_y": 25.931333422660828,
+        "ssim_y": 0.7284290390976573,
+        "lpips_alex": 0.2493747752159834,
+        "mobileface_cosine": 0.38048261869698763
+      }
+    },
+    "mild28": {
+      "cascade1": {
+        "psnr_y": 28.140143036842346,
+        "ssim_y": 0.8235474858649671,
+        "lpips_alex": 0.1869691824540496,
+        "mobileface_cosine": 0.5973001532256603
+      },
+      "cascade2": {
+        "psnr_y": 28.117050051689148,
+        "ssim_y": 0.8238573637593669,
+        "lpips_alex": 0.1852141059935093,
+        "mobileface_cosine": 0.5951550099998713
+      },
+      "cascade3": {
+        "psnr_y": 28.11801302433014,
+        "ssim_y": 0.8237371547137404,
+        "lpips_alex": 0.18541574804112315,
+        "mobileface_cosine": 0.5951903611421585
+      }
+    },
+    "clean28": {
+      "cascade1": {
+        "psnr_y": 28.723676204681396,
+        "ssim_y": 0.8508502435463882,
+        "lpips_alex": 0.1652226746082306,
+        "mobileface_cosine": 0.7311111427843571
+      },
+      "cascade2": {
+        "psnr_y": 28.699782371520996,
+        "ssim_y": 0.8513163172500133,
+        "lpips_alex": 0.1645938977599144,
+        "mobileface_cosine": 0.7279230020940304
+      },
+      "cascade3": {
+        "psnr_y": 28.70001983642578,
+        "ssim_y": 0.8512162630022605,
+        "lpips_alex": 0.16470848070457578,
+        "mobileface_cosine": 0.7285304330289364
+      }
+    }
+  },
+  "same_input_repeat_max_abs_difference": 0.0,
+  "selected": "single"
+}

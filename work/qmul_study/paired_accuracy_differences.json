@@ -1,0 +1,182 @@
+{
+  "bicubic": {
+    "arcface": {
+      "difference_percentage_points": 1.231203007518797,
+      "paired_pair_bootstrap_95_interval_pp": [
+        0.6390977443609023,
+        1.8515037593984964
+      ],
+      "resamples": 2000,
+      "scope": "Fixed-threshold pair resampling; not identity-cluster, training-seed or recalibration uncertainty"
+    },
+    "mobileface": {
+      "difference_percentage_points": 1.3439849624060152,
+      "paired_pair_bootstrap_95_interval_pp": [
+        0.6764567669172933,
+        1.9736842105263157
+      ],
+      "resamples": 2000,
+      "scope": "Fixed-threshold pair resampling; not identity-cluster, training-seed or recalibration uncertainty"
+    }
+  },
+  "ours_fidelity50": {
+    "arcface": {
+      "difference_percentage_points": 0.9210526315789472,
+      "paired_pair_bootstrap_95_interval_pp": [
+        0.44149436090225563,
+        1.4097744360902256
+      ],
+      "resamples": 2000,
+      "scope": "Fixed-threshold pair resampling; not identity-cluster, training-seed or recalibration uncertainty"
+    },
+    "mobileface": {
+      "difference_percentage_points": 1.381578947368421,
+      "paired_pair_bootstrap_95_interval_pp": [
+        0.8080357142857144,
+        1.9551221804511267
+      ],
+      "resamples": 2000,
+      "scope": "Fixed-threshold pair resampling; not identity-cluster, training-seed or recalibration uncertainty"
+    }
+  },
+  "realesrgan_x4plus": {
+    "arcface": {
+      "difference_percentage_points": -5.12218045112782,
+      "paired_pair_bootstrap_95_interval_pp": [
+        -6.043468045112782,
+        -4.21029135338346
+      ],
+      "resamples": 2000,
+      "scope": "Fixed-threshold pair resampling; not identity-cluster, training-seed or recalibration uncertainty"
+    },
+    "mobileface": {
+      "difference_percentage_points": -0.6860902255639098,
+      "paired_pair_bootstrap_95_interval_pp": [
+        -1.550986842105263,
+        0.20676691729323307
+      ],
+      "resamples": 2000,
+      "scope": "Fixed-threshold pair resampling; not identity-cluster, training-seed or recalibration uncertainty"
+    }
+  },
+  "gfpgan_amp": {
+    "arcface": {
+      "difference_percentage_points": -6.43796992481203,
+      "paired_pair_bootstrap_95_interval_pp": [
+        -7.575187969924812,
+        -5.2819548872180455
+      ],
+      "resamples": 2000,
+      "scope": "Fixed-threshold pair resampling; not identity-cluster, training-seed or recalibration uncertainty"
+    },
+    "mobileface": {
+      "difference_percentage_points": -6.287593984962406,
+      "paired_pair_bootstrap_95_interval_pp": [
+        -7.434210526315789,
+        -5.1595394736842115
+      ],
+      "resamples": 2000,
+      "scope": "Fixed-threshold pair resampling; not identity-cluster, training-seed or recalibration uncertainty"
+    }
+  },
+  "codeformer_tf32": {
+    "arcface": {
+      "difference_percentage_points": -8.825187969924812,
+      "paired_pair_bootstrap_95_interval_pp": [
+        -9.84046052631579,
+        -7.753759398496241
+      ],
+      "resamples": 2000,
+      "scope": "Fixed-threshold pair resampling; not identity-cluster, training-seed or recalibration uncertainty"
+    },
+    "mobileface": {
+      "difference_percentage_points": -4.276315789473684,
+      "paired_pair_bootstrap_95_interval_pp": [
+        -5.178571428571429,
+        -3.3921522556391013
+      ],
+      "resamples": 2000,
+      "scope": "Fixed-threshold pair resampling; not identity-cluster, training-seed or recalibration uncertainty"
+    }
+  },
+  "domain_full": {
+    "arcface": {
+      "difference_percentage_points": 0.7706766917293233,
+      "paired_pair_bootstrap_95_interval_pp": [
+        0.19736842105263158,
+        1.3439849624060152
+      ],
+      "resamples": 2000,
+      "scope": "Fixed-threshold pair resampling; not identity-cluster, training-seed or recalibration uncertainty"
+    },
+    "mobileface": {
+      "difference_percentage_points": 1.5413533834586466,
+      "paired_pair_bootstrap_95_interval_pp": [
+        0.8646616541353384,
+        2.2086466165413534
+      ],
+      "resamples": 2000,
+      "scope": "Fixed-threshold pair resampling; not identity-cluster, training-seed or recalibration uncertainty"
+    }
+  },
+  "domain_ffhq_control": {
+    "arcface": {
+      "difference_percentage_points": 0.2255639097744361,
+      "paired_pair_bootstrap_95_interval_pp": [
+        -0.15977443609022557,
+        0.6111372180451115
+      ],
+      "resamples": 2000,
+      "scope": "Fixed-threshold pair resampling; not identity-cluster, training-seed or recalibration uncertainty"
+    },
+    "mobileface": {
+      "difference_percentage_points": 1.0338345864661653,
+      "paired_pair_bootstrap_95_interval_pp": [
+        0.5075187969924813,
+        1.5509868421052617
+      ],
+      "resamples": 2000,
+      "scope": "Fixed-threshold pair resampling; not identity-cluster, training-seed or recalibration uncertainty"
+    }
+  },
+  "domain_no_attention": {
+    "arcface": {
+      "difference_percentage_points": 0.8364661654135339,
+      "paired_pair_bootstrap_95_interval_pp": [
+        0.29135338345864664,
+        1.4097744360902256
+      ],
+      "resamples": 2000,
+      "scope": "Fixed-threshold pair resampling; not identity-cluster, training-seed or recalibration uncertainty"
+    },
+    "mobileface": {
+      "difference_percentage_points": 1.475563909774436,
+      "paired_pair_bootstrap_95_interval_pp": [
+        0.7800751879699248,
+        2.1146616541353382
+      ],
+      "resamples": 2000,
+      "scope": "Fixed-threshold pair resampling; not identity-cluster, training-seed or recalibration uncertainty"
+    }
+  },
+  "domain_no_ssc": {
+    "arcface": {
+      "difference_percentage_points": 1.137218045112782,
+      "paired_pair_bootstrap_95_interval_pp": [
+        0.5357142857142857,
+        1.7199248120300752
+      ],
+      "resamples": 2000,
+      "scope": "Fixed-threshold pair resampling; not identity-cluster, training-seed or recalibration uncertainty"
+    },
+    "mobileface": {
+      "difference_percentage_points": 1.5695488721804511,
+      "paired_pair_bootstrap_95_interval_pp": [
+        0.9116541353383458,
+        2.2086466165413534
+      ],
+      "resamples": 2000,
+      "scope": "Fixed-threshold pair resampling; not identity-cluster, training-seed or recalibration uncertainty"
+    }
+  }
+}

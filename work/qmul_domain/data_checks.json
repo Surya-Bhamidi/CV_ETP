@@ -1,0 +1,21 @@
+{
+  "training_images_decoded": 16384,
+  "validation_images_decoded": 512,
+  "training_identities": 5063,
+  "validation_identities": 256,
+  "training_validation_identity_overlap": 0,
+  "training_or_validation_vs_verification_identity_overlap": 0,
+  "native_size_median_wh": [
+    19.0,
+    24.0
+  ],
+  "native_size_min_wh": [
+    5,
+    7
+  ],
+  "native_size_max_wh": [
+    106,
+    124
+  ],
+  "targets_are_native_observations_not_clean_hr": true
+}

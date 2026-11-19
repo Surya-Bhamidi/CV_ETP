@@ -1,0 +1,11 @@
+{
+  "available_for_comparison": true,
+  "checkpoint": "work/recognition_v4/best.pt",
+  "checkpoint_sha256": "2fd49ea0226e05c7f9fcc1263fde429995c0a15b4be00fba52d045b25284fe11",
+  "checks": {
+    "validation_selected_identity_pair_epoch": true
+  },
+  "release_selected_using_test": false,
+  "default_model_unchanged": true,
+  "warning": "Experimental identity-pair training using official training identities. Recognition gains and restored identity are not guaranteed; compare with the preceding v3 output."
+}

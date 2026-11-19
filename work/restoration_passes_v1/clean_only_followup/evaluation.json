@@ -1,0 +1,17 @@
+{
+  "protocol_sha256": "40957988183fcba477bcba771b214d91dde6949cbdf2fb12cfd330152f8a9a69",
+  "test_clean28": {
+    "single": {
+      "psnr_y": 28.11941483989358,
+      "ssim_y": 0.8533614269049514,
+      "lpips_alex": 0.17140550163458101,
+      "mobileface_cosine": 0.7151916840812191
+    },
+    "backprojection3": {
+      "psnr_y": 28.315751638263464,
+      "ssim_y": 0.8556728427036799,
+      "lpips_alex": 0.16539670119527727,
+      "mobileface_cosine": 0.7347542811185122
+    }
+  }
+}

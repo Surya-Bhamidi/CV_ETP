@@ -1,0 +1,9 @@
+{
+  "unchanged_project_checkpoint": true,
+  "same_inference_source_for_validation_test_and_ui": true,
+  "original_validation_selection_snapshot_matches": true,
+  "all_profile_selection_still_single": true,
+  "clean_only_scope_frozen_before_test": true,
+  "all512_clean_test_scores_retained": true,
+  "no_weight_updates": true
+}

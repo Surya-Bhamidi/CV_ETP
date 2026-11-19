@@ -1,0 +1,13 @@
+{
+  "seed": 42,
+  "resamples": 2000,
+  "main_mobileface_accuracy_95_anchor_cluster_interval_percent": [
+    69.13770282534304,
+    70.9131893468372
+  ],
+  "main_mobileface_change_95_anchor_cluster_interval_pp": [
+    1.3739641590462717,
+    2.4713867678634567
+  ],
+  "scope": "Fixed-model/calibration anchor-ID resampling; shared negative identities, threshold fitting, training seeds, historical test reuse and upstream overlap are not fully accounted for."
+}

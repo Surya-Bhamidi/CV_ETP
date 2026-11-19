@@ -1,0 +1,115 @@
+{
+  "checks_no_detected_direct_leakage": true,
+  "blocking_findings": {
+    "ffhq_split_id_overlap": false,
+    "ffhq_exact_cross_split_duplicates": false,
+    "ffhq_center_crop_cross_split_duplicates": false,
+    "ffhq_strict_near_cross_split_duplicates": false,
+    "qmul_cross_split_identity_overlap": false,
+    "qmul_cross_split_exact_decoded_duplicates": false,
+    "qmul_cross_split_exact_lr28_duplicates": false,
+    "ffhq_qmul_exact_center_crop_lr28_overlap": false
+  },
+  "ffhq": {
+    "counts": {
+      "train": 67000,
+      "validation": 1000,
+      "test": 2000
+    },
+    "exact_cross_split_groups": [],
+    "center_crop_exact_cross_split_groups": [],
+    "strict_near_duplicates": [],
+    "phash_candidates_hamming_le4": [
+      {
+        "train": 9652,
+        "validation": 1184,
+        "phash_hamming": 4,
+        "rgb32_mae_255": 40.6796875
+      },
+      {
+        "train": 62508,
+        "validation": 60453,
+        "phash_hamming": 4,
+        "rgb32_mae_255": 46.529296875
+      },
+      {
+        "train": 32036,
+        "validation": 60453,
+        "phash_hamming": 4,
+        "rgb32_mae_255": 35.779947916666664
+      },
+      {
+        "train": 48580,
+        "validation": 60453,
+        "phash_hamming": 4,
+        "rgb32_mae_255": 52.733723958333336
+      },
+      {
+        "train": 10187,
+        "validation": 60453,
+        "phash_hamming": 4,
+        "rgb32_mae_255": 32.6240234375
+      },
+      {
+        "train": 36276,
+        "test": 5845,
+        "phash_hamming": 4,
+        "rgb32_mae_255": 23.017903645833332
+      },
+      {
+        "train": 57796,
+        "test": 52899,
+        "phash_hamming": 4,
+        "rgb32_mae_255": 38.871744791666664
+      },
+      {
+        "train": 18694,
+        "test": 20456,
+        "phash_hamming": 4,
+        "rgb32_mae_255": 32.8701171875
+      },
+      {
+        "train": 8515,
+        "test": 69980,
+        "phash_hamming": 4,
+        "rgb32_mae_255": 27.271158854166668
+      },
+      {
+        "train": 69499,
+        "test": 69980,
+        "phash_hamming": 4,
+        "rgb32_mae_255": 29.555989583333332
+      }
+    ],
+    "near_duplicate_rule": "pHash Hamming<=4 AND mean RGB difference of area-resized32<=3/255; heuristic, not identity verification"
+  },
+  "qmul": {
+    "counts": {
+      "train": 32768,
+      "validation": 512,
+      "previous_verification": 9913,
+      "additional_evaluation": 1423
+    },
+    "identity_intersections": {
+      "train_vs_validation": [],
+      "train_vs_previous_verification": [],
+      "train_vs_additional_evaluation": [],
+      "validation_vs_previous_verification": [],
+      "validation_vs_additional_evaluation": [],
+      "previous_verification_vs_additional_evaluation": []
+    },
+    "decoded_exact_cross_split_groups": [],
+    "lr28_exact_cross_split_groups": []
+  },
+  "cross_dataset_exact_lr28_matches": [],
+  "fresh_cohort_sha256": "2d619ab619dbaf911bb5d7819c676d59edc230cfb59e68fd0706ed9cbffd95e0",
+  "source_sha256": "afea1c8df05c20e02b2196ac4ac294a372980c50a03c69c72f3e035aab75411f",
+  "seconds": 22.83330329999808,
+  "limits": [
+    "FFHQ has no identity labels in the cache; image-level disjointness does not establish identity-level disjointness.",
+    "Unknown shared people across FFHQ, QMUL and recognizer/generative-model pretraining cannot be certified absent.",
+    "Previous repeated-test comparisons and test-informed UI release gates create selection bias even without training pixel overlap.",
+    "Prior 10-fold pair calibration reuses identities/images across folds; this is not identity-disjoint threshold calibration.",
+    "New comparison will freeze settings before evaluating and calibrate thresholds only using official-training validation identities."
+  ]
+}
